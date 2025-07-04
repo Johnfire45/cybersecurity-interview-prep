@@ -18,13 +18,13 @@ This repository contains structured preparation for cybersecurity job interviews
 ```
 cybersecurity-interview-prep/
 ├── README.md                    # Project overview and navigation
-├── web-application-security/   # Web application security topics and materials
-├── api-security/               # API security topics and materials
-├── android-security/           # Android security topics and materials
-├── client-side/                # Client-side security topics and materials
-├── network-security/           # Network security topics and materials
-├── cloud-security/             # Cloud security topics and materials
-├── devsecops/                  # DevSecOps topics and materials
+├── web-application-security/   # Web application security (structured subtopics)
+├── api-security/               # API security (structured subtopics)
+├── android-security/           # Android security (structured subtopics)
+├── client-side/                # Client-side security (structured subtopics)
+├── network-security/           # Network security (structured subtopics)
+├── cloud-security/             # Cloud security (structured subtopics)
+├── devsecops/                  # DevSecOps (structured subtopics)
 └── docs/                       # Central coordination hub
     ├── _prep-structure.md      # Interview flow rules and protocol
     ├── context.md              # This file - LLM interaction guidelines
@@ -32,6 +32,8 @@ cybersecurity-interview-prep/
     ├── _progress.md            # Progress tracking
     └── _resources.md           # Resource collection
 ```
+
+**Note:** Each domain follows the Universal Topic Structure Protocol with standardized subtopic folders.
 
 ## 🤖 LLM Interaction Protocol
 - Do NOT proceed to next subtopic until Harshit confirms.
@@ -65,14 +67,16 @@ I'm Harshit Shah, and I'm preparing for cybersecurity job interviews across mult
 
 **Project Structure:**
 I have a repository called "cybersecurity-interview-prep" with topic-based directories:
-- web-application-security/ (contains web application security topics)
-- api-security/
-- android-security/
-- client-side/
-- network-security/
-- cloud-security/
-- devsecops/
+- web-application-security/ (structured subtopics with notes, quiz, hands-on, resources)
+- api-security/ (structured subtopics with notes, quiz, hands-on, resources)
+- android-security/ (structured subtopics with notes, quiz, hands-on, resources)
+- client-side/ (structured subtopics with notes, quiz, hands-on, resources)
+- network-security/ (structured subtopics with notes, quiz, hands-on, resources)
+- cloud-security/ (structured subtopics with notes, quiz, hands-on, resources)
+- devsecops/ (structured subtopics with notes, quiz, hands-on, resources)
 - docs/ (contains coordination files)
+
+Each domain follows a standardized structure with subtopic folders containing notes.md, quiz.md, hands-on.md, and resources.md files.
 
 **Learning Protocol:**
 1. I want to go topic by topic across all cybersecurity domains
@@ -114,3 +118,38 @@ Future additions may include:
 - Threat detection use cases
 - Resume or portfolio integration workflows
 - Prompt generation workflows for live agent integrations
+
+---
+
+## 📂 Universal Topic Structure Protocol
+
+**ALL cybersecurity topics follow this standardized folder structure:**
+
+```
+[domain-name]/
+├── [subtopic-folder]/
+│   ├── notes.md        # Detailed explanation and diagrams
+│   ├── quiz.md         # Real-world interview Q&A (final answers only)
+│   ├── hands-on.md     # Cursor-based labs, PoC, payload testing
+│   └── resources.md    # External links, labs, cheatsheets
+
+General folders (per domain):
+- resources/ → general references for the domain
+- tools/ → tools/scripts for testing the domain
+- examples/ → screenshots, local test cases, lab apps
+```
+
+**Applied across all domains:**
+- web-application-security/
+- api-security/
+- android-security/
+- client-side/
+- network-security/
+- cloud-security/
+- devsecops/
+
+**Benefits:**
+- Consistent organization across all interview topics
+- Scalable structure for systematic learning
+- Easy navigation and resource management
+- Standardized LLM interaction patterns
