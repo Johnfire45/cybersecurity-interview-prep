@@ -41,6 +41,15 @@ LLMs (ChatGPT, Cursor, and others) must:
 3. **Only when confirmed:** conduct a quiz
 4. Provide feedback **only if asked**
 5. Wait for confirmation before advancing
+6. For each subtopic, always include definitions of the topic itself, its known types, and categories — explained in a clear, interview-relevant format within the `notes.md` file.
+
+## Progress Tracker Protocol
+
+- `_progress.md` tracks subtopic-level preparation across domains.
+- Statuses: 🟢 Mastered, 🟡 In Progress, 🔴 Not Started, 🧪 Needs Brushing Up.
+- Each subtopic includes "Next Up" and "Review Later" annotations.
+- Future automation may populate overall stats dynamically.
+- Cursor must always discuss before bulk restructuring.
 
 ## 📂 Universal Topic Structure
 
@@ -59,5 +68,95 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 - Project structure: ✅ initialized
 - Quiz protocol: ✅ active
-- Web Application Security: 🟡 ready to begin from Subtopic 1.1 (Input Validation & Injection)
+- Web Application Security: 🟡 Subtopic 1.1 completed, ready for 1.2 (Cross-Site Scripting)
 - Other domains: ❌ not started
+
+---
+
+## 📁 Complete Project Directory Structure
+
+```
+cybersecurity-interview-prep/
+├── README.md                                    # Project overview and navigation
+├── .gitignore                                   # Git exclusions
+├── web-application-security/                    # Web application security domain
+│   ├── 1.1-input-validation-injection/         # Subtopic 1.1 ✅ COMPLETED
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 1.2KB - HAS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.2-cross-site-scripting/               # Subtopic 1.2 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.3-authentication-session/             # Subtopic 1.3 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.4-authorization-access-control/       # Subtopic 1.4 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.5-file-upload-attacks/                # Subtopic 1.5 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.6-cors-security-headers/              # Subtopic 1.6 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.7-host-header-cache-poisoning/        # Subtopic 1.7 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.8-csrf-samesite/                      # Subtopic 1.8 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.9-business-logic-vulnerabilities/     # Subtopic 1.9 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.10-ssrf-redirects/                    # Subtopic 1.10 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.11-security-misconfiguration/         # Subtopic 1.11 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── 1.12-misc-attacks/                      # Subtopic 1.12 ❌ PENDING
+│   │   ├── notes.md                            # 0B - NEEDS CONTENT
+│   │   ├── quiz.md                             # 0B - NEEDS CONTENT
+│   │   ├── hands-on.md                         # 0B - NEEDS CONTENT
+│   │   └── resources.md                        # 0B - NEEDS CONTENT
+│   ├── resources/                              # Domain-specific resources (empty)
+│   ├── tools/                                  # Domain-specific tools (empty)
+│   └── examples/                               # Domain-specific examples (empty)
+├── api-security/                               # API security domain (empty)
+├── android-security/                           # Android security domain (empty)
+├── client-side/                                # Client-side security domain (empty)
+├── network-security/                           # Network security domain (empty)
+├── cloud-security/                             # Cloud security domain (empty)
+├── devsecops/                                  # DevSecOps domain (empty)
+└── docs/                                       # Central coordination hub
+    ├── context.md                              # LLM interaction guidelines (this file)
+    ├── _progress.md                            # Progress tracking across all domains
+    └── _resources.md                           # Global resources and references
+```
+
+**📊 Content Status Summary:**
+- **Completed Subtopic:** 1.1 (Input Validation & Injection) - Quiz content only
+- **Pending Subtopics:** 1.2 through 1.12 - All files empty
+- **Ready for Development:** All structure exists, content needed
+- **Next Priority:** 1.2 Cross-Site Scripting (next in sequence)
