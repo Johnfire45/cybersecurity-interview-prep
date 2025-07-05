@@ -21,7 +21,7 @@ _This section can be auto-updated later via script if needed._
 
 ## Web Application Security
 
-### 1.1 Input Validation & Injection 🟢
+### 1.01 Input Validation & Injection 🟢
 
 - [x] Input Validation Techniques — 🟢
 - [x] Client vs Server-Side Validation — 🟢
@@ -38,7 +38,7 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.2 Cross-Site Scripting 🟡
+### 1.02 Cross-Site Scripting 🟡
 
 - [x] Reflected XSS — 🟢
 - [ ] Stored XSS — 🔴
@@ -51,7 +51,7 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.3 Authentication & Session 🔴
+### 1.03 Authentication & Session 🔴
 
 - [ ] Authentication Mechanisms — 🔴
 - [ ] Credential Stuffing & Brute Force — 🔴
@@ -62,7 +62,7 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.4 Authorization & Access Control 🔴
+### 1.04 Authorization & Access Control 🔴
 
 - [ ] RBAC — 🔴
 - [ ] BOLA — 🔴
@@ -72,7 +72,7 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.5 File Upload Attacks 🔴
+### 1.05 File Upload Attacks 🔴
 
 - [ ] File Type Validation — 🔴
 - [ ] Content-Type Bypass — 🔴
@@ -82,7 +82,7 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.6 CORS & Security Headers 🔴
+### 1.06 CORS & Security Headers 🔴
 
 - [ ] CORS Misconfiguration — 🔴
 - [ ] Security Headers (CSP, HSTS, etc.) — 🔴
@@ -91,7 +91,7 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.7 Host Header & Cache Poisoning 🔴
+### 1.07 Host Header & Cache Poisoning 🔴
 
 - [ ] Host Header Injection — 🔴
 - [ ] Web Cache Poisoning — 🔴
@@ -100,7 +100,7 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.8 CSRF & SameSite 🔴
+### 1.08 CSRF & SameSite 🔴
 
 - [ ] CSRF Attacks — 🔴
 - [ ] SameSite Cookie Attributes — 🔴
@@ -109,7 +109,7 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.9 Business Logic 🔴
+### 1.09 Business Logic 🔴
 
 - [ ] Logic Flaws — 🔴
 - [ ] Race Conditions — 🔴
