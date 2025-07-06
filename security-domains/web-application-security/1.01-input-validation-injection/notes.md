@@ -1,4 +1,4 @@
-# 📌 1.1 Input Validation & Injection
+# 📌 1.01 Input Validation & Injection
 
 ## 🔍 What is Input Validation?
 Input validation is the process of ensuring user-provided input is clean, correct, and safe before it's processed by the application. Proper validation prevents malicious data from entering the system and triggering unintended behaviors.
@@ -100,7 +100,7 @@ If `$host = 8.8.8.8; rm -rf /`, it triggers a shell injection.
 - Combine validation + context-aware encoding
 - Prevent injection by avoiding unsafe interpreters
 
-# 📌 1.1 Input Validation & Injection
+# 📌 1.01 Input Validation & Injection
 
 ## 🔍 What is Input Validation?
 Input validation is the process of ensuring user-provided input is clean, correct, and safe before it's processed by the application. Proper validation prevents malicious data from entering the system and triggering unintended behaviors.

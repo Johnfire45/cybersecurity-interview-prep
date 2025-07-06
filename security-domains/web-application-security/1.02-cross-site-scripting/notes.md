@@ -1,4 +1,4 @@
-# Cross-Site Scripting (XSS)
+# 1.02 Cross-Site Scripting (XSS)
 
 ## What is XSS?
 Cross-Site Scripting (XSS) is a vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. These scripts can steal cookies, hijack sessions, deface websites, or redirect users to malicious sites.
