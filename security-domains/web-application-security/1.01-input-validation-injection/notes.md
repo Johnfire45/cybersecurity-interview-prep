@@ -1,3 +1,9 @@
+---
+[🏠 Home](../../../../README.md) / [🌐 Web Application Security](../) / [🔎 Input Validation & Injection](./notes.md)
+
+[⬅️ Previous](../1.12-misc-attacks/notes.md) | [➡️ Next](../1.02-cross-site-scripting/notes.md)
+---
+
 # 📌 1.01 Input Validation & Injection
 
 ## 🔍 What is Input Validation?
@@ -34,7 +40,7 @@ Failing to validate input properly can lead to:
 - Always validate on the **server side**
 - Use built-in validation libraries
 - Normalize input before validation (trim, decode)
-- Don’t rely on client-side validation for security
+- Don't rely on client-side validation for security
 - Apply contextual output encoding (e.g., HTML, JS, SQL)
 
 ---
@@ -136,7 +142,7 @@ Failing to validate input properly can lead to:
 - Always validate on the **server side**
 - Use built-in validation libraries
 - Normalize input before validation (trim, decode)
-- Don’t rely on client-side validation for security
+- Don't rely on client-side validation for security
 - Apply contextual output encoding (e.g., HTML, JS, SQL)
 
 ---

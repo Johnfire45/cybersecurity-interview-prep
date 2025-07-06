@@ -1,3 +1,9 @@
+---
+[🏠 Home](../../../../README.md) / [🌐 Web Application Security](../) / [🔎 Cross-Site Scripting](./notes.md)
+
+[⬅️ Previous](../1.01-input-validation-injection/notes.md) | [➡️ Next](../1.03-authentication-session/notes.md)
+---
+
 # 1.02 Cross-Site Scripting (XSS)
 
 ## What is XSS?

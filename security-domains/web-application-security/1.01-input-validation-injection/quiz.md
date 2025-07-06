@@ -1,3 +1,9 @@
+---
+[🏠 Home](../../../../README.md) / [🌐 Web Application Security](../) / [🔎 Input Validation & Injection](./quiz.md)
+
+[⬅️ Previous](../1.12-misc-attacks/quiz.md) | [➡️ Next](../1.02-cross-site-scripting/quiz.md)
+---
+
 # 🧪 Subtopic Quiz — 1.01.1 Input Validation Fundamentals
 
 This file contains real-world interview questions and finalized answers for this subtopic.
@@ -57,7 +63,7 @@ You're asked to improve security in a legacy web app vulnerable to both XSS and 
 
 ### 🧩 Question 3:
 **Scenario:**  
-You’re testing a payment endpoint that expects this JSON:
+You're testing a payment endpoint that expects this JSON:
 ```json
 {
   "amount": 100,

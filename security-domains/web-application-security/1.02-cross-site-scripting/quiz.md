@@ -1,7 +1,10 @@
-
-
-
 ---
+[🏠 Home](../../../../README.md) / [🌐 Web Application Security](../) / [🔎 Cross-Site Scripting](./quiz.md)
+
+[⬅️ Previous](../1.01-input-validation-injection/quiz.md) | [➡️ Next](../1.03-authentication-session/quiz.md)
+---
+
+# [Subtopic Title Here]
 
 ### 🧪 MCQ 1 – XSS Filter Bypass
 
@@ -35,7 +38,7 @@ const params = new URLSearchParams(window.location.search);
 document.getElementById("welcome").innerHTML = params.get("name");
 ```
 
-Which payload will most likely execute an alert if there’s no CSP or framework sanitization?
+Which payload will most likely execute an alert if there's no CSP or framework sanitization?
 
 A. `?name=<script>alert('XSS')</script>`  
 B. `?name="><img src=x onerror=alert('XSS')>`  
