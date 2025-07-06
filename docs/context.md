@@ -45,11 +45,11 @@ LLMs (ChatGPT, Cursor, and others) must:
 
 ## Progress Tracker Protocol
 
-- `_progress.md` tracks subtopic-level preparation across domains.
-- Statuses: 🟢 Mastered, 🟡 In Progress, 🔴 Not Started, 🧪 Needs Brushing Up.
-- Each subtopic includes "Next Up" and "Review Later" annotations.
-- Future automation may populate overall stats dynamically.
-- Cursor must always discuss before bulk restructuring.
+
+- Use `_progress.md` as the single source of truth for topic-wise progress tracking.
+- Do not mark any topic or subtopic as completed unless confirmed by Harshit.
+- If a topic is marked 🟢 Mastered in `_progress.md`, it implies theory, quiz, and hands-on were all completed and reviewed.
+- Maintain parity between `context.md` guidelines and `_progress.md` statuses.
 
 ## 📂 Universal Topic Structure
 

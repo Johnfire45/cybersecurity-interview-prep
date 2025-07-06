@@ -30,12 +30,12 @@ _This section can be auto-updated later via script if needed._
     - [x] Blind SQL Injection — 🟢
     - [x] Out-of-Band SQLi — 🟢
     - [x] Second-Order SQLi — 🟢
-- [ ] Command Injection — 🔴
+- [x] Command Injection — 🟢
 - [ ] Business Logic Input Abuse — 🔴
 - [ ] Detection & Exploitation — 🔴
 - [ ] Mitigation Strategies — 🔴  
-    > 🔁 **Next Up:** Command Injection  
-    > 🧪 **Review Later:** None
+    > 🔁 **Next Up:** Business Logic Input Abuse  
+    > 🧪 **Review Later:** Input Validation, Filtering vs Safe APIs
 
 ---
 
