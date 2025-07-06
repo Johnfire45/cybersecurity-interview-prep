@@ -172,57 +172,37 @@ ping 8.8.8.8; rm -rf /
 
 ---
 
-### 🛡 Defenses
+---
+
+## 🛡️ Unified Defenses for Injection Attacks
+
+### 🔐 General Best Practices
+
+- Treat **all input as untrusted**
+- Enforce **strict validation** with allowlists
+- Normalize and sanitize inputs (trim, decode, type check)
+- Apply **context-aware output encoding** (e.g., HTML, SQL, JSON)
+
+### 🧱 SQL Injection Defenses
+
+- Always use **parameterized queries** or **ORMs** with bound parameters
+- Avoid constructing raw SQL with user input
+- Use **least privilege** for DB accounts
+- Monitor for anomalies with **WAFs** or query logs
+
+### 🖥️ Command Injection Defenses
 
 - **Never concatenate input into shell/system calls**
-- Use language-native libraries instead (e.g., `subprocess.run([...], shell=False)` in Python)
-- Sanitize input using allowlists
-- Use `chroot`, `AppArmor`, or `seccomp` to sandbox OS-level commands
-- Disable unnecessary interpreters in production systems
+- Use language-safe wrappers (e.g., `subprocess.run(..., shell=False)`)
+- Sandbox command execution with `AppArmor`, `seccomp`, or containers
+- Disable dangerous interpreters in production (e.g., Bash, Perl)
 
 ---
 
-### 🧪 Lab Resources
+## 🧪 Labs and Further Reading
 
 - [PortSwigger: OS Command Injection Labs](https://portswigger.net/web-security/os-command-injection)
 - [TryHackMe: Command Injection](https://tryhackme.com/room/commandinjection)
 - [HackTricks: Command Injection](https://book.hacktricks.xyz/pentesting-web/command-injection)
-
----
-
-## 🧰 Recommended Defenses
-
-- Use **parameterized queries** (prepared statements)
-- Avoid shell command concatenation with user input
-- Validate input strictly against expected values
-- Employ Web Application Firewalls (WAFs) as a defense-in-depth
-- Implement **least privilege** on database user accounts
-
----
-
-## 🧠 Key Takeaways
-
-- Treat all user input as untrusted
-- Validate early, encode later
-- Combine validation + context-aware encoding
-- Prevent injection by avoiding unsafe interpreters
-- Understand different SQLi types for targeted defense
-
----
-
-## 🛠️ Tooling
-
-- [SQLMap](https://sqlmap.org): SQLi exploitation automation tool
-- [Burp Suite](https://portswigger.net): Intercept and fuzz HTTP requests
-- [NoSQLMap](https://github.com/codingo/NoSQLMap): For MongoDB/NoSQL injection
-- [PostgreSQL Payloads](https://github.com/payloadbox/sql-injection-payload-list)
-
----
-
-## 🧪 Lab References
-
 - [PortSwigger SQLi Labs](https://portswigger.net/web-security/sql-injection)
 - [TryHackMe SQLi Room](https://tryhackme.com/room/sqlinjection)
-- [HackTheBox Academy SQLi](https://academy.hackthebox.com/module/20)
-
----
