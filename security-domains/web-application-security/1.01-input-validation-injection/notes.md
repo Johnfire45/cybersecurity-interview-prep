@@ -82,6 +82,67 @@ If `$user_input = ' OR 1=1 --`, the query becomes:
 SELECT * FROM users WHERE username = '' OR 1=1 --'
 ```
 
+---
+
+## 🛠 Command Injection
+
+Command Injection occurs when user input is passed directly to a system shell or OS command interpreter without proper sanitization, allowing arbitrary command execution.
+
+---
+
+### 🔍 How It Happens
+
+Many backend scripts use commands like `ping`, `ls`, `cat`, etc., and naively embed user input into these commands.
+
+```bash
+# Vulnerable Bash example
+ping $user_input
+```
+
+If `user_input = 8.8.8.8; rm -rf /`, the executed command becomes:
+```bash
+ping 8.8.8.8; rm -rf /
+```
+
+---
+
+### 🚨 Real-World Examples
+
+- `curl http://example.com?ip=8.8.8.8;whoami`
+- Form fields that accept hostnames, filenames, or paths
+- Misuse of `os.system()`, `Runtime.exec()`, or `ProcessBuilder` in code
+
+---
+
+### ⚒️ Common Sinks
+
+| Language | Vulnerable Function(s)             |
+|----------|------------------------------------|
+| Bash     | Direct CLI calls (`ping`, `cat`)   |
+| Python   | `os.system`, `subprocess.call`     |
+| PHP      | `exec()`, `shell_exec()`, `system()` |
+| Java     | `Runtime.getRuntime().exec()`      |
+
+---
+
+### 🛡 Defenses
+
+- **Never concatenate input into shell/system calls**
+- Use language-native libraries instead (e.g., `subprocess.run([...], shell=False)` in Python)
+- Sanitize input using allowlists
+- Use `chroot`, `AppArmor`, or `seccomp` to sandbox OS-level commands
+- Disable unnecessary interpreters in production systems
+
+---
+
+### 🧪 Lab Resources
+
+- [PortSwigger: OS Command Injection Labs](https://portswigger.net/web-security/os-command-injection)
+- [TryHackMe: Command Injection](https://tryhackme.com/room/commandinjection)
+- [HackTricks: Command Injection](https://book.hacktricks.xyz/pentesting-web/command-injection)
+
+---
+
 ### 🛠 Command Injection
 ```bash
 ping $host
