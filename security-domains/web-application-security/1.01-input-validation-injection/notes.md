@@ -186,6 +186,58 @@ ping 8.8.8.8; rm -rf /
 ### 🧱 SQL Injection Defenses
 
 - Always use **parameterized queries** or **ORMs** with bound parameters
+
+---
+
+## ✅ Prepared Statement with Parameters
+
+A **Prepared Statement** is a SQL query that uses **placeholders** instead of embedding user input directly in the query string.
+
+This technique ensures that user input is treated as **data only**, not executable code — making it one of the **most reliable defenses against SQL Injection (SQLi)**.
+
+---
+
+### 🛡 Why It Works
+
+- The SQL engine **compiles the query structure first**, before any user input is seen.
+- Inputs are **bound to placeholders** (`?`, `$1`, `:name`, etc.), not concatenated into the SQL string.
+- This guarantees that the input **cannot modify the query logic**, no matter what data is provided.
+
+---
+
+### ⚙️ Internal Workflow (Generic Flow)
+
+1. **Prepare the query (with placeholders):**
+   ```sql
+   SELECT * FROM users WHERE email = ?
+   ```
+
+2. **Bind user input to the placeholder:**
+   ```pseudo
+   bind_param(1, user_input)
+   ```
+
+3. **Execute safely:**
+   ```pseudo
+   result = statement.execute()
+   ```
+
+---
+
+### 🔒 Key Benefit
+
+This approach **fully separates code and data**, eliminating the possibility of injection — even with malicious input like:
+```sql
+' OR 1=1 --
+```
+This will be treated as a literal string, **not as part of the query logic**.
+
+---
+
+> 🚫 Never build SQL queries using string concatenation.  
+> ✅ Always use parameterized queries via Prepared Statements or ORMs with bound parameters.
+
+---
 - Avoid constructing raw SQL with user input
 - Use **least privilege** for DB accounts
 - Monitor for anomalies with **WAFs** or query logs
