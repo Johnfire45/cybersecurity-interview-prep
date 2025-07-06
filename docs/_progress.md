@@ -11,7 +11,8 @@
 ## ✅ Overall Summary
 
 - **Total Subtopics:** 12  
-- **Completed:** 🟢 1  
+- **Completed:** 🟢 0  
+- **In Progress:** 🟡 1  
 - **Brushing Up:** 🧪 0  
 - **Remaining:** 🔴 11  
 
@@ -21,20 +22,20 @@ _This section can be auto-updated later via script if needed._
 
 ## Web Application Security
 
-### 1.01 Input Validation & Injection 🟢
+### 1.01 Input Validation & Injection 🟡
 
 - [x] Input Validation Techniques — 🟢
 - [x] Client vs Server-Side Validation — 🟢
 - [x] Classic SQL Injection — 🟢
-- [ ] Blind SQL Injection — 🔴
-- [ ] Out-of-Band SQLi — 🔴
-- [ ] Second-Order SQLi — 🔴
-- [x] Command Injection — 🟢
-- [x] Business Logic Input Abuse — 🟢
-- [x] Detection & Exploitation — 🟢
-- [x] Mitigation Strategies — 🟢  
-> 🔁 **Next Up:** Blind SQLi  
-> 🧪 **Review Later:** None
+    - [x] Blind SQL Injection — 🟢
+    - [x] Out-of-Band SQLi — 🟢
+    - [x] Second-Order SQLi — 🟢
+- [ ] Command Injection — 🔴
+- [ ] Business Logic Input Abuse — 🔴
+- [ ] Detection & Exploitation — 🔴
+- [ ] Mitigation Strategies — 🔴  
+    > 🔁 **Next Up:** Command Injection  
+    > 🧪 **Review Later:** None
 
 ---
 

@@ -11,8 +11,8 @@ Use this file to track general security resources, cheat sheets, and references 
 
 ### 🎯 Interview Preparation
 - [Cybersecurity Interview Questions](https://github.com/Johnfire45/cybersecurity-interview-prep)
-- [Security Job Boards](https://example.com)
-- [Industry Certifications](https://example.com)
+- [Security Job Boards – InfoSec Jobs, Remote OK, Indeed](https://infosec-jobs.com/), [Remote OK](https://remoteok.com/remote-cybersecurity-jobs), [Indeed Cybersecurity Jobs](https://www.indeed.com/q-Cybersecurity-jobs.html)
+- [Industry Certifications – CompTIA, OSCP, CISSP, CKA, CEH](https://www.stationx.net/cyber-security-certifications/)
 
 ### 🛠️ Tools & Labs
 - [Burp Suite](https://portswigger.net/burp)

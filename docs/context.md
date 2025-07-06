@@ -68,7 +68,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 - Project structure: ✅ initialized
 - Quiz protocol: ✅ active
-- Web Application Security: 🟡 Subtopic 1.01 quiz completed, other parts pending
+- Web Application Security: 🟡 Subtopic 1.01 (SQLi theory + quiz done; command injection and rest pending)
 - Other domains: ❌ not started
 
 ---
@@ -81,8 +81,8 @@ cybersecurity-interview-prep/
 ├── .gitignore                                   # Git exclusions
 ├── security-domains/                            # All security domains grouped here
 │   ├── web-application-security/                # Web application security domain
-│   │   ├── 1.01-input-validation-injection/     # Subtopic 1.01 🟡 IN PROGRESS (only quiz done)
-│   │   │   ├── notes.md                        # 0B - NEEDS CONTENT
+│   │   ├── 1.01-input-validation-injection/     # Subtopic 1.01 🟡 IN PROGRESS (SQLi Theory + Quiz done; rest pending)
+│   │   │   ├── notes.md                        # ✅ Has SQLi theory content
 │   │   │   ├── quiz.md                         # 1.2KB - HAS CONTENT
 │   │   │   ├── hands-on.md                     # 0B - NEEDS CONTENT
 │   │   │   └── resources.md                    # 0B - NEEDS CONTENT
@@ -108,7 +108,9 @@ cybersecurity-interview-prep/
 ```
 
 **📊 Content Status Summary:**
-- **Partially Completed Subtopic:** 1.01 (Input Validation & Injection) - Quiz done, notes/hands-on/resources pending
+- **Partially Completed Subtopic:** 1.01 (Input Validation & Injection)  
+  – ✅ SQL Injection (Theory + Quiz completed)  
+  – ❌ Command Injection, Mitigations, Hands-on, Resources pending
 - **Pending Subtopics:** 1.2 through 1.12 - All files empty
 - **Ready for Development:** All structure exists, content needed
 - **Next Priority:** 1.2 Cross-Site Scripting (next in sequence)

