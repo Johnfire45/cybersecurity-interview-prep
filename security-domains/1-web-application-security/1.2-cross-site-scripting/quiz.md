@@ -68,3 +68,36 @@ document.getElementById("container").innerHTML = `<div>${route}</div>`;
 **Fixes:**  
 1. Replace `.innerHTML` with `.textContent`  
 2. Use `DOMPurify.sanitize(route)` before insertion
+
+---
+
+### 🧨 DOM XSS – Real-World Challenge 2
+
+**Code Snippet:**
+```js
+const page = location.hash.substring(1);
+eval(page);
+```
+
+**Payload:**  
+```
+https://example.com/#1;alert(1)
+```
+
+**Explanation:**  
+- The app uses `eval()` on untrusted data from `location.hash`.  
+- An attacker can inject JavaScript after the `#`, causing arbitrary code execution.
+
+**Vulnerability Type:**  
+- DOM-Based XSS
+
+**Why `eval()` is Dangerous:**  
+- `eval()` executes any input as JavaScript code, making it extremely risky if not properly controlled.  
+- If attacker-controlled input reaches `eval()`, it's game over — full XSS.
+
+**Fixes:**  
+1. **Avoid using `eval()`** entirely. Use `switch-case` or safely map values to functions.
+2. **Parse input safely** using built-in JS utilities or libraries.
+3. **Sanitize hash values** before any DOM insertion or logic execution.
+4. **Use DOMPurify** or similar libraries.
+5. **Set a Content Security Policy (CSP)** to restrict script execution.
