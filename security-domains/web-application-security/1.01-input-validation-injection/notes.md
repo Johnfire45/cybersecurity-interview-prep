@@ -258,3 +258,51 @@ This will be treated as a literal string, **not as part of the query logic**.
 - [HackTricks: Command Injection](https://book.hacktricks.xyz/pentesting-web/command-injection)
 - [PortSwigger SQLi Labs](https://portswigger.net/web-security/sql-injection)
 - [TryHackMe SQLi Room](https://tryhackme.com/room/sqlinjection)
+
+# 🧠 Business Logic Input Abuse
+
+Business Logic Vulnerabilities arise when attackers misuse an application's intended workflow to perform unauthorized actions — **without breaking any technical control**.
+
+---
+
+## ⚠️ Real-World Examples
+
+- **Coupon replay**: Reusing discount codes
+- **Race condition**: Fast checkout before price update
+- **Password reset bypass**: Skipping OTP verification
+- **Role escalation**: Changing `role=user` to `role=admin`
+- **Refund abuse**: Issuing refunds on consumed services
+
+---
+
+## 🧪 Common Attack Vectors
+
+- Parameter tampering (`price`, `role`, `status`)
+- API call reordering / workflow skipping
+- Rate abuse (referrals, logins, redemptions)
+
+---
+
+## 🔍 Red Flags
+
+- Hidden form field reliance
+- Missing server-side step validation
+- Insecure assumptions in multi-step flows
+
+---
+
+## 🛡️ Defenses
+
+- Server-side state enforcement
+- Strong validation of each step
+- Authorization for every action
+- Anomaly detection in workflows
+
+---
+
+## ✅ Interview Example
+
+**Q:** What if OTP validation is skipped via direct POST?
+
+**A:** The attacker resets the victim's password → **Account Takeover**  
+**Fix:** Enforce server-side state + OTP binding before action.
