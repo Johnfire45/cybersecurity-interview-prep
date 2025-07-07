@@ -31,7 +31,7 @@ _This section can be auto-updated later via script if needed._
     - [x] Out-of-Band SQLi — 🟢
     - [x] Second-Order SQLi — 🟢
 - [x] Command Injection — 🟢
-- [ ] Business Logic Input Abuse — 🔴
+- [x] Business Logic Input Abuse — 🟢
 - [ ] Detection & Exploitation — 🔴
 - [ ] Mitigation Strategies — 🔴  
     > 🔁 **Next Up:** Business Logic Input Abuse  

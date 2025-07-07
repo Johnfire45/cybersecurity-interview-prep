@@ -68,7 +68,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 - Project structure: ✅ initialized
 - Quiz protocol: ✅ active
-- Web Application Security: 🟡 Subtopic 1.01 (SQLi and Command Injection theory + quiz completed; PoC and resources pending)
+- Web Application Security: 🟡 Subtopic 1.01 (Business Logic Input Abuse completed; other items, PoC, and resources pending)
 - Other domains: ❌ not started
 
 ---
@@ -81,7 +81,7 @@ cybersecurity-interview-prep/
 ├── .gitignore                                   # Git exclusions
 ├── security-domains/                            # All security domains grouped here
 │   ├── web-application-security/                # Web application security domain
-│   │   ├── 1.01-input-validation-injection/     # Subtopic 1.01 🟡 IN PROGRESS (Theory + Quiz done; PoC/resources pending)
+│   │   ├── 1.01-input-validation-injection/     # Subtopic 1.01 🟡 IN PROGRESS (Business Logic Input Abuse done; other items, PoC/resources pending)
 │   │   │   ├── notes.md                        # ✅ Has SQLi theory content
 │   │   │   ├── quiz.md                         # 1.2KB - HAS CONTENT
 │   │   │   ├── hands-on.md                     # 0B - NEEDS CONTENT
