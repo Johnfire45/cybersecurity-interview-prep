@@ -1,13 +1,13 @@
 ---
-[🏠 Home](../../../../README.md) / [🌐 Web Application Security](../) / [🔎 Input Validation & Injection](./notes.md)
+[🏠 Home](../../../../README.md) / [🌐 Web Application Security](../) / [🛡️ Input Validation & Injection](./notes.md)
 
-[⬅️ Previous](../1.12-misc-attacks/notes.md) | [➡️ Next](../1.02-cross-site-scripting/notes.md)
+[⬅️ Previous](../0.6-trust-identity-concepts/notes.md) | [➡️ Next](../1.2-cross-site-scripting/notes.md)
 ---
 
 # 📌 1.01 Input Validation & Injection
 
-## 🔍 What is Input Validation?
-Input validation is the process of ensuring user-provided input is clean, correct, and safe before it's processed by the application. Proper validation prevents malicious data from entering the system and triggering unintended behaviors.
+## 🔍 What is Input Validation & Injection?
+Input validation is the process of ensuring user-provided data is clean, correct, and safe before processing. Injection vulnerabilities occur when untrusted input is interpreted as code or commands by the application, leading to attacks like SQL Injection, Command Injection, and more.
 
 ---
 
@@ -306,3 +306,52 @@ Business Logic Vulnerabilities arise when attackers misuse an application's inte
 
 **A:** The attacker resets the victim's password → **Account Takeover**  
 **Fix:** Enforce server-side state + OTP binding before action.
+
+## 🗺️ Attack Flow (SQLi Example)
+```mermaid
+sequenceDiagram
+  participant Attacker
+  participant Application
+  participant Database
+  Attacker->>Application: Submits malicious input (e.g., ' OR 1=1 --)
+  Application->>Database: Executes raw input in SQL query
+  Database-->>Attacker: Returns sensitive data or error
+```
+
+## 🧪 Common Payloads
+
+- **SQLi:** `' OR '1'='1`, `admin'--`, `'; DROP TABLE users;--`
+- **NoSQLi:** `{"$ne": ""}`, `{"username": {"$gt": ""}}`
+- **SSTI:** `{{7*7}}`, `${7*7}`
+- **Command Injection:** `8.8.8.8; whoami`, `| cat /etc/passwd`
+- **Path Traversal:** `../../etc/passwd`
+
+## 🖥️ Server-Side vs Client-Side Validation
+
+- **Client-Side:**  
+  - Improves UX, but can be bypassed (e.g., by disabling JS or using tools like Burp Suite).
+  - Never trust client-side validation for security.
+- **Server-Side:**  
+  - Always required for security.
+  - Enforces business rules, data types, and context-aware checks.
+
+## 🛡️ Remediation & Best Practices
+
+### 🔒 General Defenses
+- Treat all input as untrusted.
+- Use allowlists (whitelists) for validation.
+- Normalize and sanitize input (trim, decode, type check).
+- Apply context-aware output encoding (HTML, SQL, JSON, etc.).
+
+### 🧱 SQL Injection
+- Always use **parameterized queries** or **ORMs** with bound parameters.
+- Never build SQL queries using string concatenation.
+- Use least-privilege DB accounts.
+- Monitor for anomalies (WAF, query logs).
+
+#### ✅ Example: Prepared Statement
+```sql
+SELECT * FROM users WHERE email = ?
+```
+```python
+cursor.execute("SELECT * FROM users WHERE email = ?", (user_input,))
