@@ -1,11 +1,12 @@
-# **LLM Context Version:** v1.0 (2025-07-04)
+# **LLM Context Version:** v2.0 (2025-01-XX)
 
 # LLM Context for Cybersecurity Interview Preparation
 
 This project is managed by Harshit Shah for preparing cybersecurity interviews across all domains.
 
 ## 🎯 Project Overview
-This repository contains structured preparation for cybersecurity job interviews across multiple domains:
+This repository contains structured preparation for cybersecurity job interviews across 17 comprehensive domains:
+- Cybersecurity Fundamentals (Core principles, Linux, Networking, Trust & Identity)
 - Web Application Security (OWASP Top 10 focus)
 - API Security  
 - Android Security
@@ -13,6 +14,15 @@ This repository contains structured preparation for cybersecurity job interviews
 - Network Security
 - Cloud Security
 - DevSecOps
+- Secure Code Review
+- Cryptography
+- Red Team / Offensive Security
+- Blue Team / Defensive Security
+- Mobile Security (iOS)
+- IoT & Embedded Security
+- Social Engineering & Human Factors
+- Compliance & Governance
+- Career & Behavioral Prep
 
 ## 🤖 LLM Interaction Protocol
 - Do NOT proceed to next subtopic until Harshit confirms.
@@ -45,7 +55,6 @@ LLMs (ChatGPT, Cursor, and others) must:
 
 ## Progress Tracker Protocol
 
-
 - Use `_progress.md` as the single source of truth for topic-wise progress tracking.
 - Do not mark any topic or subtopic as completed unless confirmed by Harshit.
 - If a topic is marked 🟢 Mastered in `_progress.md`, it implies theory, quiz, and hands-on were all completed and reviewed.
@@ -66,12 +75,30 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 # ✅ Current Status (as of now)
 
-- Project structure: ✅ initialized
+- Project structure: ✅ initialized with 17 domains (folders 0–16 all present and correctly named)
 - Quiz protocol: ✅ active
-- Web Application Security: 🟡 Subtopic 1.01 (Business Logic Input Abuse completed; other items, PoC, and resources pending)
-- Other domains: ❌ not started
+- Web Application Security: 🟡 Work is beginning on:
+  - `1.1-input-validation-injection/` (Input Validation & Injection)
+  - `1.2-cross-site-scripting/` (Cross-Site Scripting)
+- Cybersecurity Fundamentals (Domain 0): 🟠 Folder structure is ready, content will be filled out later.
+- Other domains: 🔴 Not Started
 
 ---
+
+**📊 Content Status Summary:**
+- **In Progress:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting)
+- **Cybersecurity Fundamentals (Domain 0):** Folder structure exists, content to be added later.
+- **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
+- **Next Priority:** Complete 1.1 and 1.2, then proceed to fill out Domain 0 and subsequent topics.
+
+---
+
+## 📁 Folder Name Consistency Check
+
+All domain and subtopic folder names from 0 to 16 match the `_progress.md` index exactly.
+
+**No mismatches detected.**  
+If you spot any, please flag for manual review.
 
 ## 📁 Complete Project Directory Structure
 
@@ -80,37 +107,157 @@ cybersecurity-interview-prep/
 ├── README.md                                    # Project overview and navigation
 ├── .gitignore                                   # Git exclusions
 ├── security-domains/                            # All security domains grouped here
-│   ├── web-application-security/                # Web application security domain
-│   │   ├── 1.01-input-validation-injection/     # Subtopic 1.01 🟡 IN PROGRESS (Business Logic Input Abuse done; other items, PoC/resources pending)
-│   │   │   ├── notes.md                        # ✅ Has SQLi theory content
-│   │   │   ├── quiz.md                         # 1.2KB - HAS CONTENT
-│   │   │   ├── hands-on.md                     # 0B - NEEDS CONTENT
-│   │   │   └── resources.md                    # 0B - NEEDS CONTENT
-│   │   ├── 1.02-cross-site-scripting/          # Subtopic 1.2 ❌ PENDING
-│   │   │   ├── notes.md                        # 0B - NEEDS CONTENT
-│   │   │   ├── quiz.md                         # 0B - NEEDS CONTENT
-│   │   │   ├── hands-on.md                     # 0B - NEEDS CONTENT
-│   │   │   └── resources.md                    # 0B - NEEDS CONTENT
-│   │   ├── ...
-│   │   ├── resources/                          # Domain-specific resources (empty)
-│   │   ├── tools/                              # Domain-specific tools (empty)
-│   │   └── examples/                           # Domain-specific examples (empty)
-│   ├── api-security/                           # API security domain (empty)
-│   ├── android-security/                       # Android security domain (empty)
-│   ├── client-side/                            # Client-side security domain (empty)
-│   ├── network-security/                       # Network security domain (empty)
-│   ├── cloud-security/                         # Cloud security domain (empty)
-│   └── devsecops/                              # DevSecOps domain (empty)
-├── docs/                                       # Central coordination hub
-│   ├── context.md                              # LLM interaction guidelines (this file)
-│   ├── _progress.md                            # Progress tracking across all domains
-│   └── _resources.md                           # Global resources and references
+│   ├── 0-cybersecurity-fundamentals/            # Domain 0: Cybersecurity fundamentals
+│   │   ├── 0.1-core-principles/
+│   │   ├── 0.2-security-programs-frameworks/
+│   │   ├── 0.3-linux-fundamentals/
+│   │   ├── 0.4-operating-system-kernel/
+│   │   ├── 0.5-networking-fundamentals/
+│   │   ├── 0.6-trust-identity-concepts/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 1-web-application-security/              # Domain 1: Web application security
+│   │   ├── 1.1-input-validation-injection/      # Subtopic 1.1 🟢 COMPLETED
+│   │   ├── 1.2-cross-site-scripting/            # Subtopic 1.2 🟡 IN PROGRESS
+│   │   ├── 1.3-authentication-session/          # Subtopic 1.3 🔴 NOT STARTED
+│   │   ├── 1.4-authorization-access-control/    # Subtopic 1.4 🔴 NOT STARTED
+│   │   ├── 1.5-file-upload-attacks/             # Subtopic 1.5 🔴 NOT STARTED
+│   │   ├── 1.6-cors-security-headers/           # Subtopic 1.6 🔴 NOT STARTED
+│   │   ├── 1.7-host-header-cache-poisoning/     # Subtopic 1.7 🔴 NOT STARTED
+│   │   ├── 1.8-csrf-samesite/                   # Subtopic 1.8 🔴 NOT STARTED
+│   │   ├── 1.9-business-logic-vulnerabilities/  # Subtopic 1.9 🔴 NOT STARTED
+│   │   ├── 1.10-ssrf-redirects/                 # Subtopic 1.10 🔴 NOT STARTED
+│   │   ├── 1.11-security-misconfiguration/      # Subtopic 1.11 🔴 NOT STARTED
+│   │   ├── 1.12-misc-attacks/                   # Subtopic 1.12 🔴 NOT STARTED
+│   │   ├── resources/                           # Domain-specific resources
+│   │   ├── tools/                               # Domain-specific tools
+│   │   └── examples/                            # Domain-specific examples
+│   ├── 2-api-security/                          # Domain 2: API security
+│   │   ├── 2.1-api-authentication-authorization/
+│   │   ├── 2.2-api-input-validation-filtering/
+│   │   ├── 2.3-api-authorization-flaws/
+│   │   ├── 2.4-api-data-exposure/
+│   │   ├── 2.5-api-security-testing/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 3-android-security/                      # Domain 3: Android security
+│   │   ├── 3.1-app-manifest-analysis/
+│   │   ├── 3.2-storage-security/
+│   │   ├── 3.3-webview-security/
+│   │   ├── 3.4-ipc-broadcast-security/
+│   │   ├── 3.5-network-security/
+│   │   ├── 3.6-reverse-engineering-obfuscation/
+│   │   ├── 3.7-mobile-security-tools/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 4-client-side-security/                  # Domain 4: Client-side security
+│   │   ├── 4.1-javascript-security/
+│   │   ├── 4.2-dom-based-attacks/
+│   │   ├── 4.3-content-security-policy/
+│   │   ├── 4.4-same-origin-policy/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 5-network-security/                      # Domain 5: Network security
+│   │   ├── 5.1-network-protocols/
+│   │   ├── 5.2-tls-ssl-configuration/
+│   │   ├── 5.3-man-in-the-middle-attacks/
+│   │   ├── 5.4-network-security-tools/
+│   │   ├── 5.5-wireless-security/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 6-cloud-security/                        # Domain 6: Cloud security
+│   │   ├── 6.1-identity-access-management/
+│   │   ├── 6.2-cloud-storage-security/
+│   │   ├── 6.3-container-security/
+│   │   ├── 6.4-serverless-security/
+│   │   ├── 6.5-cloud-monitoring-logging/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 7-devsecops/                             # Domain 7: DevSecOps
+│   │   ├── 7.1-secure-cicd-pipelines/
+│   │   ├── 7.2-infrastructure-as-code-security/
+│   │   ├── 7.3-security-testing-automation/
+│   │   ├── 7.4-policy-as-code/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 8-secure-code-review/                    # Domain 8: Secure code review
+│   │   ├── 8.1-code-review-methodologies/
+│   │   ├── 8.2-common-vulnerabilities-in-code/
+│   │   ├── 8.3-language-specific-security/
+│   │   ├── 8.4-secure-development-practices/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 9-cryptography/                          # Domain 9: Cryptography
+│   │   ├── 9.1-cryptographic-fundamentals/
+│   │   ├── 9.2-tls-ssl-pki/
+│   │   ├── 9.3-key-management/
+│   │   ├── 9.4-cryptographic-vulnerabilities/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 10-red-team-offensive-security/          # Domain 10: Red team/offensive
+│   │   ├── 10.1-web-exploitation/
+│   │   ├── 10.2-mobile-exploitation/
+│   │   ├── 10.3-network-exploitation/
+│   │   ├── 10.4-social-engineering/
+│   │   ├── 10.5-custom-exploits-scripts/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 11-blue-team-defensive-security/         # Domain 11: Blue team/defensive
+│   │   ├── 11.1-siem-log-analysis/
+│   │   ├── 11.2-threat-hunting/
+│   │   ├── 11.3-incident-response/
+│   │   ├── 11.4-detection-engineering/
+│   │   ├── 11.5-security-operations/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 12-mobile-security-ios/                  # Domain 12: Mobile security (iOS)
+│   │   ├── 12.1-ios-app-security/
+│   │   ├── 12.2-ios-reverse-engineering/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 13-iot-embedded-security/                # Domain 13: IoT & embedded security
+│   │   ├── 13.1-iot-protocols-communication/
+│   │   ├── 13.2-firmware-analysis/
+│   │   ├── 13.3-hardware-security/
+│   │   ├── 13.4-iot-device-security/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 14-social-engineering-human-factors/     # Domain 14: Social engineering
+│   │   ├── 14.1-social-engineering-techniques/
+│   │   ├── 14.2-human-psychology-manipulation/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   ├── 15-compliance-governance/                # Domain 15: Compliance & governance
+│   │   ├── 15.1-regulatory-frameworks/
+│   │   ├── 15.2-security-governance/
+│   │   ├── resources/
+│   │   ├── tools/
+│   │   └── examples/
+│   └── 16-career-behavioral-prep/               # Domain 16: Career & behavioral prep
+│       ├── 16.1-interview-preparation/
+│       ├── 16.2-portfolio-projects/
+│       ├── 16.3-communication-leadership/
+│       ├── 16.4-career-development/
+│       ├── 16.5-scenario-based-interview-walkthroughs/
+│       ├── resources/
+│       ├── tools/
+│       └── examples/
+├── docs/                                        # Central coordination hub
+│   ├── context.md                               # LLM interaction guidelines (this file)
+│   ├── _progress.md                             # Progress tracking across all domains
+│   └── _resources.md                            # Global resources and references
 ```
-
-**📊 Content Status Summary:**
-- **Completed Subtopic:** 1.01 (Input Validation & Injection)  
-  – ✅ SQL Injection and Command Injection (Theory + Quiz completed)  
-  – 🧪 PoC and Resources optional (not blocking)
-- **Pending Subtopics:** 1.2 through 1.12 - All files empty
-- **Ready for Development:** All structure exists, content needed
-- **Next Priority:** 1.2 Cross-Site Scripting (next in sequence)
