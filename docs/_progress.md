@@ -97,15 +97,14 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-### 1.2 Cross-Site Scripting 🟡
+### 1.2 Cross-Site Scripting 🟢
 
-- [x] Reflected XSS — ��
-- [ ] Stored XSS — 🔴
+- [x] Reflected XSS — 🟢
+- [x] Stored XSS — 🟢
 - [x] DOM XSS — 🟢
-- [x] CSP Bypass — 🧪
-- [x] Filter Evasion — 🧪
+- [x] CSP Bypass — 🟢
+- [x] Filter Evasion — 🟢
 - [x] Mitigation — 🟢  
-> 🔁 **Next Up:** Stored XSS  
 > 🧪 **Review Later:** CSP Bypass, Filter Evasion
 
 ---
