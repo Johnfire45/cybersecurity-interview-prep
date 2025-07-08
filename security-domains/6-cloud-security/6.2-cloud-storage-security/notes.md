@@ -1,4 +1,4 @@
-subf# [Subtopic Title Here]
+# [Subtopic Title Here]
 
 ## 📘 Overview
 Brief summary of the concept, including key definitions and real-world relevance.
@@ -16,4 +16,4 @@ Step-by-step breakdown of how a pentester would exploit it.
 How developers or defenders can prevent or fix the vulnerability.
 
 ## 🔗 References & Resources
-Links to OWASP, cheatsheets, RFCs, or blog posts.
+Links to OWASP, cheatsheets, RFCs, or blog posts. 

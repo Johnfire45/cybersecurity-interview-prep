@@ -65,11 +65,8 @@ LLMs (ChatGPT, Cursor, and others) must:
 Each subtopic folder must contain:
 - `notes.md` – Explanation + diagrams
 - `quiz.md` – Final answers to scenario questions
-- `hands-on.md` – Cursor-based PoC or payload work
-- `resources.md` – External links, labs, cheatsheets
 
 Each domain (e.g., api-security, cloud-security) must also have:
-- `resources/`, `tools/`, `examples/` folders
 
 ---
 
@@ -114,9 +111,6 @@ cybersecurity-interview-prep/
 │   │   ├── 0.4-operating-system-kernel/         # Subtopic 0.4 🔴 NOT STARTED
 │   │   ├── 0.5-networking-fundamentals/         # Subtopic 0.5 🔴 NOT STARTED
 │   │   ├── 0.6-trust-identity-concepts/         # Subtopic 0.6 🔴 NOT STARTED
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 1-web-application-security/              # Domain 1: Web application security 🟡 PARTIALLY COMPLETED
 │   │   ├── 1.1-input-validation-injection/      # Subtopic 1.1 🟢 COMPLETED
 │   │   ├── 1.2-cross-site-scripting/            # Subtopic 1.2 🟢 COMPLETED
@@ -130,18 +124,12 @@ cybersecurity-interview-prep/
 │   │   ├── 1.10-ssrf-redirects/                 # Subtopic 1.10 🔴 NOT STARTED
 │   │   ├── 1.11-security-misconfiguration/      # Subtopic 1.11 🔴 NOT STARTED
 │   │   ├── 1.12-misc-attacks/                   # Subtopic 1.12 🔴 NOT STARTED
-│   │   ├── resources/                           # Domain-specific resources
-│   │   ├── tools/                               # Domain-specific tools
-│   │   └── examples/                            # Domain-specific examples
 │   ├── 2-api-security/                          # Domain 2: API security
 │   │   ├── 2.1-api-authentication-authorization/
 │   │   ├── 2.2-api-input-validation-filtering/
 │   │   ├── 2.3-api-authorization-flaws/
 │   │   ├── 2.4-api-data-exposure/
 │   │   ├── 2.5-api-security-testing/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 3-android-security/                      # Domain 3: Android security
 │   │   ├── 3.1-app-manifest-analysis/
 │   │   ├── 3.2-storage-security/
@@ -150,114 +138,71 @@ cybersecurity-interview-prep/
 │   │   ├── 3.5-network-security/
 │   │   ├── 3.6-reverse-engineering-obfuscation/
 │   │   ├── 3.7-mobile-security-tools/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 4-client-side-security/                  # Domain 4: Client-side security
 │   │   ├── 4.1-javascript-security/
 │   │   ├── 4.2-dom-based-attacks/
 │   │   ├── 4.3-content-security-policy/
 │   │   ├── 4.4-same-origin-policy/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 5-network-security/                      # Domain 5: Network security
 │   │   ├── 5.1-network-protocols/
 │   │   ├── 5.2-tls-ssl-configuration/
 │   │   ├── 5.3-man-in-the-middle-attacks/
 │   │   ├── 5.4-network-security-tools/
 │   │   ├── 5.5-wireless-security/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 6-cloud-security/                        # Domain 6: Cloud security
 │   │   ├── 6.1-identity-access-management/
 │   │   ├── 6.2-cloud-storage-security/
 │   │   ├── 6.3-container-security/
 │   │   ├── 6.4-serverless-security/
 │   │   ├── 6.5-cloud-monitoring-logging/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 7-devsecops/                             # Domain 7: DevSecOps
 │   │   ├── 7.1-secure-cicd-pipelines/
 │   │   ├── 7.2-infrastructure-as-code-security/
 │   │   ├── 7.3-security-testing-automation/
 │   │   ├── 7.4-policy-as-code/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 8-secure-code-review/                    # Domain 8: Secure code review
 │   │   ├── 8.1-code-review-methodologies/
 │   │   ├── 8.2-common-vulnerabilities-in-code/
 │   │   ├── 8.3-language-specific-security/
 │   │   ├── 8.4-secure-development-practices/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 9-cryptography/                          # Domain 9: Cryptography
 │   │   ├── 9.1-cryptographic-fundamentals/
 │   │   ├── 9.2-tls-ssl-pki/
 │   │   ├── 9.3-key-management/
 │   │   ├── 9.4-cryptographic-vulnerabilities/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 10-red-team-offensive-security/          # Domain 10: Red team/offensive
 │   │   ├── 10.1-web-exploitation/
 │   │   ├── 10.2-mobile-exploitation/
 │   │   ├── 10.3-network-exploitation/
 │   │   ├── 10.4-social-engineering/
 │   │   ├── 10.5-custom-exploits-scripts/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 11-blue-team-defensive-security/         # Domain 11: Blue team/defensive
 │   │   ├── 11.1-siem-log-analysis/
 │   │   ├── 11.2-threat-hunting/
 │   │   ├── 11.3-incident-response/
 │   │   ├── 11.4-detection-engineering/
 │   │   ├── 11.5-security-operations/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 12-mobile-security-ios/                  # Domain 12: Mobile security (iOS)
 │   │   ├── 12.1-ios-app-security/
 │   │   ├── 12.2-ios-reverse-engineering/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 13-iot-embedded-security/                # Domain 13: IoT & embedded security
 │   │   ├── 13.1-iot-protocols-communication/
 │   │   ├── 13.2-firmware-analysis/
 │   │   ├── 13.3-hardware-security/
 │   │   ├── 13.4-iot-device-security/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 14-social-engineering-human-factors/     # Domain 14: Social engineering
 │   │   ├── 14.1-social-engineering-techniques/
 │   │   ├── 14.2-human-psychology-manipulation/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
 │   ├── 15-compliance-governance/                # Domain 15: Compliance & governance
 │   │   ├── 15.1-regulatory-frameworks/
 │   │   ├── 15.2-security-governance/
-│   │   ├── resources/
-│   │   ├── tools/
-│   │   └── examples/
-│   └── 16-career-behavioral-prep/               # Domain 16: Career & behavioral prep
+│   ├── 16-career-behavioral-prep/               # Domain 16: Career & behavioral prep
 │       ├── 16.1-interview-preparation/
 │       ├── 16.2-portfolio-projects/
 │       ├── 16.3-communication-leadership/
 │       ├── 16.4-career-development/
 │       ├── 16.5-scenario-based-interview-walkthroughs/
-│       ├── resources/
-│       ├── tools/
-│       └── examples/
 ├── docs/                                        # Central coordination hub
 │   ├── context.md                               # LLM interaction guidelines (this file)
 │   ├── _progress.md                             # Progress tracking across all domains
-│   └── _resources.md                            # Global resources and references
 ```

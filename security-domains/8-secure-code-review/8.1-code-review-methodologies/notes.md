@@ -1,4 +1,4 @@
-subf# [Subtopic Title Here]
+# [Subtopic Title Here]
 
 ## 📘 Overview
 Brief summary of the concept, including key definitions and real-world relevance.
