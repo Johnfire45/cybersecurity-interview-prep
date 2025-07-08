@@ -77,10 +77,10 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 - Project structure: ✅ initialized with 17 domains (folders 0–16 all present and correctly named)
 - Quiz protocol: ✅ active
-- Web Application Security: 🟢 Completed:
+- Web Application Security: 🟡 PARTIALLY COMPLETED:
   - `1.1-input-validation-injection/` (Input Validation & Injection) — 🟢 COMPLETED
   - `1.2-cross-site-scripting/` (Cross-Site Scripting) — 🟢 COMPLETED
-- Cybersecurity Fundamentals (Domain 0): 🟡 NEXT PRIORITY - Content development beginning
+- Cybersecurity Fundamentals (Domain 0): 🔴 NOT STARTED
 - Other domains: 🔴 Not Started
 
 ---
@@ -104,10 +104,10 @@ If you spot any, please flag for manual review.
 
 ```
 cybersecurity-interview-prep/
-├── README.md                                    # Project overview and navigation
+├── README.mcd                                    # Project overview and navigation
 ├── .gitignore                                   # Git exclusions
 ├── security-domains/                            # All security domains grouped here
-│   ├── 0-cybersecurity-fundamentals/            # Domain 0: Cybersecurity fundamentals 🟡 NEXT PRIORITY
+│   ├── 0-cybersecurity-fundamentals/            # Domain 0: Cybersecurity fundamentals 🔴 NOT STARTED
 │   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🔴 NOT STARTED
 │   │   ├── 0.2-security-programs-frameworks/    # Subtopic 0.2 🔴 NOT STARTED
 │   │   ├── 0.3-linux-fundamentals/              # Subtopic 0.3 🔴 NOT STARTED
@@ -117,7 +117,7 @@ cybersecurity-interview-prep/
 │   │   ├── resources/
 │   │   ├── tools/
 │   │   └── examples/
-│   ├── 1-web-application-security/              # Domain 1: Web application security 🟢 PARTIALLY COMPLETED
+│   ├── 1-web-application-security/              # Domain 1: Web application security 🟡 PARTIALLY COMPLETED
 │   │   ├── 1.1-input-validation-injection/      # Subtopic 1.1 🟢 COMPLETED
 │   │   ├── 1.2-cross-site-scripting/            # Subtopic 1.2 🟢 COMPLETED
 │   │   ├── 1.3-authentication-session/          # Subtopic 1.3 🔴 NOT STARTED

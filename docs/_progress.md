@@ -1,10 +1,10 @@
 # Cybersecurity Interview Prep — 📊 Complete Progress Tracker
 
 ## 🟩 Legend:
-🟢 Mastered  
-🟡 In Progress  
-🔴 Not Started  
-🧪 Needs Brushing Up  
+🟢 COMPLETED/MASTERED  
+🟡 IN PROGRESS/PARTIALLY COMPLETED  
+🔴 NOT STARTED  
+🧪 NEEDS REVIEW  
 
 ---
 
@@ -12,16 +12,16 @@
 
 - **Total Domains:** 17  
 - **Total Subtopics:** TBA  
-- **Completed:** 🟢 1  
-- **In Progress:** 🟡 2  
+- **Completed:** 🟢 0  
+- **In Progress:** 🟡 1  
 - **Brushing Up:** 🧪 0  
-- **Remaining:** 🔴 14  
+- **Remaining:** 🔴 16  
 
 _This section can be auto-updated later via script if needed._
 
 ---
 
-## 0. Cybersecurity Fundamentals 🟡
+## 0. Cybersecurity Fundamentals 🔴
 
 ### 0.1 Core Principles 🔴
 
