@@ -130,6 +130,24 @@ After any file creation or update, use:
 
 ---
 
+## 🧠 Learning Flow for New Topics
+
+When starting a **new topic or sub-topic** (especially unfamiliar or foundational ones):
+
+- GPT must provide **detailed breakdowns**, not just high-level bullets.
+- This includes:
+  - 📖 Concept explanation from first principles
+  - 🧩 Layered learning: step-by-step build-up
+  - 🧪 Real-world analogies or examples
+  - 🔒 Security context (where applicable)
+  - 🛠️ How this applies to interviews, real-world, or projects
+
+- Once the topic is well-discussed and understood, only then:
+  - ✍️ Summarize the key points into `notes.md`
+  - 🧼 Keep `notes.md` clean, concise, and final — no raw dumps
+
+---
+
 ## ✍️ Cursor Prompt Rules
 
 For any Cursor prompt:

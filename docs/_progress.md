@@ -11,17 +11,26 @@
 ## ✅ Overall Summary
 
 - **Total Domains:** 17  
-- **Total Subtopics:** TBA  
-- **Completed:** 🟢 0  
-- **In Progress:** 🟡 1  
+- **Total Subtopics:** 241  
+- **Completed:** 🟢 19  
+- **In Progress:** 🟡 2  
 - **Brushing Up:** 🧪 0  
-- **Remaining:** 🔴 16  
+- **Remaining:** 🔴 220  
+
+Progress: [██░░░░░░░░░░░░░░░░░░] 7.9% Complete
 
 _This section can be auto-updated later via script if needed._
 
 ---
 
 ## 0. Cybersecurity Fundamentals 🔴
+
+#### Domain Progress Summary
+- 🟢 Mastered: 0
+- 🟡 In Progress: 0
+- 🧪 Needs Review: 0
+- 🔴 Not Started: 33
+- **Total Subtopics:** 33
 
 ### 0.1 Core Principles 🔴
 
@@ -704,4 +713,4 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-**📊 Total Domains: 17 | Total Subtopics: TBA | Current Progress: 1 Completed, 2 In Progress**
+**📊 Total Domains: 17 | Total Subtopics: 241 | Current Progress: 19 Completed, 2 In Progress**
