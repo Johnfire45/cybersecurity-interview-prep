@@ -83,7 +83,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 ---
 
 **📊 Content Status Summary:**
-- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting)
+- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (CIA Triad)
 - **Next Priority:** Domain 0 (Cybersecurity Fundamentals) - Core principles, Linux, Networking, Trust & Identity
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion.

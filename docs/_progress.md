@@ -12,12 +12,12 @@
 
 - **Total Domains:** 17  
 - **Total Subtopics:** 241  
-- **Completed:** 🟢 19  
+- **Completed:** 🟢 20  
 - **In Progress:** 🟡 2  
 - **Brushing Up:** 🧪 0  
-- **Remaining:** 🔴 220  
+- **Remaining:** 🔴 219  
 
-Progress: [██░░░░░░░░░░░░░░░░░░] 7.9% Complete
+Progress: [██░░░░░░░░░░░░░░░░░░] 8.3% Complete
 
 _This section can be auto-updated later via script if needed._
 
@@ -34,7 +34,7 @@ _This section can be auto-updated later via script if needed._
 
 ### 0.1 Core Principles 🔴
 
-- [ ] CIA Triad — 🔴
+- [x] CIA Triad — 🟢
 - [ ] Threat Modeling — 🔴
 - [ ] Security Principles (Least Privilege, Defense in Depth) — 🔴
 - [ ] Red Team vs Blue Team vs Purple Team — 🔴
@@ -713,4 +713,4 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-**📊 Total Domains: 17 | Total Subtopics: 241 | Current Progress: 19 Completed, 2 In Progress**
+**📊 Total Domains: 17 | Total Subtopics: 241 | Current Progress: 20 Completed, 2 In Progress**
