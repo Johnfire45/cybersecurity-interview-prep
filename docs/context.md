@@ -72,15 +72,16 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 # ✅ Current Status (as of now)
 
-- Project structure: ✅ initialized with 17 domains (folders 0–16 all present and correctly named)
-- Quiz protocol: ✅ active
-- Web Application Security: 🟡 PARTIALLY COMPLETED:
-  - `1.1-input-validation-injection/` (Input Validation & Injection) — 🟢 COMPLETED
-  - `1.2-cross-site-scripting/` (Cross-Site Scripting) — 🟢 COMPLETED
-- Cybersecurity Fundamentals (Domain 0): 🟡 PARTIALLY COMPLETED (2/33 subtopics done):
-  - `0.1-core-principles/` CIA Triad — 🟢 COMPLETED
-  - `0.1-core-principles/` Threat Modeling — 🟢 COMPLETED
-- Other domains: 🔴 Not Started
+## 🏆 Overall Progress Dashboard (as of now)
+
+| Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
+|:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
+| 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
+| 📚 Subtopics |  81   |         2            |       1        |      78        | 🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
+| ✅ Subtasks  | 241   |        18            |       –        |     223        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (18/241) |   7.5%     |
+
+**Legend:**  
+🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
 
 ---
 

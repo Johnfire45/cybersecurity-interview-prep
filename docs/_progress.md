@@ -8,27 +8,33 @@
 
 ---
 
-## ✅ Overall Summary
+## 🏆 Overall Progress Dashboard
 
-**Domains:**
-- Total: 17
-- Mastered: 0
-- In Progress: 1
-- Not Started: 16
+> 🎯 **Mission:** Build Mastery, One Block at a Time
 
-**Subtopics:**
-- Total: 81
-- Mastered: 2
-- In Progress: 1
-- Not Started: 78
+| Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
+|:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
+| 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
+| 📚 Subtopics |  81   |         2            |       1        |      78        | 🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
+| ✅ Subtasks  | 241   |        18            |       –        |     223        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (18/241) |   7.5%     |
 
-**Subtasks:**
-- Total: 241
-- Completed: 18
-- Remaining: 223
-- Progress: 7.5%
+---
 
-_This section can be auto-updated later via script if needed._
+> 💡 **Keep going! Every green block is a step closer to mastery.**
+
+**Legend:**  
+🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
+
+---
+
+### 📘 Legend
+
+- 🟢 Mastered – Topic fully understood and drilled  
+- 🟡 In Progress – Some parts complete, others pending  
+- 🔴 Not Started – Yet to begin  
+- 🟨 Domain In Progress – Visual cue for focus  
+- 🟩 Progress Marker – Completion milestone  
+- ⬜ Remaining – Uncompleted portion
 
 ---
 
