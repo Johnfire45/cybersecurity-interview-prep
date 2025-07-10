@@ -139,6 +139,100 @@ Widely used in DevSecOps, cloud-native architectures, and regulatory compliance 
 
 ---
 
+## 📘 1.3.2 Threat Modeling — Key Components
+
+Before applying a threat modeling framework, it’s important to understand the **core components** involved in any effective threat modeling exercise:
+
+---
+
+### 🧱 Core Components
+
+1. **Assets**
+   - What needs protection? (e.g., PII, credentials, payment data, services)
+   - Can include users, infrastructure, and software components
+
+2. **Actors**
+   - Who interacts with the system? (e.g., users, attackers, third-party services)
+   - Includes both internal and external threat agents
+
+3. **Entry Points**
+   - Where can interaction begin? (e.g., APIs, forms, upload portals)
+   - These are often the attack surface
+
+4. **Trust Boundaries**
+   - Logical points where different levels of trust meet (e.g., client ↔ backend, frontend ↔ DB)
+   - Crucial for identifying validation gaps and privilege boundaries
+
+5. **Data Flows**
+   - How data moves between components
+   - Used to generate **Data Flow Diagrams (DFDs)** for visual modeling
+
+6. **Security Controls**
+   - Existing defenses (e.g., input validation, authentication, logging, rate limiting)
+   - Basis for identifying gaps
+
+---
+
+## 🧠 Threat Modeling Frameworks
+
+A range of structured approaches exist to guide the modeling process depending on the goal: security, privacy, risk analysis, or agility.
+
+---
+
+### 🧠 1. STRIDE (Microsoft)
+- **Purpose**: Identify threats in system design by classifying them into 6 categories:
+  - **S**poofing
+  - **T**ampering
+  - **R**epudiation
+  - **I**nformation Disclosure
+  - **D**enial of Service
+  - **E**levation of Privilege
+- 🔍 Strongly supported in the file using **DFDs**, **trust boundaries**, and threat identification
+- 🧩 Best for: Design-phase threat identification in app/system architecture
+
+---
+
+### ⚙️ 2. PASTA (Process for Attack Simulation and Threat Analysis)
+- **Purpose**: Risk-centric and attacker-focused framework to simulate realistic attack paths
+- **7 Stages**: 
+  1. Define business objectives  
+  2. Define technical scope  
+  3. Application decomposition  
+  4. Threat analysis  
+  5. Vulnerability analysis  
+  6. Attack modeling  
+  7. Risk and impact analysis
+- 📈 Maps well to SDLC stages and threat intelligence
+- 🧩 Best for: Large-scale systems, high-risk environments, and regulatory alignment
+
+---
+
+### 🛡️ 3. LINDDUN
+- **Purpose**: Privacy-focused threat modeling
+- Focus Areas:
+  - **L**inkability, **I**dentifiability, **N**on-repudiation, **D**etectability, **D**isclosure of information, **U**nauthorized actions, **N**on-compliance
+- 🔍 Mentioned in the framework table
+- 🧩 Best for: Systems handling PII or subject to privacy regulations (e.g., GDPR)
+
+---
+
+### 🛑 4. DREAD (Deprecated)
+- **Purpose**: Scoring system for threat prioritization (e.g., Damage, Reproducibility, Exploitability...)
+- ❗Marked as deprecated and no longer widely recommended
+- 🔍 Included in table for legacy awareness
+- 🧩 Not advised for modern use, but may appear in legacy systems/interview discussions
+
+---
+
+## ✅ Summary Table
+
+| Model   | Use Case                          |
+|---------|-----------------------------------|
+| **STRIDE**  | Security threat classification    |
+| **PASTA**   | Risk-driven attack simulation     |
+| **LINDDUN** | Privacy-focused threat modeling   |
+| **DREAD**   | Deprecated threat scoring system  |
+
 ## 🛡️ Interview Notes
 
 - Expect to **draw a data flow diagram** and identify STRIDE threats per element
