@@ -65,6 +65,7 @@ Use triple-backtick markdown **only** when output should be copy-pasted directly
 - Structured reports (e.g., result tables)
 
 ❌ Do **not** wrap general explanations or reasoning in markdown.  
+❌ Do **not** wrap quiz question and answer or any such interactive chats in markdown.  
 ✅ Maintain clean formatting and emojis outside markdown when needed.
 
 ---

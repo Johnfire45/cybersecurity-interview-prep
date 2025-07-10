@@ -35,7 +35,7 @@ _This section can be auto-updated later via script if needed._
 ### 0.1 Core Principles 🔴
 
 - [x] CIA Triad — 🟢
-- [ ] Threat Modeling — 🔴
+- [ ] Threat Modeling — 🟢
 - [ ] Security Principles (Least Privilege, Defense in Depth) — 🔴
 - [ ] Red Team vs Blue Team vs Purple Team — 🔴
 
