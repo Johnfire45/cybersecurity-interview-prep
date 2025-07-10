@@ -10,14 +10,23 @@
 
 ## ✅ Overall Summary
 
-- **Total Domains:** 17  
-- **Total Subtopics:** 241  
-- **Completed:** 🟢 20  
-- **In Progress:** 🟡 2  
-- **Brushing Up:** 🧪 0  
-- **Remaining:** 🔴 219  
+**Domains:**
+- Total: 17
+- Mastered: 0
+- In Progress: 1
+- Not Started: 16
 
-Progress: [██░░░░░░░░░░░░░░░░░░] 8.3% Complete
+**Subtopics:**
+- Total: 81
+- Mastered: 2
+- In Progress: 1
+- Not Started: 78
+
+**Subtasks:**
+- Total: 241
+- Completed: 18
+- Remaining: 223
+- Progress: 7.5%
 
 _This section can be auto-updated later via script if needed._
 
@@ -27,15 +36,15 @@ _This section can be auto-updated later via script if needed._
 
 #### Domain Progress Summary
 - 🟢 Mastered: 0
-- 🟡 In Progress: 0
+- 🟡 In Progress: 1
 - 🧪 Needs Review: 0
-- 🔴 Not Started: 33
+- 🔴 Not Started: 32
 - **Total Subtopics:** 33
 
-### 0.1 Core Principles 🔴
+### 0.1 Core Principles 🟡
 
 - [x] CIA Triad — 🟢
-- [ ] Threat Modeling — 🟢
+- [x] Threat Modeling — 🟢
 - [ ] Security Principles (Least Privilege, Defense in Depth) — 🔴
 - [ ] Red Team vs Blue Team vs Purple Team — 🔴
 
@@ -102,7 +111,6 @@ _This section can be auto-updated later via script if needed._
 - [x] Business Logic Input Abuse — 🟢
 - [x] Detection & Exploitation — 🟢
 - [x] Mitigation Strategies — 🟢  
-    > 🧪 **Review Later:** Input Validation, Filtering vs Safe APIs
 
 ---
 
@@ -114,8 +122,6 @@ _This section can be auto-updated later via script if needed._
 - [x] CSP Bypass — 🟢
 - [x] Filter Evasion — 🟢
 - [x] Mitigation — 🟢  
-> 🧪 **Review Later:** CSP Bypass, Filter Evasion
-
 ---
 
 ### 1.3 Authentication & Session Management 🔴
@@ -713,4 +719,4 @@ _This section can be auto-updated later via script if needed._
 
 ---
 
-**📊 Total Domains: 17 | Total Subtopics: 241 | Current Progress: 20 Completed, 2 In Progress**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 2 | Subtasks Completed: 18 | Progress: 7.5%**

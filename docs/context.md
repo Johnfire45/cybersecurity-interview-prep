@@ -77,14 +77,16 @@ Each domain (e.g., api-security, cloud-security) must also have:
 - Web Application Security: 🟡 PARTIALLY COMPLETED:
   - `1.1-input-validation-injection/` (Input Validation & Injection) — 🟢 COMPLETED
   - `1.2-cross-site-scripting/` (Cross-Site Scripting) — 🟢 COMPLETED
-- Cybersecurity Fundamentals (Domain 0): 🔴 NOT STARTED
+- Cybersecurity Fundamentals (Domain 0): 🟡 PARTIALLY COMPLETED (2/33 subtopics done):
+  - `0.1-core-principles/` CIA Triad — 🟢 COMPLETED
+  - `0.1-core-principles/` Threat Modeling — 🟢 COMPLETED
 - Other domains: 🔴 Not Started
 
 ---
 
 **📊 Content Status Summary:**
-- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (CIA Triad)
-- **Next Priority:** Domain 0 (Cybersecurity Fundamentals) - Core principles, Linux, Networking, Trust & Identity
+- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (CIA Triad), 0.1 (Threat Modeling)
+- **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining Core principles, Linux, Networking, Trust & Identity
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion.
 
@@ -104,8 +106,8 @@ cybersecurity-interview-prep/
 ├── README.mcd                                    # Project overview and navigation
 ├── .gitignore                                   # Git exclusions
 ├── security-domains/                            # All security domains grouped here
-│   ├── 0-cybersecurity-fundamentals/            # Domain 0: Cybersecurity fundamentals 🔴 NOT STARTED
-│   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🔴 NOT STARTED
+│   ├── 0-cybersecurity-fundamentals/            # Domain 0: Cybersecurity fundamentals 🟡 PARTIALLY COMPLETED (2/33)
+│   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🟡 PARTIALLY COMPLETED (CIA Triad ✅, Threat Modeling ✅)
 │   │   ├── 0.2-security-programs-frameworks/    # Subtopic 0.2 🔴 NOT STARTED
 │   │   ├── 0.3-linux-fundamentals/              # Subtopic 0.3 🔴 NOT STARTED
 │   │   ├── 0.4-operating-system-kernel/         # Subtopic 0.4 🔴 NOT STARTED

@@ -53,6 +53,45 @@ Each folder should contain:
 
 ---
 
+### 📊 Progress Tracking Protocol
+
+#### **Domain Structure and Progress Units**
+
+- **Main Domains:**  
+  The top-level folders (numbered 0–16) represent the primary cybersecurity domains (e.g., Web Application Security, Cloud Security).
+
+- **Subtopics/Subdomains:**  
+  Each domain contains multiple subtopics, represented as numbered headers in `_progress.md` (e.g., `### 1.1 Input Validation & Injection`). These are the main learning modules within each domain.
+
+- **Subtasks (Progress Units):**  
+  Under each subtopic, there are multiple individual checkboxes (`- [ ]` or `- [x]`).  
+  - Each checkbox represents a specific concept, technique, or scenario to be mastered.
+  - The total number of these checkboxes across all subtopics is the true measure of progress (e.g., 241 subtasks).
+  - **Progress percentage, “completed,” and “remaining” counts in `_progress.md` must always be calculated based on the number of checked `[x]` boxes, not just subtopic headers.**
+
+#### **Manual Mastery Mark (🟢):**
+
+- When a subtopic is fully mastered (all subtasks completed and reviewed), it is marked with a green dot (🟢) at the subtopic header level.
+- The green dot is a manual, authoritative indicator of mastery for that subtopic, but the overall progress bar and statistics are based on the sum of completed subtasks.
+
+#### **Summary:**
+
+- **Domains:** Organizational grouping
+- **Subtopics:** Learning modules
+- **Subtasks:** Actual progress units (checkboxes)
+- **Progress Bar:** Always reflects the ratio of checked subtasks to total subtasks
+
+---
+
+#### **Manual Green Dot (🟢) — Source of Truth**
+
+- The green dot (🟢) at the subtask, subtopic, or domain level is the only authoritative indicator of progress in `_progress.md`.
+- Only the user (Harshit) updates the 🟢 mark, and it always reflects the true, reviewed, and confirmed state of completion.
+- All summary statistics, progress bars, and status updates made by Cursor or any LLM agent must be based on counting and tracking the number of domains, subtopics, and subtasks marked with 🟢.
+- **Never override, infer, or “auto-complete” a 🟢 mark—Cursor must only update progress based on explicit 🟢 marks present in the file.**
+
+---
+
 ## ✅ File Output Guidelines
 
 ### 🧾 When to Use Markdown Blocks
