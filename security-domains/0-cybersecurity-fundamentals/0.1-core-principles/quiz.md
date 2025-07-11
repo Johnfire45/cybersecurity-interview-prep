@@ -74,3 +74,52 @@
    - Microservices trust internal traffic blindly  
    - DB assumes app-layer will enforce tenant separation  
    - Public frontend not throttled or isolated
+
+   
+### 🔐 Security Principles — Advanced Scenario Quiz
+
+#### 🧠 Scenario: Multi-Principle Security Breakdown in Fintech Integration
+
+A fintech startup integrates with a third-party payment gateway. Here’s what happened in a real-world incident:
+
+- Internal microservices are protected via a centralized API gateway, but **each microservice blindly trusts JWTs** without verifying signatures.
+- The payment module **encrypts card tokens**, but **stores the encryption key hardcoded** in the source code — which was accidentally **pushed to a public GitHub repo**.
+- An attacker finds an **exposed CI/CD backup folder** on a cloud bucket containing:
+  - `.env` files with API secrets
+  - Admin access tokens (expired, but **not revoked**)
+  - Source code files exposing internal microservice routes
+- The application has **no rate limiting** or behavioral anomaly detection.
+- **All authenticated users**, including **interns**, can invoke an **internal diagnostic API** that dumps logs with **PII and credentials**.
+- Developers assume “no one will find these routes,” using **security through obscurity**.
+
+---
+
+#### ❓Question:
+
+**Which FOUR Security Principles were violated?**  
+Explain **each violation** in context of the above scenario.
+
+---
+
+#### ✅ Expected Answer (Reference)
+
+**1. Defense in Depth**
+- No layered protection (JWT blindly trusted, no rate limits, no anomaly detection).
+- If one layer failed (e.g., gateway), no fallback validation existed.
+
+**2. Least Privilege**
+- Interns could access diagnostic APIs and log sensitive data.
+- CI/CD folders were publicly readable — permissions were not scoped.
+
+**3. Fail-Safe Defaults**
+- Sensitive systems and logs were accessible without explicit permission boundaries.
+- Assumes access is allowed unless explicitly denied.
+
+**4. Open Design**
+- Sensitive keys were hardcoded in code pushed to GitHub.
+- Assumed obscurity (undocumented routes) would keep attackers out.
+- Security relied on secrecy, not on robust, reviewed design.
+
+---
+
+> 🧠 This question integrates multiple real-world violations and tests understanding of layered architectural risks, design flaws, and access control principles.

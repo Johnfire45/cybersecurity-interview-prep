@@ -78,7 +78,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
 | 📚 Subtopics |  81   |         2            |       1        |      78        | 🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
-| ✅ Subtasks  | 241   |        18            |       –        |     223        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (18/241) |   7.5%     |
+| ✅ Subtasks  | 241   |        19            |       –        |     222        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (19/241) |   7.9%     |
 
 **Legend:**  
 🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
@@ -86,7 +86,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 ---
 
 **📊 Content Status Summary:**
-- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (CIA Triad), 0.1 (Threat Modeling)
+- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (CIA Triad), 0.1 (Threat Modeling), 0.1 (Security Principles)
 - **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining Core principles, Linux, Networking, Trust & Identity
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion.

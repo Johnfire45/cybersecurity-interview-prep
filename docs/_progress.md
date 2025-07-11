@@ -16,7 +16,7 @@
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
 | 📚 Subtopics |  81   |         2            |       1        |      78        | 🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
-| ✅ Subtasks  | 241   |        18            |       –        |     223        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (18/241) |   7.5%     |
+| ✅ Subtasks  | 241   |        19            |       –        |     222        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (19/241) |   7.9%     |
 
 ---
 
@@ -51,7 +51,7 @@
 
 - [x] CIA Triad — 🟢
 - [x] Threat Modeling — 🟢
-- [ ] Security Principles (Least Privilege, Defense in Depth) — 🔴
+- [x] Security Principles (Least Privilege, Defense in Depth) — 🟢
 - [ ] Red Team vs Blue Team vs Purple Team — 🔴
 
 ### 0.2 Security Programs & Frameworks 🔴
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 2 | Subtasks Completed: 18 | Progress: 7.5%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 2 | Subtasks Completed: 19 | Progress: 7.9%**
