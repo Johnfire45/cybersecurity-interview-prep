@@ -1,3 +1,4 @@
+```markdown
 # CIA Triad (Confidentiality, Integrity, Availability)
 
 ## 📘 Overview
@@ -9,6 +10,8 @@ The **CIA Triad** is the foundational model for information security, consisting
 
 This model guides the design, evaluation, and implementation of security policies across all domains—whether network, application, or data security.
 
+---
+
 ## 🎯 Attack Scenarios
 
 - **Confidentiality breach**: Misconfigured cloud storage (e.g., public S3 buckets) leaking sensitive employee payroll data.
@@ -18,11 +21,15 @@ This model guides the design, evaluation, and implementation of security policie
 Advanced example:
 - A user overwriting HR documents by uploading a file with the same name and bypassing file validation (breaks both **integrity** and **availability**).
 
+---
+
 ## 🧪 Detection Techniques
 
 - **Confidentiality**: Audit logs, access review reports, and DLP (Data Loss Prevention) alerts.
 - **Integrity**: Hash/checksum verification, file integrity monitoring tools (e.g., Tripwire).
 - **Availability**: Uptime monitoring tools, SIEM alerts on service crashes or traffic spikes.
+
+---
 
 ## 🛠️ Exploitation Flow
 
@@ -35,6 +42,8 @@ Example (Confidentiality):
 1. HR misconfigures database access permissions.
 2. Internal network allows all users to view sensitive records.
 3. Unauthorized data access occurs.
+
+---
 
 ## 🔐 Mitigation Strategies
 
@@ -53,11 +62,7 @@ Example (Confidentiality):
   - Ensure redundancy and failover systems
   - Monitor service uptime with alerting
 
-## 🔗 References & Resources
-
-- [OWASP Top 10](https://owasp.org/Top10/)
-- [NIST SP 800-12 Rev. 1: Introduction to Information Security](https://csrc.nist.gov/publications/detail/sp/800-12/rev-1/final)
-- [Wikipedia: CIA Triad](https://en.wikipedia.org/wiki/Information_security#The_CIA_triad)
+---
 
 # Threat Modeling
 
@@ -73,6 +78,44 @@ It helps uncover:
 - Unhandled threat surfaces
 
 Widely used in DevSecOps, cloud-native architectures, and regulatory compliance efforts.
+
+---
+
+## 🧱 Core Components of Threat Modeling
+
+- **Assets**: What needs protection? (e.g., data, services, credentials)
+- **Attackers**: Who can threaten the system? (internal, external, automated)
+- **Trust Boundaries**: Where trust levels shift (e.g., client ↔ server)
+- **Entry/Exit Points**: Where interaction begins or ends (APIs, forms, inputs)
+- **Threats**: What can go wrong across components or flows
+- **Mitigations**: How to prevent, detect, or contain identified threats
+
+---
+
+## ⚔️ Threat Modeling Frameworks
+
+| **STRIDE**               | **PASTA**                             | **LINDDUN**                                               | **OCTAVE**                                    |
+|--------------------------|----------------------------------------|------------------------------------------------------------|-----------------------------------------------|
+| Spoofing                 | Process for Attack Simulation         | Linkability                                                | Operational Risk                              |
+| Tampering                | Threat Analysis                       | Identifiability                                            | Critical Threat Assets                        |
+| Repudiation              | Attack Vectors                        | Non-Repudiation                                            | Vulnerability Evaluation                      |
+| DoS                      | Network Simulation                    | Detectability                                              |                                               |
+| Privilege Escalation     |                                        | Disclosure                                                 |                                               |
+|                          |                                        | Unawareness                                                |                                               |
+|                          |                                        | Non-Compliance                                             |                                               |
+| ✅ Used For:             | ✅ Used For:                           | ✅ Used For:                                               | ✅ Used For:                                   |
+| Web/Mobile/API           | Complex Enterprise Risk Modeling      | Privacy-Focused Systems                                    | Internal Business Risk Modeling               |
+| Thick Client             |                                        |                                                            |                                               |
+
+---
+
+### 📌 Usage Tips
+
+- 🧠 Combine **STRIDE + PASTA** for layered threat + risk modeling
+- 🔐 Apply early in SDLC: architecture design, CI/CD pipelines
+- 🔍 LINDDUN helps for **privacy** risks (e.g., GDPR, PII)
+- 📊 OCTAVE is **asset and business-impact driven**
+- Treat threat modeling as **continuous**, not one-time
 
 ---
 
@@ -106,22 +149,12 @@ Widely used in DevSecOps, cloud-native architectures, and regulatory compliance 
 
 ## 🔐 Mitigation Strategies
 
-- **STRIDE**-based threat modeling for each component
 - Define **trust boundaries** clearly in architecture diagrams
 - Use **service-level authentication** (mTLS, JWT claims)
 - Enforce **input validation** at all exposed interfaces
 - Apply **least privilege principles** between services/modules
-- Treat threat modeling as **continuous**, not one-time
-
----
-
-## 🧠 Frameworks Summary
-
-| Model   | Use Case                          |
-|---------|-----------------------------------|
-| **STRIDE**  | Security threat classification    |
-| **LINDDUN** | Privacy-focused threat modeling   |
-| **DREAD**   | Deprecated threat scoring system  |
+- Use **STRIDE** or other models to drive secure design reviews
+- Make threat modeling a **recurring process**
 
 ---
 
@@ -139,91 +172,6 @@ Widely used in DevSecOps, cloud-native architectures, and regulatory compliance 
 
 ---
 
-## 📘 1.3.2 Threat Modeling — Key Components
-
-Before applying a threat modeling framework, it’s important to understand the **core components** involved in any effective threat modeling exercise:
-
----
-
-### 🧱 Core Components
-
-1. **Assets**
-   - What needs protection? (e.g., PII, credentials, payment data, services)
-   - Can include users, infrastructure, and software components
-
-2. **Actors**
-   - Who interacts with the system? (e.g., users, attackers, third-party services)
-   - Includes both internal and external threat agents
-
-3. **Entry Points**
-   - Where can interaction begin? (e.g., APIs, forms, upload portals)
-   - These are often the attack surface
-
-4. **Trust Boundaries**
-   - Logical points where different levels of trust meet (e.g., client ↔ backend, frontend ↔ DB)
-   - Crucial for identifying validation gaps and privilege boundaries
-
-5. **Data Flows**
-   - How data moves between components
-   - Used to generate **Data Flow Diagrams (DFDs)** for visual modeling
-
-6. **Security Controls**
-   - Existing defenses (e.g., input validation, authentication, logging, rate limiting)
-   - Basis for identifying gaps
-
----
-
-## 🧠 Threat Modeling Frameworks
-
-A range of structured approaches exist to guide the modeling process depending on the goal: security, privacy, risk analysis, or agility.
-
----
-
-### 🧠 1. STRIDE (Microsoft)
-- **Purpose**: Identify threats in system design by classifying them into 6 categories:
-  - **S**poofing
-  - **T**ampering
-  - **R**epudiation
-  - **I**nformation Disclosure
-  - **D**enial of Service
-  - **E**levation of Privilege
-- 🔍 Strongly supported in the file using **DFDs**, **trust boundaries**, and threat identification
-- 🧩 Best for: Design-phase threat identification in app/system architecture
-
----
-
-### ⚙️ 2. PASTA (Process for Attack Simulation and Threat Analysis)
-- **Purpose**: Risk-centric and attacker-focused framework to simulate realistic attack paths
-- **7 Stages**: 
-  1. Define business objectives  
-  2. Define technical scope  
-  3. Application decomposition  
-  4. Threat analysis  
-  5. Vulnerability analysis  
-  6. Attack modeling  
-  7. Risk and impact analysis
-- 📈 Maps well to SDLC stages and threat intelligence
-- 🧩 Best for: Large-scale systems, high-risk environments, and regulatory alignment
-
----
-
-### 🛡️ 3. LINDDUN
-- **Purpose**: Privacy-focused threat modeling
-- Focus Areas:
-  - **L**inkability, **I**dentifiability, **N**on-repudiation, **D**etectability, **D**isclosure of information, **U**nauthorized actions, **N**on-compliance
-- 🔍 Mentioned in the framework table
-- 🧩 Best for: Systems handling PII or subject to privacy regulations (e.g., GDPR)
-
----
-
-### 🛑 4. DREAD (Deprecated)
-- **Purpose**: Scoring system for threat prioritization (e.g., Damage, Reproducibility, Exploitability...)
-- ❗Marked as deprecated and no longer widely recommended
-- 🔍 Included in table for legacy awareness
-- 🧩 Not advised for modern use, but may appear in legacy systems/interview discussions
-
----
-
 ## ✅ Summary Table
 
 | Model   | Use Case                          |
@@ -231,10 +179,36 @@ A range of structured approaches exist to guide the modeling process depending o
 | **STRIDE**  | Security threat classification    |
 | **PASTA**   | Risk-driven attack simulation     |
 | **LINDDUN** | Privacy-focused threat modeling   |
-| **DREAD**   | Deprecated threat scoring system  |
+| **OCTAVE**  | Business and asset risk modeling  |
+| **DREAD**   | ⚠️ Deprecated threat scoring model |
 
-## 🛡️ Interview Notes
+---
+```
 
-- Expect to **draw a data flow diagram** and identify STRIDE threats per element
-- Be ready to **map real-world vulnerabilities** to trust boundary issues
-- Highlight **design-phase security mindset** in SDLC interviews
+## 🔐 Security Principles
+
+> **Fundamental guidelines** on how to **design, implement & access secure systems**.
+
+### 🎯 Mastering Them Helps You:
+- Critically evaluate system designs
+- Spot vulnerabilities early
+- Architect secure solutions
+
+---
+
+### 🧱 Essential Security Principles
+
+| 🔑 **Principle**               | 🎯 **Purpose**                                                                 | 🛡️ **Key Benefits**                                                  |
+|-------------------------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| **Least Privilege**           | Minimize rights/access to users/processes                                     | 🔻 Reduces Attack Surface                                            |
+| **Defense-in-Depth**          | Multiple overlapping defense layers                                           | 🧱 Resilience to Layered Attacks                                     |
+| **Fail-Safe Defaults**        | Deny access by default                                                        | ❌ Minimizes Unintentional Access                                    |
+| **Separation of Duties**      | Divide critical tasks between roles                                           | 🔐 Prevents Error or Abuse from Single User                          |
+| **Economy of Mechanism**      | Simple logic → minimal errors → simpler attack surface                        | ✅ Easier to Audit & Secure                                          |
+| **Open Design**               | Don't rely on secrecy; publish secure design                                 | 🌍 Encourages Transparency & Robustness                              |
+| ~~Security Through Obscurity~~ ⚠️ | ⚠️ **Myth**: “No one can guess this...” → weak assumption               | 🚫 Never substitute for real security controls                       |
+| **Complete Mediation**        | Every access must be verified against the access control policy               | 🛑 Stops Permission Leakage<br>❗ Don't cache permissions             |
+| **Least Common Mechanism**    | Avoid shared memory/resources across different privilege levels               | ⚠️ Limits Inter-process Abuse<br>🧯 Prevents Cross-Impact             |
+| **Psychological Acceptability** | Security must not hinder legitimate users                                    | 🧠 Encourages Compliance<br>🟠 Overly complex design → weak behaviors |
+
+> Example: Forcing users to remember a 256-bit hex password → weak password reuse or sticky notes.  
