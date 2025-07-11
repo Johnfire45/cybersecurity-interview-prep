@@ -77,8 +77,8 @@ Each domain (e.g., api-security, cloud-security) must also have:
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
-| 📚 Subtopics |  81   |         2            |       1        |      78        | 🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
-| ✅ Subtasks  | 241   |        19            |       –        |     222        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (19/241) |   7.9%     |
+| 📚 Subtopics |  81   |         3            |       0        |      78        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
+| ✅ Subtasks  | 241   |        20            |       –        |     221        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (20/241) |   8.3%     |
 
 **Legend:**  
 🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
@@ -86,8 +86,8 @@ Each domain (e.g., api-security, cloud-security) must also have:
 ---
 
 **📊 Content Status Summary:**
-- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (CIA Triad), 0.1 (Threat Modeling), 0.1 (Security Principles)
-- **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining Core principles, Linux, Networking, Trust & Identity
+- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (Core Principles - CIA Triad, Threat Modeling, Security Principles, Red Team vs Blue Team vs Purple Team)
+- **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining subtopics: 0.2 (Security Programs & Frameworks), 0.3 (Linux Fundamentals), 0.4 (Operating System & Kernel), 0.5 (Networking Fundamentals), 0.6 (Trust & Identity Concepts)
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion.
 
@@ -107,8 +107,8 @@ cybersecurity-interview-prep/
 ├── README.mcd                                    # Project overview and navigation
 ├── .gitignore                                   # Git exclusions
 ├── security-domains/                            # All security domains grouped here
-│   ├── 0-cybersecurity-fundamentals/            # Domain 0: Cybersecurity fundamentals 🟡 PARTIALLY COMPLETED (2/33)
-│   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🟡 PARTIALLY COMPLETED (CIA Triad ✅, Threat Modeling ✅)
+│   ├── 0-cybersecurity-fundamentals/            # Domain 0: Cybersecurity fundamentals 🟡 PARTIALLY COMPLETED (1/6)
+│   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🟢 COMPLETED (CIA Triad ✅, Threat Modeling ✅, Security Principles ✅, Red Team vs Blue Team vs Purple Team ✅)
 │   │   ├── 0.2-security-programs-frameworks/    # Subtopic 0.2 🔴 NOT STARTED
 │   │   ├── 0.3-linux-fundamentals/              # Subtopic 0.3 🔴 NOT STARTED
 │   │   ├── 0.4-operating-system-kernel/         # Subtopic 0.4 🔴 NOT STARTED

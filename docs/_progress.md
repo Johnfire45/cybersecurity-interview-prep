@@ -15,8 +15,8 @@
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
-| 📚 Subtopics |  81   |         2            |       1        |      78        | 🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
-| ✅ Subtasks  | 241   |        19            |       –        |     222        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (19/241) |   7.9%     |
+| 📚 Subtopics |  81   |         3            |       0        |      78        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
+| ✅ Subtasks  | 241   |        20            |       –        |     221        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (20/241) |   8.3%     |
 
 ---
 
@@ -41,18 +41,18 @@
 ## 0. Cybersecurity Fundamentals 🔴
 
 #### Domain Progress Summary
-- 🟢 Mastered: 0
-- 🟡 In Progress: 1
+- 🟢 Mastered: 1
+- 🟡 In Progress: 0
 - 🧪 Needs Review: 0
 - 🔴 Not Started: 32
 - **Total Subtopics:** 33
 
-### 0.1 Core Principles 🟡
+### 0.1 Core Principles 🟢
 
 - [x] CIA Triad — 🟢
 - [x] Threat Modeling — 🟢
 - [x] Security Principles (Least Privilege, Defense in Depth) — 🟢
-- [ ] Red Team vs Blue Team vs Purple Team — 🔴
+- [x] Red Team vs Blue Team vs Purple Team — 🟢
 
 ### 0.2 Security Programs & Frameworks 🔴
 
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 2 | Subtasks Completed: 19 | Progress: 7.9%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 3 | Subtasks Completed: 20 | Progress: 8.3%**

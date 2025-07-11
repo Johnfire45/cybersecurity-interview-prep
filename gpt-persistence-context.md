@@ -53,7 +53,7 @@ Each folder should contain:
 
 ---
 
-### 📊 Progress Tracking Protocol
+## 📊 Progress Tracking Protocol
 
 #### **Domain Structure and Progress Units**
 
@@ -76,9 +76,9 @@ Each folder should contain:
 
 #### **Summary:**
 
-- **Domains:** Organizational grouping
-- **Subtopics:** Learning modules
-- **Subtasks:** Actual progress units (checkboxes)
+- **Domains:** Organizational grouping  
+- **Subtopics:** Learning modules  
+- **Subtasks:** Actual progress units (checkboxes)  
 - **Progress Bar:** Always reflects the ratio of checked subtasks to total subtasks
 
 ---
@@ -92,16 +92,46 @@ Each folder should contain:
 
 ---
 
+## 📚 Study Progress Flow
+
+1. Check `_progress.md` before each session  
+2. First explain the topic/subtopic/subtasks in details in the chat only and then also give a summary of the explaination for the `notes.md` in a markdown box.  
+3. Move to `quiz.md` and solve questions  
+4. Mark topic as **🟢 mastered** when:  
+   - Notes are understood  
+   - Quiz is solved correctly  
+   - User confirms retention
+
+---
+
+## 🧠 Learning Flow for New Topics
+
+When starting a **new topic or sub-topic or subtasks**:
+
+- GPT must provide **detailed breakdowns**, not just high-level bullets.
+- This includes:
+  - 📖 Concept explanation from first principles  
+  - 🧩 Layered learning: step-by-step build-up  
+  - 🧪 Real-world analogies or examples  
+  - 🔒 Security context (where applicable)  
+  - 🛠️ How this applies to interviews, real-world, or projects  
+
+- Once the topic is well-discussed and understood, only then:
+  - ✍️ Summarize the key points into `notes.md`  
+  - 🧼 Keep `notes.md` clean, concise, and final — no raw dumps
+
+---
+
 ## ✅ File Output Guidelines
 
 ### 🧾 When to Use Markdown Blocks
 
 Use triple-backtick markdown **only** when output should be copy-pasted directly:
-- Code (e.g., JS, HTML, Python, Bash)
-- Shell commands, payloads
-- Cursor, Claude or LLM prompts
-- File contents (e.g., `notes.md`, `quiz.md`)
-- Structured reports (e.g., result tables)
+- Code (e.g., JS, HTML, Python, Bash)  
+- Shell commands, payloads  
+- Cursor, Claude or LLM prompts  
+- File contents (e.g., `notes.md`, `quiz.md`)  
+- Structured reports (e.g., result tables)  
 
 ❌ Do **not** wrap general explanations or reasoning in markdown.  
 ❌ Do **not** wrap quiz question and answer or any such interactive chats in markdown.  
@@ -138,56 +168,6 @@ After any file creation or update, use:
 
 ---
 
-## 🧪 Quiz Behavior Rules
-
-- Ask **interview-level MCQs** — not basic  
-- Label real-world scenarios:
-  - 🧨 Real-World Scenario  
-  - 🔒 OWASP Auth Bypass  
-  - 💡 Business Logic Exploit  
-  - 🛠️ Defense Engineering  
-
-### 🎯 Quiz Format Rules:
-1. Always ask **1 question at a time**  
-2. **If question has sub-questions**, ask those only after the first is answered  
-3. Wait for user input before revealing answers  
-4. After answer:
-   - Confirm correctness
-   - Explain reasoning and possible variants  
-5. If user requests, insert the quiz into `quiz.md` automatically  
-
----
-
-## 📚 Study Progress Flow
-
-1. Check `_progress.md` before each session  
-2. Start with `notes.md` for new subtopic  
-3. Move to `quiz.md` and solve questions  
-4. Mark topic as **🟢 mastered** when:
-   - Notes are understood  
-   - Quiz is solved correctly  
-   - User confirms retention
-
----
-
-## 🧠 Learning Flow for New Topics
-
-When starting a **new topic or sub-topic** (especially unfamiliar or foundational ones):
-
-- GPT must provide **detailed breakdowns**, not just high-level bullets.
-- This includes:
-  - 📖 Concept explanation from first principles
-  - 🧩 Layered learning: step-by-step build-up
-  - 🧪 Real-world analogies or examples
-  - 🔒 Security context (where applicable)
-  - 🛠️ How this applies to interviews, real-world, or projects
-
-- Once the topic is well-discussed and understood, only then:
-  - ✍️ Summarize the key points into `notes.md`
-  - 🧼 Keep `notes.md` clean, concise, and final — no raw dumps
-
----
-
 ## ✍️ Cursor Prompt Rules
 
 For any Cursor prompt:
@@ -198,8 +178,8 @@ For any Cursor prompt:
   - 💬 Inline code explanations  
   - 🗂️ File names & output structure  
 - Always refer to:
-  - `_progress.md`
-  - `context.md`
+  - `_progress.md`  
+  - `context.md`  
   - Any files referenced in prompt
 
 ---
@@ -216,6 +196,26 @@ For any Cursor prompt:
 
 ---
 
+## 🧪 Quiz Behavior Rules
+
+- Ask **interview-level MCQs** — not basic  
+- Label real-world scenarios:
+  - 🧨 Real-World Scenario  
+  - 🔒 OWASP Auth Bypass  
+  - 💡 Business Logic Exploit  
+  - 🛠️ Defense Engineering  
+
+### 🎯 Quiz Format Rules:
+1. Always ask **1 question at a time**  
+2. **If question has sub-questions**, ask those only after the first is answered  
+3. Wait for user input before revealing answers  
+4. After answer:
+   - Confirm correctness  
+   - Explain reasoning and possible variants  
+5. If user requests, insert the quiz into `quiz.md` automatically
+
+---
+
 ## 🛡️ Security Framing Rules
 
 In any security topic:
@@ -223,8 +223,8 @@ In any security topic:
   - OWASP Top 10  
   - OWASP API Top 10  
 - ⚠️ Warn on dangerous or insecure practices:
-  - Use of `eval`, `innerHTML`, insecure deserialization, broken access control
-- 🔐 Highlight mitigation strategy (e.g., CSP, input sanitization, auth headers)
+  - Use of `eval`, `innerHTML`, insecure deserialization, broken access control  
+- 🔐 Highlight mitigation strategy (e.g., CSP, input sanitization, auth headers)  
 - 🚫 NEVER expose or generate hardcoded secrets or tokens
 
 ---

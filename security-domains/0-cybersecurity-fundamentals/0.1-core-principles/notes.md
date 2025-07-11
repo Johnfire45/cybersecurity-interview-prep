@@ -212,3 +212,25 @@ Widely used in DevSecOps, cloud-native architectures, and regulatory compliance 
 | **Psychological Acceptability** | Security must not hinder legitimate users                                    | 🧠 Encourages Compliance<br>🟠 Overly complex design → weak behaviors |
 
 > Example: Forcing users to remember a 256-bit hex password → weak password reuse or sticky notes.  
+
+## 🛡️ Red Team vs Blue Team vs Purple Team
+
+## 🔄 Comparison Table
+
+| 🧩 Category            | 🔴 Red Team (Offensive)                                      | 🔵 Blue Team (Defensive)                                         | 🟣 Purple Team (Collaborative)                                    |
+|------------------------|--------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
+| **Role**               | Emulates attackers                                           | Detects & defends                                                | Bridges Red & Blue teams                                         |
+| **Objective**          | Identify unknown vulnerabilities                             | Minimize attack surface & incident impact                        | Improve defense through collaboration                           |
+| **Primary Focus**      | Attacks, exploitation, evasion                               | Monitoring, detection, and response                              | Coordination, tuning, feedback loops                            |
+| **Core Activities**    | Social engineering, lateral movement, adversary simulation   | Threat hunting, SIEM analysis, incident response                 | Exercise facilitation, detection gap analysis                   |
+| **Key Tools/Concepts** | MITRE ATT&CK, C2 frameworks, exploits                        | SIEM, endpoint monitoring, network logs                          | MITRE coverage, adversary emulation, detection mapping          |
+| **Mindset**            | "Assume breach is possible — prove it"                       | "Assume breach happened — catch it fast"                         | "Assume breach is continuous — build synergy between teams"     |
+| **Interview Tip**      | Demonstrate how you chain vulnerabilities                   | Show how you detect, triage, and respond to alerts               | Explain how findings improve defense mechanisms                 |
+| **Real-World Analogy** | Penetration tester or ethical hacker                         | SOC analyst or detection engineer                                | Purple team lead or threat simulation engineer                  |
+
+---
+
+> ✅ **Interview Guidance:**  
+- Red teamers often get tested on chaining exploits, lateral movement, and bypassing detection.  
+- Blue teamers are quizzed on log analysis, triage, and SIEM correlation use cases.  
+- Purple team interviews often assess your ability to simulate threats and measure detection gaps.
