@@ -209,10 +209,10 @@ For any Cursor prompt:
 1. Always ask **1 question at a time**  
 2. **If question has sub-questions**, ask those only after the first is answered  
 3. Wait for user input before revealing answers  
-4. After answer:
-   - Confirm correctness  
+4. After the User answer:
+   - Confirm correctness and draw a comparison between the actual right and how the user answered technically
    - Explain reasoning and possible variants  
-5. If user requests, insert the quiz into `quiz.md` automatically
+5. After this give a summarize `quiz.md` notes 
 
 ---
 
@@ -239,5 +239,3 @@ In any security topic:
 - 🛠️ Treat this file (`gpt-persistence-context.md`) as binding and always up-to-date
 
 ---
-
-Let me know if you'd like to save or version this context into your local `_guidelines.md` or sync it with `context.md`.

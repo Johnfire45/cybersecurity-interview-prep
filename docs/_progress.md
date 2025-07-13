@@ -57,7 +57,7 @@
 ### 0.2 Security Programs & Frameworks 🔴
 
 - [x] Risk Management — 🟢
-- [ ] Security Governance — 🔴
+- [ ] Security Governance — 🟢
 - [ ] Security Controls (Preventive, Detective, Corrective) — 🔴
 - [ ] NIST / ISO / CIS Controls Overview — 🔴
 - [ ] Security Policies & Compliance (SOC2, HIPAA, etc.) — 🔴

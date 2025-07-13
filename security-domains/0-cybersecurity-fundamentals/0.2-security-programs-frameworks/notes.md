@@ -84,3 +84,47 @@ Security Governance is the strategic layer of cybersecurity, focusing on alignin
 - Clear RACI chart (who owns, approves, consults, informed)
 - Success measured via KPIs and audits
 - Often tied to standards like ISO 27001 or NIST CSF
+
+---
+
+## 🔐 Security Controls – Preventive, Detective, Corrective
+
+### ✅ What Are Security Controls?
+Security controls are technical, administrative, or physical measures to mitigate, detect, or correct risks to systems.
+
+---
+
+### 🧩 Control Categories
+
+| Category      | Purpose                                   | Examples                                                   |
+|---------------|-------------------------------------------|-------------------------------------------------------------|
+| Preventive    | Block incidents before they occur         | MFA, firewalls, access control, security policies           |
+| Detective     | Discover incidents during or after        | SIEM, audit logs, IDS/IPS                                   |
+| Corrective    | Respond to incidents and restore systems  | Patch management, backups, terminating compromised accounts |
+
+---
+
+### 🧱 Control Layers
+
+| Layer          | Preventive              | Detective                 | Corrective              |
+|----------------|--------------------------|---------------------------|--------------------------|
+| Administrative | Onboarding rules         | HR audit logs             | Disciplinary policies    |
+| Technical      | MFA, RBAC                | IDS, SIEM, logs           | Patch, revoke access     |
+| Physical       | Badges, security gates   | CCTV                      | Lock replacement         |
+
+---
+
+### 🛠️ Real-World Use
+A robust system implements all three types for layered defense:
+- **Preventive**: RBAC + MFA
+- **Detective**: SIEM + alerts
+- **Corrective**: Account suspension + forensics
+
+---
+
+### 🎯 Interview Insights
+- Focus on mapping each control to its type and effectiveness
+- Be ready to design control sets for:
+  - Data breaches
+  - Insider threats
+  - Compliance failures

@@ -96,3 +96,70 @@ From the scenario:
 - 🛡️ Audit success and certification progress  
 - 🔁 Decreased response time to risk-related findings  
 
+---
+
+### 🧠 Real-World Scenario — Security Governance
+
+**Question:**  
+Your organization recently faced a security incident where confidential HR data was leaked due to the use of an unapproved SaaS tool. Despite having MFA and firewall rules in place, no explicit policy was violated, and the tool was used by an HR manager with admin-level access.
+
+➡️ *How would you design a governance structure that prevents such incidents in the future, even when no technical policy was breached?*
+
+In your answer, cover:
+- 🎯 Governance-level controls  
+- 📜 Policy creation or refinement  
+- 🧑‍💼 Ownership and accountability assignment  
+- 📈 How you’d measure effectiveness of governance
+
+---
+
+**Answer:**  
+For designing this governance structure, we first need to understand all of our threats and incidents that led to this breach. The incident occurred due to an HR manager using an unapproved SaaS tool and having excessive admin-level access.  
+
+To prevent such incidents, we must:
+
+- ✅ **Enable formal governance frameworks** like ISO 27001 and NIST RMF that define access controls, asset classification, and compliance mandates.
+- ✅ **Define and enforce approved SaaS usage policies**, ensuring that only tools vetted by the security team are allowed within the organization.
+- ✅ **Implement Role-Based Access Control (RBAC)** — ensuring that HR personnel only have access appropriate to their job functions and nothing more.
+- ✅ **Establish clear accountability**: assign data stewardship and app approval responsibilities to specific roles (e.g., GRC lead, IT security manager).
+- ✅ **Track and enforce policy compliance** using automated tooling (e.g., SaaS shadow IT detectors, DLP alerts).
+- ✅ **Set up governance metrics** such as:
+  - % of approved vs unapproved SaaS usage  
+  - Mean time to detect unapproved tools  
+  - Role-policy alignment score  
+  - Compliance score against frameworks like ISO 27001
+
+This governance structure creates proactive, policy-aligned oversight and ensures no individual can act beyond their defined role without triggering visibility and review.
+
+---
+
+# 📄 File: quiz.md
+
+---
+
+## 🛠️ Security Controls (Preventive, Detective, Corrective)
+
+**🧨 Real-World Scenario:**  
+A fintech company suffered a silent breach due to an outdated third-party library. Sensitive customer PII and payment data was exfiltrated over several days without detection.
+
+**🎯 Question:**  
+As a security engineer, how would you design a control strategy using **Preventive, Detective, and Corrective** controls to avoid or contain such incidents in the future?
+
+---
+
+**✅ Answer:**
+
+- **Preventive Controls:**
+  - Enforce patching and upgrading of third-party libraries regularly
+  - Integrate Software Composition Analysis (SCA) tools like Snyk, Dependabot, or OWASP Dependency-Check in CI/CD
+  - Apply least privilege to prevent wide access in case of compromise
+
+- **Detective Controls:**
+  - Deploy IDS tools (Snort, Suricata) to monitor for abnormal behavior
+  - Implement a SIEM system (e.g., Splunk, ELK) for log aggregation and alerting
+  - Enable audit logs and anomaly-based access alerts
+
+- **Corrective Controls:**
+  - Immediately patch known vulnerabilities upon discovery
+  - Execute incident response with system isolation and forensic investigation
+  - Perform root cause analysis (RCA) and improve control coverage
