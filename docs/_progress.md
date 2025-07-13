@@ -16,7 +16,7 @@
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
 | 📚 Subtopics |  81   |         3            |       0        |      78        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
-| ✅ Subtasks  | 241   |        20            |       –        |     221        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (20/241) |   8.3%     |
+| ✅ Subtasks  | 241   |        21            |       –        |     220        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (21/241) |   8.7%     |
 
 ---
 
@@ -56,7 +56,7 @@
 
 ### 0.2 Security Programs & Frameworks 🔴
 
-- [ ] Risk Management — 🔴
+- [x] Risk Management — 🟢
 - [ ] Security Governance — 🔴
 - [ ] Security Controls (Preventive, Detective, Corrective) — 🔴
 - [ ] NIST / ISO / CIS Controls Overview — 🔴
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 3 | Subtasks Completed: 20 | Progress: 8.3%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 3 | Subtasks Completed: 21 | Progress: 8.7%**

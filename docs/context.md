@@ -78,7 +78,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
 | 📚 Subtopics |  81   |         3            |       0        |      78        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
-| ✅ Subtasks  | 241   |        20            |       –        |     221        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (20/241) |   8.3%     |
+| ✅ Subtasks  | 241   |        21            |       –        |     220        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (21/241) |   8.7%     |
 
 **Legend:**  
 🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
@@ -208,4 +208,3 @@ cybersecurity-interview-prep/
 ├── docs/                                        # Central coordination hub
 │   ├── context.md                               # LLM interaction guidelines (this file)
 │   ├── _progress.md                             # Progress tracking across all domains
-```
