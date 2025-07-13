@@ -52,3 +52,35 @@ A formal process used to identify, assess, prioritize, and treat risks to organi
 - RMFs are essential in **governance**, **compliance**, and **long-term security posture**.
 - **Choosing the right RMF** depends on org size, industry, regulatory needs, and leadership goals.
 - Combine **RMF + threat modeling** for both top-down and system-level assurance.
+
+## 🔐 0.2.2 Security Governance — Summary Notes
+
+### ✅ What is Security Governance?
+Security Governance is the strategic layer of cybersecurity, focusing on aligning security with business objectives, accountability, and regulatory compliance. It is concerned with **who is responsible**, **what policies guide decisions**, and **how outcomes are measured**.
+
+---
+
+### 🧩 Core Components
+- **Governance Frameworks**: ISO 27001, COBIT, NIST CSF  
+- **Policies**: Acceptable Use, Data Classification, Access Control  
+- **Roles & Accountability**: CISO, CIO, Security Committees  
+- **Risk Appetite**: Defines acceptable risk thresholds  
+- **Metrics**: Incident count, response time, compliance status  
+- **Security Committees**: Oversight boards for security direction  
+- **Budget Alignment**: Security investment linked to risk areas
+
+---
+
+### 📊 Governance vs Management vs Operations
+| Governance | Management | Operations |
+|------------|------------|------------|
+| Strategic direction | Tactical execution | Technical control |
+| Policy setting | Enforcement planning | Daily monitoring |
+
+---
+
+### 💡 Interview-Relevant Highlights
+- Governance ensures security is **business-aligned**
+- Clear RACI chart (who owns, approves, consults, informed)
+- Success measured via KPIs and audits
+- Often tied to standards like ISO 27001 or NIST CSF
