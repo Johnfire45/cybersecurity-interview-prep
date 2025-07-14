@@ -77,8 +77,8 @@ Each domain (e.g., api-security, cloud-security) must also have:
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
-| 📚 Subtopics |  81   |         3            |       0        |      78        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
-| ✅ Subtasks  | 241   |        21            |       –        |     220        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (21/241) |   8.7%     |
+| 📚 Subtopics |  81   |         4            |       0        |      77        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (4/81)   |   4.9%     |
+| ✅ Subtasks  | 241   |        25            |       –        |     216        | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ (25/241) |   10.4%     |
 
 **Legend:**  
 🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
@@ -86,8 +86,8 @@ Each domain (e.g., api-security, cloud-security) must also have:
 ---
 
 **📊 Content Status Summary:**
-- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (Core Principles - CIA Triad, Threat Modeling, Security Principles, Red Team vs Blue Team vs Purple Team)
-- **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining subtopics: 0.2 (Security Programs & Frameworks), 0.3 (Linux Fundamentals), 0.4 (Operating System & Kernel), 0.5 (Networking Fundamentals), 0.6 (Trust & Identity Concepts)
+- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (Core Principles - CIA Triad, Threat Modeling, Security Principles, Red Team vs Blue Team vs Purple Team), 0.2 (Security Programs & Frameworks)
+- **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining subtopics: 0.3 (Linux Fundamentals), 0.4 (Operating System & Kernel), 0.5 (Networking Fundamentals), 0.6 (Trust & Identity Concepts)
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion.
 
@@ -104,17 +104,17 @@ If you spot any, please flag for manual review.
 
 ```
 cybersecurity-interview-prep/
-├── README.mcd                                    # Project overview and navigation
+├── README.md                                    # Project overview and navigation
 ├── .gitignore                                   # Git exclusions
-├── security-domains/                            # All security domains grouped here
-│   ├── 0-cybersecurity-fundamentals/            # Domain 0: Cybersecurity fundamentals 🟡 PARTIALLY COMPLETED (1/6)
-│   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🟢 COMPLETED (CIA Triad ✅, Threat Modeling ✅, Security Principles ✅, Red Team vs Blue Team vs Purple Team ✅)
-│   │   ├── 0.2-security-programs-frameworks/    # Subtopic 0.2 🔴 NOT STARTED
+├── security-domains/
+│   ├── 0-cybersecurity-fundamentals/
+│   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🟢 COMPLETED
+│   │   ├── 0.2-security-programs-frameworks/    # Subtopic 0.2 🟢 COMPLETED
 │   │   ├── 0.3-linux-fundamentals/              # Subtopic 0.3 🔴 NOT STARTED
 │   │   ├── 0.4-operating-system-kernel/         # Subtopic 0.4 🔴 NOT STARTED
 │   │   ├── 0.5-networking-fundamentals/         # Subtopic 0.5 🔴 NOT STARTED
 │   │   ├── 0.6-trust-identity-concepts/         # Subtopic 0.6 🔴 NOT STARTED
-│   ├── 1-web-application-security/              # Domain 1: Web application security 🟡 PARTIALLY COMPLETED
+│   ├── 1-web-application-security/
 │   │   ├── 1.1-input-validation-injection/      # Subtopic 1.1 🟢 COMPLETED
 │   │   ├── 1.2-cross-site-scripting/            # Subtopic 1.2 🟢 COMPLETED
 │   │   ├── 1.3-authentication-session/          # Subtopic 1.3 🔴 NOT STARTED
@@ -127,13 +127,13 @@ cybersecurity-interview-prep/
 │   │   ├── 1.10-ssrf-redirects/                 # Subtopic 1.10 🔴 NOT STARTED
 │   │   ├── 1.11-security-misconfiguration/      # Subtopic 1.11 🔴 NOT STARTED
 │   │   ├── 1.12-misc-attacks/                   # Subtopic 1.12 🔴 NOT STARTED
-│   ├── 2-api-security/                          # Domain 2: API security
+│   ├── 2-api-security/
 │   │   ├── 2.1-api-authentication-authorization/
 │   │   ├── 2.2-api-input-validation-filtering/
 │   │   ├── 2.3-api-authorization-flaws/
 │   │   ├── 2.4-api-data-exposure/
 │   │   ├── 2.5-api-security-testing/
-│   ├── 3-android-security/                      # Domain 3: Android security
+│   ├── 3-android-security/
 │   │   ├── 3.1-app-manifest-analysis/
 │   │   ├── 3.2-storage-security/
 │   │   ├── 3.3-webview-security/
@@ -141,70 +141,72 @@ cybersecurity-interview-prep/
 │   │   ├── 3.5-network-security/
 │   │   ├── 3.6-reverse-engineering-obfuscation/
 │   │   ├── 3.7-mobile-security-tools/
-│   ├── 4-client-side-security/                  # Domain 4: Client-side security
+│   ├── 4-client-side-security/
 │   │   ├── 4.1-javascript-security/
 │   │   ├── 4.2-dom-based-attacks/
 │   │   ├── 4.3-content-security-policy/
 │   │   ├── 4.4-same-origin-policy/
-│   ├── 5-network-security/                      # Domain 5: Network security
+│   ├── 5-network-security/
 │   │   ├── 5.1-network-protocols/
 │   │   ├── 5.2-tls-ssl-configuration/
 │   │   ├── 5.3-man-in-the-middle-attacks/
 │   │   ├── 5.4-network-security-tools/
 │   │   ├── 5.5-wireless-security/
-│   ├── 6-cloud-security/                        # Domain 6: Cloud security
+│   ├── 6-cloud-security/
 │   │   ├── 6.1-identity-access-management/
 │   │   ├── 6.2-cloud-storage-security/
 │   │   ├── 6.3-container-security/
 │   │   ├── 6.4-serverless-security/
 │   │   ├── 6.5-cloud-monitoring-logging/
-│   ├── 7-devsecops/                             # Domain 7: DevSecOps
+│   ├── 7-devsecops/
 │   │   ├── 7.1-secure-cicd-pipelines/
 │   │   ├── 7.2-infrastructure-as-code-security/
 │   │   ├── 7.3-security-testing-automation/
 │   │   ├── 7.4-policy-as-code/
-│   ├── 8-secure-code-review/                    # Domain 8: Secure code review
+│   ├── 8-secure-code-review/
 │   │   ├── 8.1-code-review-methodologies/
 │   │   ├── 8.2-common-vulnerabilities-in-code/
 │   │   ├── 8.3-language-specific-security/
 │   │   ├── 8.4-secure-development-practices/
-│   ├── 9-cryptography/                          # Domain 9: Cryptography
+│   ├── 9-cryptography/
 │   │   ├── 9.1-cryptographic-fundamentals/
 │   │   ├── 9.2-tls-ssl-pki/
 │   │   ├── 9.3-key-management/
 │   │   ├── 9.4-cryptographic-vulnerabilities/
-│   ├── 10-red-team-offensive-security/          # Domain 10: Red team/offensive
+│   ├── 10-red-team-offensive-security/
 │   │   ├── 10.1-web-exploitation/
 │   │   ├── 10.2-mobile-exploitation/
 │   │   ├── 10.3-network-exploitation/
 │   │   ├── 10.4-social-engineering/
 │   │   ├── 10.5-custom-exploits-scripts/
-│   ├── 11-blue-team-defensive-security/         # Domain 11: Blue team/defensive
+│   ├── 11-blue-team-defensive-security/
 │   │   ├── 11.1-siem-log-analysis/
 │   │   ├── 11.2-threat-hunting/
 │   │   ├── 11.3-incident-response/
 │   │   ├── 11.4-detection-engineering/
 │   │   ├── 11.5-security-operations/
-│   ├── 12-mobile-security-ios/                  # Domain 12: Mobile security (iOS)
+│   ├── 12-mobile-security-ios/
 │   │   ├── 12.1-ios-app-security/
 │   │   ├── 12.2-ios-reverse-engineering/
-│   ├── 13-iot-embedded-security/                # Domain 13: IoT & embedded security
+│   ├── 13-iot-embedded-security/
 │   │   ├── 13.1-iot-protocols-communication/
 │   │   ├── 13.2-firmware-analysis/
 │   │   ├── 13.3-hardware-security/
 │   │   ├── 13.4-iot-device-security/
-│   ├── 14-social-engineering-human-factors/     # Domain 14: Social engineering
+│   ├── 14-social-engineering-human-factors/
 │   │   ├── 14.1-social-engineering-techniques/
 │   │   ├── 14.2-human-psychology-manipulation/
-│   ├── 15-compliance-governance/                # Domain 15: Compliance & governance
+│   ├── 15-compliance-governance/
 │   │   ├── 15.1-regulatory-frameworks/
 │   │   ├── 15.2-security-governance/
-│   ├── 16-career-behavioral-prep/               # Domain 16: Career & behavioral prep
-│       ├── 16.1-interview-preparation/
-│       ├── 16.2-portfolio-projects/
-│       ├── 16.3-communication-leadership/
-│       ├── 16.4-career-development/
-│       ├── 16.5-scenario-based-interview-walkthroughs/
-├── docs/                                        # Central coordination hub
+│   ├── 16-career-behavioral-prep/
+│   │   ├── 16.1-interview-preparation/
+│   │   ├── 16.2-portfolio-projects/
+│   │   ├── 16.3-communication-leadership/
+│   │   ├── 16.4-career-development/
+│   │   ├── 16.5-scenario-based-interview-walkthroughs/
+├── docs/
 │   ├── context.md                               # LLM interaction guidelines (this file)
 │   ├── _progress.md                             # Progress tracking across all domains
+│   ├── _resources.md                            # Resource links and references
+│   ├── audit-plan.md                            # Sample audit plan

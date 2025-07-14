@@ -133,10 +133,6 @@ This governance structure creates proactive, policy-aligned oversight and ensure
 
 ---
 
-# 📄 File: quiz.md
-
----
-
 ## 🛠️ Security Controls (Preventive, Detective, Corrective)
 
 **🧨 Real-World Scenario:**  
@@ -163,3 +159,30 @@ As a security engineer, how would you design a control strategy using **Preventi
   - Immediately patch known vulnerabilities upon discovery
   - Execute incident response with system isolation and forensic investigation
   - Perform root cause analysis (RCA) and improve control coverage
+
+
+--
+
+## 🧨 Real-World Scenario – Healthcare Security Policies
+
+A healthcare company discovers that PHI (Protected Health Information) is being leaked through insecure storage and unauthorized SaaS usage.
+
+**Question:**
+
+Design a security policy and compliance framework to prevent such incidents. Focus on:
+
+- Sector-specific compliance (e.g., HIPAA)
+- Technical controls (RBAC, encryption, audit logging)
+- SaaS data sharing and patient consent
+- Post-breach handling
+
+**Answer:**
+
+- Implement HIPAA compliance for healthcare data
+- Use RBAC to prevent shared account access to production
+- Store PHI in **encrypted form** (preferably AES for storage)
+- Require **user consent** before sharing any data with third-party analytics
+- Enforce SaaS control policies via IT & InfoSec teams
+- Setup **audit logging** and **incident response plans**
+- Ensure **Breach Notification Plan** is in place per HIPAA requirements
+- All employees follow approved security practices; no unapproved software installations

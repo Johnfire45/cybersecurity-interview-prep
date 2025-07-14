@@ -1,0 +1,31 @@
+# Task: Sync Progress and Context for Cybersecurity Interview Prep
+
+## Context:
+
+We've now completed **all subtopics under `0.2 Security Programs & Frameworks`**, and they've been manually marked with 🟢 in `_progress.md`.  
+Per `gpt-persistence-context.md`, the 🟢 mark is the **only source of truth** for topic mastery.
+
+## What needs to happen:
+
+Please review both `_progress.md` and `context.md` and figure out what updates are required to make the files fully consistent with the current progress state.
+
+Consider:
+
+- Does the **domain-level status for `0.2`** reflect that all subtopics are completed?
+- Is the **summary at the top of `_progress.md`** accurate?
+- Is `context.md` showing the correct **content status summary** and **progress mapping**?
+- Are there any **orphaned, out-of-sync, or redundant entries**?
+
+## Request:
+
+- **First, discuss what changes you believe are needed** to fully align the project with the manual progress.
+- Then apply the necessary updates to `_progress.md` and `context.md`.
+
+Respect the rule:  
+**Never override or infer 🟢 marks. Only update based on the actual file state.**
+
+## Files to use:
+
+- `_progress.md`
+- `context.md`
+- `gpt-persistence-context.md`

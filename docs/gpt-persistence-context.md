@@ -139,14 +139,18 @@ Use triple-backtick markdown **only** when output should be copy-pasted directly
 
 ---
 
-## 🏷️ Filename Tags
+## 📄 Filename Output Rule
 
-Always prefix generated content with a filename tag:
+**Always print the filename tag outside the markdown block. Only the file content goes inside.**
+
+**Example:**
+
+# 📄 File: notes.md
 
 ```markdown
-# 📄 File: notes.md
-```
-
+<file content>
+<All `notes.md` content must be placed *inside* a triple-backtick markdown block.>
+```markdown
 For each file update, show clearly where the output belongs.
 
 ---

@@ -15,8 +15,8 @@
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
-| 📚 Subtopics |  81   |         3            |       0        |      78        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/81)   |   3.7%     |
-| ✅ Subtasks  | 241   |        21            |       –        |     220        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (21/241) |   8.7%     |
+| 📚 Subtopics |  81   |         4            |       0        |      77        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (4/81)   |   4.9%     |
+| ✅ Subtasks  | 241   |        25            |       –        |     216        | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ (25/241) |   10.4%     |
 
 ---
 
@@ -41,10 +41,10 @@
 ## 0. Cybersecurity Fundamentals 🔴
 
 #### Domain Progress Summary
-- 🟢 Mastered: 1
+- 🟢 Mastered: 2
 - 🟡 In Progress: 0
 - 🧪 Needs Review: 0
-- 🔴 Not Started: 32
+- 🔴 Not Started: 31
 - **Total Subtopics:** 33
 
 ### 0.1 Core Principles 🟢
@@ -54,13 +54,13 @@
 - [x] Security Principles (Least Privilege, Defense in Depth) — 🟢
 - [x] Red Team vs Blue Team vs Purple Team — 🟢
 
-### 0.2 Security Programs & Frameworks 🔴
+### 0.2 Security Programs & Frameworks 🟢
 
 - [x] Risk Management — 🟢
-- [ ] Security Governance — 🟢
-- [ ] Security Controls (Preventive, Detective, Corrective) — 🔴
-- [ ] NIST / ISO / CIS Controls Overview — 🔴
-- [ ] Security Policies & Compliance (SOC2, HIPAA, etc.) — 🔴
+- [x] Security Governance — 🟢
+- [x] Security Controls (Preventive, Detective, Corrective) — 🟢
+- [x] NIST / ISO / CIS Controls Overview — 🟢
+- [x] Security Policies & Compliance (SOC2, HIPAA, etc.) — 🟢
 
 ### 0.3 Linux Fundamentals 🔴
 
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 3 | Subtasks Completed: 21 | Progress: 8.7%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 4 | Subtasks Completed: 25 | Progress: 10.4%**
