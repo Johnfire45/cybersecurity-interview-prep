@@ -69,7 +69,8 @@
 - [x] Users, Groups, and Sudo Privileges — 🟢
 - [x] Process Management (ps, top, kill) — 🟢
 - [x] Logs & Syslog Analysis — 🟢
-- [x] Crons, Daemons, and Services — 🟢git - [ ] Package Managers (apt, yum, snap, etc.) — 🔴
+- [x] Crons, Daemons, and Services — 🟢
+- [ ] Package Managers (apt, yum, snap, etc.) — 🔴
 - [ ] Bash Scripting Basics — 🔴
 
 ### 0.4 Operating System & Kernel 🔴
