@@ -78,7 +78,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
 | 📚 Subtopics |  81   |         4            |       1        |      76        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (4/81)   |   4.9%     |
-| ✅ Subtasks  | 241   |        29            |       –        |     212        | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ (29/241) |   12.0%     |
+| ✅ Subtasks  | 241   |        30            |       –        |     211        | 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ (30/241) |   12.4%     |
 
 **Legend:**  
 🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
@@ -87,7 +87,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 **📊 Content Status Summary:**
 - **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (Core Principles - CIA Triad, Threat Modeling, Security Principles, Red Team vs Blue Team vs Purple Team), 0.2 (Security Programs & Frameworks)
-- **In Progress:** 0.3 (Linux Fundamentals - 5/8 subtasks completed), Domain 0 (Cybersecurity Fundamentals - 2/6 subtopics completed)
+- **In Progress:** 0.3 (Linux Fundamentals - 6/8 subtasks completed), Domain 0 (Cybersecurity Fundamentals - 2/6 subtopics completed)
 - **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining subtopics: 0.4 (Operating System & Kernel), 0.5 (Networking Fundamentals), 0.6 (Trust & Identity Concepts)
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion.
@@ -111,7 +111,7 @@ cybersecurity-interview-prep/
 │   ├── 0-cybersecurity-fundamentals/
 │   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🟢 COMPLETED
 │   │   ├── 0.2-security-programs-frameworks/    # Subtopic 0.2 🟢 COMPLETED
-│   │   ├── 0.3-linux-fundamentals/              # Subtopic 0.3 🟡 IN PROGRESS (4/8)
+│   │   ├── 0.3-linux-fundamentals/              # Subtopic 0.3 🟡 IN PROGRESS (6/8)
 │   │   ├── 0.4-operating-system-kernel/         # Subtopic 0.4 🔴 NOT STARTED
 │   │   ├── 0.5-networking-fundamentals/         # Subtopic 0.5 🔴 NOT STARTED
 │   │   ├── 0.6-trust-identity-concepts/         # Subtopic 0.6 🔴 NOT STARTED

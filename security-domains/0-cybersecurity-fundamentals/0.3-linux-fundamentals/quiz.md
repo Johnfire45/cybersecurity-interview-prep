@@ -155,3 +155,53 @@ I would check `/var/log/auth.log` first, since it records authentication attempt
 **Comparison Note:**  
 Your answer correctly identified `auth.log` as the starting point.  
 To be interview-ready, also mention **system, audit, web/service, and network logs** for full incident correlation.  
+
+### Comprehensive Question — Crons, Daemons, and Services
+
+**Question:**  
+You are performing a Red Team vs Blue Team exercise on a Linux server.  
+During the assessment:  
+- As the **Red Team attacker**, you need persistence across reboots without root privileges.  
+- As the **Blue Team defender**, you later investigate and suspect malicious persistence in the system.  
+
+**Tasks:**  
+1. As an attacker, what methods could you use for persistence leveraging **crons, daemons, or services**? Provide both stealthy and noisy examples.  
+2. As a defender, what specific checks and commands would you run to detect such persistence mechanisms?  
+3. Map these techniques to **MITRE ATT&CK** and **OWASP Top 10** categories.  
+4. What is the best long-term defensive strategy to mitigate and continuously monitor against such persistence?  
+
+---
+
+**Answer (Key Points):**  
+1. **Red Team Persistence Methods**  
+   - **Cron:**  
+     - Noisy → `*/5 * * * * /bin/bash reverse.sh`  
+     - Stealthy → `@reboot /home/user/.backup.sh` (hidden script with payload)  
+   - **Daemon/Service:**  
+     - Malicious systemd unit → `/etc/systemd/system/update-checker.service` with reverse shell.  
+   - **Systemd Timer:**  
+     - Fake `logrotate.timer` that executes a malicious script.  
+
+2. **Blue Team Detection Commands**  
+   - Cron: `crontab -l`, check `/etc/crontab` and `/etc/cron.*` directories.  
+   - Services: `systemctl list-unit-files --type=service`, inspect `.service` files for `ExecStart`.  
+   - Timers: `systemctl list-timers --all`, inspect `.timer` + linked `.service` files.  
+
+3. **Mappings**  
+   - **MITRE ATT&CK:** T1053 (Scheduled Task/Job), T1053.006 (Systemd Timers).  
+   - **OWASP:** A05 — Security Misconfiguration (unmonitored jobs/services).  
+
+4. **Best Long-Term Defense**  
+   - Baseline and continuously monitor:  
+     - `/etc/systemd/system/*.service` and `*.timer`  
+     - `/etc/cron.*` and user crontabs  
+   - Implement file integrity monitoring (Wazuh, OSSEC, auditd).  
+   - Alert on suspicious `ExecStart` or cron commands (`curl | bash`, reverse shells).  
+   - Preserve evidence before containment.  
+
+---
+
+### Interview One-Liner
+“Persistence on Linux can be achieved via **cron jobs, daemons, or systemd timers**.  
+Attackers prefer stealthy methods like hidden scripts or fake timers.  
+Defenders must **baseline & monitor unit files and crontabs** — this ensures detection of unauthorized changes while preserving evidence.”

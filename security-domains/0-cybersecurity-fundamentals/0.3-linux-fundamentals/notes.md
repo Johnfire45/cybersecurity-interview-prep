@@ -166,3 +166,31 @@ grep "Failed password" /var/log/auth.log
 
 **Key takeaway:**  
 Know where logs are stored, how to query them with `journalctl`, and how to set up forwarding (rsyslog → SIEM). Auditd is critical for detailed security monitoring.
+
+# 0.3.6 Crons, Daemons, and Services
+
+## 1. Daemons
+- Background processes, not tied to user logins.  
+- Examples: `sshd`, `httpd/nginx`, `mysqld`.  
+- Launched at boot, managed by init systems (systemd, init.d).  
+
+## 2. Services
+- Daemons registered with the init system.  
+- Managed with `systemctl` (start, stop, enable, disable, restart).  
+- Security risk: attackers may create malicious services for persistence.  
+
+## 3. Cron Jobs
+- Scheduler for repetitive tasks.  
+- Config: `/etc/crontab`, user crontabs (`crontab -e`).  
+- Syntax: 5 time fields + command.  
+- Example: `0 2 * * * /usr/local/bin/backup.sh` → daily at 2 AM.  
+- Security risk: attackers use cron jobs for persistence.  
+
+## 4. At & Anacron
+- `at`: schedule one-time tasks.  
+- `anacron`: runs periodic tasks even if the system was off.  
+
+## 5. Security Relevance
+- Persistence vector: malicious crons or services.  
+- Defender tasks: audit cron jobs, list services, validate binaries.  
+- Maps to OWASP Top 10: **Security Misconfiguration**.  

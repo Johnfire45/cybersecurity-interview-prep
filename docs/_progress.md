@@ -16,7 +16,7 @@
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
 | 📚 Subtopics |  81   |         4            |       1        |      76        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (4/81)   |   4.9%     |
-| ✅ Subtasks  | 241   |        29            |       –        |     212        | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ (29/241) |   12.0%     |
+| ✅ Subtasks  | 241   |        30            |       –        |     211        | 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ (30/241) |   12.4%     |
 
 ---
 
@@ -69,8 +69,7 @@
 - [x] Users, Groups, and Sudo Privileges — 🟢
 - [x] Process Management (ps, top, kill) — 🟢
 - [x] Logs & Syslog Analysis — 🟢
-- [ ] Crons, Daemons, and Services — 🔴
-- [ ] Package Managers (apt, yum, snap, etc.) — 🔴
+- [x] Crons, Daemons, and Services — 🟢git - [ ] Package Managers (apt, yum, snap, etc.) — 🔴
 - [ ] Bash Scripting Basics — 🔴
 
 ### 0.4 Operating System & Kernel 🔴
@@ -725,4 +724,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 4 | Subtasks Completed: 29 | Progress: 12.0%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 4 | Subtasks Completed: 30 | Progress: 12.4%**
