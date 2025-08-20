@@ -14,9 +14,9 @@
 
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
-| 🌐 Domains   |  17   |         0            |       1        |      16        | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜ (1/17)  |   5.9%     |
-| 📚 Subtopics |  81   |         4            |       0        |      77        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (4/81)   |   4.9%     |
-| ✅ Subtasks  | 241   |        25            |       –        |     216        | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ (25/241) |   10.4%     |
+| 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
+| 📚 Subtopics |  81   |         4            |       1        |      76        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (4/81)   |   4.9%     |
+| ✅ Subtasks  | 241   |        29            |       –        |     212        | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ (29/241) |   12.0%     |
 
 ---
 
@@ -38,13 +38,13 @@
 
 ---
 
-## 0. Cybersecurity Fundamentals 🔴
+## 0. Cybersecurity Fundamentals 🟡
 
 #### Domain Progress Summary
 - 🟢 Mastered: 2
-- 🟡 In Progress: 0
+- 🟡 In Progress: 1
 - 🧪 Needs Review: 0
-- 🔴 Not Started: 31
+- 🔴 Not Started: 30
 - **Total Subtopics:** 33
 
 ### 0.1 Core Principles 🟢
@@ -62,13 +62,13 @@
 - [x] NIST / ISO / CIS Controls Overview — 🟢
 - [x] Security Policies & Compliance (SOC2, HIPAA, etc.) — 🟢
 
-### 0.3 Linux Fundamentals 🔴
+### 0.3 Linux Fundamentals 🟡
 
-- [ ] Linux CLI Essentials (cat, grep, find, awk, etc.) — 🔴
-- [ ] File Permissions & Ownership — 🔴
-- [ ] Users, Groups, and Sudo Privileges — 🔴
-- [ ] Process Management (ps, top, kill) — 🔴
-- [ ] Logs & Syslog Analysis — 🔴
+- [x] Linux CLI Essentials (cat, grep, find, awk, etc.) — 🟢
+- [x] File Permissions & Ownership — 🟢
+- [x] Users, Groups, and Sudo Privileges — 🟢
+- [x] Process Management (ps, top, kill) — 🟢
+- [x] Logs & Syslog Analysis — 🟢
 - [ ] Crons, Daemons, and Services — 🔴
 - [ ] Package Managers (apt, yum, snap, etc.) — 🔴
 - [ ] Bash Scripting Basics — 🔴
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 4 | Subtasks Completed: 25 | Progress: 10.4%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 4 | Subtasks Completed: 29 | Progress: 12.0%**
