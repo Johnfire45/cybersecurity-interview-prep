@@ -15,7 +15,7 @@
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
-| 📚 Subtopics |  81   |         4            |       1        |      76        | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜ (4/81)   |   4.9%     |
+| 📚 Subtopics |  81   |         5            |       0        |      76        | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ (5/81)   |   6.2%     |
 | ✅ Subtasks  | 241   |        30            |       –        |     211        | 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ (30/241) |   12.4%     |
 
 ---
@@ -41,8 +41,8 @@
 ## 0. Cybersecurity Fundamentals 🟡
 
 #### Domain Progress Summary
-- 🟢 Mastered: 2
-- 🟡 In Progress: 1
+- 🟢 Mastered: 3
+- 🟡 In Progress: 0
 - 🧪 Needs Review: 0
 - 🔴 Not Started: 30
 - **Total Subtopics:** 33
@@ -62,7 +62,7 @@
 - [x] NIST / ISO / CIS Controls Overview — 🟢
 - [x] Security Policies & Compliance (SOC2, HIPAA, etc.) — 🟢
 
-### 0.3 Linux Fundamentals 🟡
+### 0.3 Linux Fundamentals 🟢
 
 - [x] Linux CLI Essentials (cat, grep, find, awk, etc.) — 🟢
 - [x] File Permissions & Ownership — 🟢
@@ -70,8 +70,8 @@
 - [x] Process Management (ps, top, kill) — 🟢
 - [x] Logs & Syslog Analysis — 🟢
 - [x] Crons, Daemons, and Services — 🟢
-- [ ] Package Managers (apt, yum, snap, etc.) — 🔴
-- [ ] Bash Scripting Basics — 🔴
+- [x] Package Managers (apt, yum, snap, etc.) — 🟢
+- [x] Bash Scripting Basics — 🟢
 
 ### 0.4 Operating System & Kernel 🔴
 
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 4 | Subtasks Completed: 30 | Progress: 12.4%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 5 | Subtasks Completed: 32 | Progress: 13.3%**

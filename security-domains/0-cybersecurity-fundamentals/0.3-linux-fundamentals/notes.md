@@ -194,3 +194,174 @@ Know where logs are stored, how to query them with `journalctl`, and how to set 
 - Persistence vector: malicious crons or services.  
 - Defender tasks: audit cron jobs, list services, validate binaries.  
 - Maps to OWASP Top 10: **Security Misconfiguration**.  
+
+# 0.3.7 Package Managers (apt, yum, snap, etc.)
+
+## 1. Overview
+- Package managers automate installing, updating, configuring, and removing software.  
+- Handle:
+  - Dependencies
+  - Verification (signatures, GPG keys)
+  - Updates & patching
+
+---
+
+## 2. Major Package Managers
+- **APT (Debian/Ubuntu)**
+  - `.deb` packages
+  - Config: `/etc/apt/sources.list`
+  - Commands: `apt install`, `apt update`, `apt upgrade`
+
+- **YUM / DNF (RHEL/CentOS/Fedora)**
+  - `.rpm` packages
+  - Config: `/etc/yum.repos.d/`
+  - Commands: `yum install`, `dnf update`
+
+- **Snap (Ubuntu)**
+  - Self-contained, sandboxed packages
+  - Command: `snap install <package>`
+
+- **Others**
+  - `zypper` (SUSE)
+  - `pacman` (Arch Linux)
+
+---
+
+## 3. Security Risks
+- **Malicious Repositories**
+  - Adding untrusted repos can deliver backdoored packages.
+
+- **Dependency Confusion / Typosquatting**
+  - Malicious package mimics trusted one (e.g., `libssl-update` vs `libssl`).
+
+- **Unsigned Packages**
+  - Installing without verifying GPG signatures can lead to tampered software.
+
+- **Supply Chain Attacks**
+  - Compromise of repos or mirrors → mass infection.
+  - Real-world analogies: SolarWinds, Codecov.
+
+---
+
+## 4. Security Best Practices
+- Use only **official, signed repos**.  
+- Verify GPG signatures for `.deb` and `.rpm`.  
+- Restrict outbound access → allow-list trusted mirrors.  
+- Monitor installation logs:
+  - APT: `/var/log/apt/history.log`
+  - YUM: `/var/log/yum.log`
+- Keep system updated with security patches.  
+
+---
+
+## 5. Security Mapping
+- **MITRE ATT&CK:** T1195 Supply Chain Compromise, T1072 External Remote Services  
+- **OWASP:** A08 Software & Data Integrity Failures, A05 Security Misconfiguration  
+
+---
+
+## 6. Interview One-Liners
+- **Attacker’s View:** “Abuse package managers by typosquatting, malicious repos, or poisoning the supply chain.”  
+- **Defender’s View:** “Enforce signed repos, baseline sources, monitor logs, and restrict outbound update traffic.”  
+
+# 0.3.8 Bash Scripting Basics
+
+## 1. Overview
+- **Bash (Bourne Again Shell):** command interpreter + scripting language for Linux/Unix.  
+- Used for automation, system jobs (cron/daemons), and quick security tooling.  
+
+---
+
+## 2. Core Concepts
+
+### Variables
+name="Harshit"  
+echo "Hello $name"  
+
+- `$VAR` → variable substitution.  
+- Always use quotes `"${VAR}"` to prevent injection.  
+
+### Conditionals
+if [ -f /etc/passwd ]; then  
+  echo "File exists"  
+else  
+  echo "Not found"  
+fi  
+
+- `[ -f file ]` → file exists  
+- `[ -d dir ]` → directory exists  
+
+### Loops
+for user in $(cat /etc/passwd); do  
+  echo $user  
+done  
+
+- Used for iterating lists, files, IP ranges.  
+
+### Functions
+function greet() {  
+  echo "Hello $1"  
+}  
+greet "Harshit"  
+
+- Reusable blocks of code.  
+
+### File Operations & Redirection
+echo "test" > file.txt     # overwrite  
+echo "append" >> file.txt  # append  
+cat file.txt | grep "app"  # filter  
+
+- `>` overwrite, `>>` append, `2>` redirect errors  
+
+---
+
+## 3. Common Tools in Scripts
+- `grep` — pattern matching  
+- `awk` — text processing  
+- `sed` — search/replace  
+- `cut`, `sort`, `uniq` — parsing & deduplication  
+
+Example:  
+cat access.log | awk '{print $1}' | sort | uniq -c  
+→ Count unique IPs from logs  
+
+---
+
+## 4. Security Pitfalls
+- **Command Injection**  
+  eval $user_input   # 🚨 dangerous  
+  → Never run untrusted input  
+
+- **Unquoted Variables**  
+  cat $file   # unsafe if $file="; rm -rf /"  
+  ✅ Always quote → cat "$file"  
+
+- **Set Secure Options**  
+  set -euo pipefail  
+  - `-e` exit on error  
+  - `-u` treat unset vars as error  
+  - `-o pipefail` catch pipeline errors  
+
+---
+
+## 5. Real-World Security Use Cases
+- **Red Team**  
+  - Automate brute-force, payload generation, log parsing.  
+- **Blue Team**  
+  - Monitor logs, extract suspicious IPs, automate IOC collection.  
+
+---
+
+## 6. Security Mapping
+- **MITRE ATT&CK:**  
+  - T1059.004 — Command & Scripting Interpreter: Bash  
+  - T1053 — Scheduled Task/Job (when used in crons)  
+- **OWASP:**  
+  - A08 — Software and Data Integrity Failures (unsafe scripting practices)  
+
+---
+
+## Interview One-Liner
+“Bash scripting automates tasks but also introduces risks.  
+Safe scripting requires quoting variables, avoiding `eval`, and enforcing secure shell options.  
+Attackers abuse Bash for persistence and automation, while defenders use it for monitoring and IOC detection.”

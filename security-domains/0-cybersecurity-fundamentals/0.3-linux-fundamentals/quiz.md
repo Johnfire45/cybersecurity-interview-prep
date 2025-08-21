@@ -205,3 +205,50 @@ During the assessment:
 “Persistence on Linux can be achieved via **cron jobs, daemons, or systemd timers**.  
 Attackers prefer stealthy methods like hidden scripts or fake timers.  
 Defenders must **baseline & monitor unit files and crontabs** — this ensures detection of unauthorized changes while preserving evidence.”
+
+### Q3 — Red vs Blue Bash Script (Summary)
+
+**Scenario:**  
+A script parses log files and blocks IPs with iptables:
+for ip in $(cat $LOGFILE | awk '{print $1}'); do
+  iptables -A INPUT -s $ip -j DROP
+done
+
+---
+
+**Red Team Exploit:**  
+- Log file is attacker-controlled → injects malicious payload into column 1.  
+- Unquoted `$ip` and unsafe loop (`for $(...)`) lead to command injection.  
+- Example: adding `; rm -rf /;` as a log entry executes arbitrary commands.  
+
+---
+
+**Blue Team Fix:**  
+- Quote all variables: `"$ip"`, `"$LOGFILE"`.  
+- Use safe loop: `while read -r ip; do ... done`.  
+- Validate input strictly (regex for IPv4/IPv6).  
+- Enforce safe Bash options: `set -euo pipefail`.  
+- Use `--` to stop option parsing in commands.  
+- Protect log integrity: restrict permissions, centralize logging.  
+
+---
+
+**Secure Rewrite (example):**
+set -euo pipefail
+while read -r ip; do
+  if [[ "$ip" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
+    iptables -A INPUT -s "$ip" -j DROP
+  fi
+done < <(awk '{print $1}' "$LOGFILE")
+
+---
+
+**Mappings:**  
+- **MITRE ATT&CK:** T1059.004 (Bash), T1053 (Scheduled Task/Job)  
+- **OWASP:** A08 (Software and Data Integrity Failures), A05 (Security Misconfiguration)  
+
+---
+
+**Interview One-Liner:**  
+“Unquoted variables and unsafe parsing in Bash scripts lead to command injection.  
+The secure fix is quoting, validating inputs, using safe loops, enforcing strict Bash options, and protecting log integrity.”
