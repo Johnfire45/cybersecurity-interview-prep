@@ -77,8 +77,8 @@ Each domain (e.g., api-security, cloud-security) must also have:
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
-| 📚 Subtopics |  81   |         5            |       0        |      76        | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ (5/81)   |   6.2%     |
-| ✅ Subtasks  | 241   |        30            |       –        |     211        | 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ (30/241) |   12.4%     |
+| 📚 Subtopics |  81   |         6            |       0        |      75        | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ (6/81)   |   7.4%     |
+| ✅ Subtasks  | 241   |        36            |       –        |     205        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ (36/241) |   14.9%     |
 
 **Legend:**  
 🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
@@ -86,9 +86,9 @@ Each domain (e.g., api-security, cloud-security) must also have:
 ---
 
 **📊 Content Status Summary:**
-- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (Core Principles - CIA Triad, Threat Modeling, Security Principles, Red Team vs Blue Team vs Purple Team), 0.2 (Security Programs & Frameworks), 0.3 (Linux Fundamentals - 8/8 subtasks completed)
-- **In Progress:** Domain 0 (Cybersecurity Fundamentals - 3/6 subtopics completed)
-- **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining subtopics: 0.4 (Operating System & Kernel), 0.5 (Networking Fundamentals), 0.6 (Trust & Identity Concepts)
+- **Completed:** 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting), 0.1 (Core Principles - CIA Triad, Threat Modeling, Security Principles, Red Team vs Blue Team vs Purple Team), 0.2 (Security Programs & Frameworks), 0.3 (Linux Fundamentals - 8/8 subtasks completed), 0.4 (Operating System & Kernel - 6/6 subtasks completed)
+- **In Progress:** Domain 0 (Cybersecurity Fundamentals - 4/6 subtopics completed)
+- **Next Priority:** Continue Domain 0 (Cybersecurity Fundamentals) - remaining subtopics: 0.5 (Networking Fundamentals), 0.6 (Trust & Identity Concepts)
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion.
 
@@ -112,7 +112,7 @@ cybersecurity-interview-prep/
 │   │   ├── 0.1-core-principles/                 # Subtopic 0.1 🟢 COMPLETED
 │   │   ├── 0.2-security-programs-frameworks/    # Subtopic 0.2 🟢 COMPLETED
 │   │   ├── 0.3-linux-fundamentals/              # Subtopic 0.3 🟡 IN PROGRESS (6/8)
-│   │   ├── 0.4-operating-system-kernel/         # Subtopic 0.4 🔴 NOT STARTED
+│   │   ├── 0.4-operating-system-kernel/         # Subtopic 0.4 🟢 COMPLETED
 │   │   ├── 0.5-networking-fundamentals/         # Subtopic 0.5 🔴 NOT STARTED
 │   │   ├── 0.6-trust-identity-concepts/         # Subtopic 0.6 🔴 NOT STARTED
 │   ├── 1-web-application-security/

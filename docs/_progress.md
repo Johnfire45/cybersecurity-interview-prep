@@ -15,8 +15,8 @@
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
-| 📚 Subtopics |  81   |         5            |       0        |      76        | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ (5/81)   |   6.2%     |
-| ✅ Subtasks  | 241   |        30            |       –        |     211        | 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ (30/241) |   12.4%     |
+| 📚 Subtopics |  81   |         6            |       0        |      75        | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ (6/81)   |   7.4%     |
+| ✅ Subtasks  | 241   |        36            |       –        |     205        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ (36/241) |   14.9%     |
 
 ---
 
@@ -41,10 +41,10 @@
 ## 0. Cybersecurity Fundamentals 🟡
 
 #### Domain Progress Summary
-- 🟢 Mastered: 3
+- 🟢 Mastered: 4
 - 🟡 In Progress: 0
 - 🧪 Needs Review: 0
-- 🔴 Not Started: 30
+- 🔴 Not Started: 24
 - **Total Subtopics:** 33
 
 ### 0.1 Core Principles 🟢
@@ -73,14 +73,14 @@
 - [x] Package Managers (apt, yum, snap, etc.) — 🟢
 - [x] Bash Scripting Basics — 🟢
 
-### 0.4 Operating System & Kernel 🔴
+### 0.4 Operating System & Kernel 🟢
 
-- [ ] Linux Init Systems (systemd, init.d) — 🔴
-- [ ] Linux Boot Process — 🔴
-- [ ] Kernel Modules & Syscalls — 🔴
-- [ ] Memory & Filesystem Hierarchies — 🔴
-- [ ] Chain of Trust in Bootloaders — 🔴
-- [ ] Secure Boot Concepts — 🔴
+- [x] Linux Init Systems (systemd, init.d) — 🟢
+- [x] Linux Boot Process — 🟢
+- [x] Kernel Modules & Syscalls — 🟢
+- [x] Memory & Filesystem Hierarchies — 🟢
+- [x] Chain of Trust in Bootloaders — 🟢
+- [x] Secure Boot Concepts — 🟢
 
 ### 0.5 Networking Fundamentals 🔴
 
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 5 | Subtasks Completed: 32 | Progress: 13.3%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 6 | Subtasks Completed: 36 | Progress: 14.9%**
