@@ -16,7 +16,7 @@
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
 | 📚 Subtopics |  81   |         6            |       0        |      75        | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ (6/81)   |   7.4%     |
-| ✅ Subtasks  | 241   |        36            |       –        |     205        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ (36/241) |   14.9%     |
+| ✅ Subtasks  | 241   |        40            |       –        |     201        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (40/241) |   16.6%     |
 
 ---
 
@@ -84,10 +84,10 @@
 
 ### 0.5 Networking Fundamentals 🔴
 
-- [ ] OSI Model Layers (L1–L7) — 🔴
-- [ ] TCP/IP Stack & Packets — 🔴
-- [ ] Ports, Services & Daemons — 🔴
-- [ ] Common Protocols (TCP, UDP, HTTP, DNS, etc.) — 🔴
+- [x] OSI Model Layers (L1–L7) — 🟢
+- [x] TCP/IP Stack & Packets — 🟢
+- [x] Ports, Services & Daemons — 🟢
+- [x] Common Protocols (TCP, UDP, HTTP, DNS, etc.) — 🟢
 - [ ] Network Addressing (IP, MAC, CIDR, NAT) — 🔴
 - [ ] Routing, Switching, and ARP — 🔴
 - [ ] Firewalls, IDS/IPS — 🔴
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 6 | Subtasks Completed: 36 | Progress: 14.9%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 6 | Subtasks Completed: 40 | Progress: 16.6%**

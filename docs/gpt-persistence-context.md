@@ -36,9 +36,6 @@ Path convention:
 Each folder should contain:
 - `notes.md` → Topic-wise notes  
 - `quiz.md` → MCQs + real-world attack simulations  
-- `README.md` (optional)  
-- `labs.md` (optional hands-on guidance)
-
 ---
 
 ## 📋 File Responsibilities
