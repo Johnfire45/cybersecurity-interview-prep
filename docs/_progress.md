@@ -15,8 +15,8 @@
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
-| 📚 Subtopics |  81   |         6            |       0        |      75        | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ (6/81)   |   7.4%     |
-| ✅ Subtasks  | 241   |        40            |       –        |     201        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (40/241) |   16.6%     |
+| 📚 Subtopics |  81   |         7            |       0        |      74        | 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ (7/81)   |   8.6%     |
+| ✅ Subtasks  | 241   |        44            |       –        |     197        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (44/241) |   18.3%     |
 
 ---
 
@@ -41,10 +41,10 @@
 ## 0. Cybersecurity Fundamentals 🟡
 
 #### Domain Progress Summary
-- 🟢 Mastered: 4
+- 🟢 Mastered: 5
 - 🟡 In Progress: 0
 - 🧪 Needs Review: 0
-- 🔴 Not Started: 24
+- 🔴 Not Started: 18
 - **Total Subtopics:** 33
 
 ### 0.1 Core Principles 🟢
@@ -82,16 +82,16 @@
 - [x] Chain of Trust in Bootloaders — 🟢
 - [x] Secure Boot Concepts — 🟢
 
-### 0.5 Networking Fundamentals 🔴
+### 0.5 Networking Fundamentals 🟢
 
 - [x] OSI Model Layers (L1–L7) — 🟢
 - [x] TCP/IP Stack & Packets — 🟢
 - [x] Ports, Services & Daemons — 🟢
 - [x] Common Protocols (TCP, UDP, HTTP, DNS, etc.) — 🟢
-- [ ] Network Addressing (IP, MAC, CIDR, NAT) — 🔴
-- [ ] Routing, Switching, and ARP — 🔴
-- [ ] Firewalls, IDS/IPS — 🔴
-- [ ] Wireshark & tcpdump Basics — 🔴
+- [x] Network Addressing (IP, MAC, CIDR, NAT) — 🟢
+- [x] Routing, Switching, and ARP — 🟢
+- [x] Firewalls, IDS/IPS — 🟢
+- [x] Wireshark & tcpdump Basics — 🟢
 
 ### 0.6 Trust & Identity Concepts 🔴
 
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 6 | Subtasks Completed: 40 | Progress: 16.6%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 7 | Subtasks Completed: 44 | Progress: 18.3%**

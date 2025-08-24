@@ -235,3 +235,233 @@ For each case:
 - A **/26** subnet splits into blocks of 64, each with 62 usable hosts.  
 - A **/27** has a block size of 32 → 30 usable hosts.  
 - **Quick trick:** Block size = 2^(32 − subnet mask). Network = nearest multiple of block size, Broadcast = Network + Block size − 1.
+
+### Q10 — Final VLSM Challenge (Detailed Walkthrough & Answer)
+
+**Pool:** `10.50.0.0/23` → covers `10.50.0.0 – 10.50.1.255` (512 total addresses)  
+**Requirements:**  
+- Dept A: **200 hosts**  
+- Dept B: **60 hosts**  
+- Dept C: **25 hosts**  
+- Link D: **2 hosts** (point‑to‑point)
+
+---
+
+## 1) Plan with VLSM (Largest → Smallest)
+
+Use the smallest subnet that provides **usable ≥ required**.  
+Usable hosts = `2^(32−mask) − 2`
+
+- **A (200 hosts)** → needs **/24** (256 total, **254 usable**) ✅  
+  - /25 has 126 usable → too small ❌
+- **B (60 hosts)** → needs **/26** (64 total, **62 usable**) ✅  
+  - /27 has 30 usable → too small ❌
+- **C (25 hosts)** → needs **/27** (32 total, **30 usable**) ✅  
+- **D (2 hosts)** → needs **/30** (4 total, **2 usable**) ✅  
+  - /31 has 2 total but 0 usable in classical accounting (point‑to‑point /31 is special case, but stick to /30 for exams)
+
+**Chosen masks:** A=/24, B=/26, C=/27, D=/30
+
+---
+
+## 2) Carve the /23 Space (Binary‑Aligned, No Overlap)
+
+The /23 spans two /24s back‑to‑back:
+- Block 1: `10.50.0.0/24` → `10.50.0.0 – 10.50.0.255`
+- Block 2: `10.50.1.0/24` → `10.50.1.0 – 10.50.1.255`
+
+Allocate in order A → B → C → D:
+
+### Dept A — /24
+- **A:** `10.50.0.0/24`  
+  - Network: `10.50.0.0`  
+  - Broadcast: `10.50.0.255`  
+  - Usable: `10.50.0.1 – 10.50.0.254` (254 hosts)
+
+Remaining free space: the entire second /24 → `10.50.1.0/24`
+
+### Dept B — /26 (64‑block aligned)
+- A /26 increments by 64 in the last octet.
+- Use start of the second /24 for clean alignment:
+- **B:** `10.50.1.0/26`  
+  - Network: `10.50.1.0`  
+  - Broadcast: `10.50.1.63`  
+  - Usable: `10.50.1.1 – 10.50.1.62` (62 hosts)
+
+Remaining free in `10.50.1.0/24`: `10.50.1.64 – 10.50.1.255`
+
+### Dept C — /27 (32‑block aligned)
+- Next aligned /27 after 1.0/26 is **1.64/27** (64..95)
+- **C:** `10.50.1.64/27`  
+  - Network: `10.50.1.64`  
+  - Broadcast: `10.50.1.95`  
+  - Usable: `10.50.1.65 – 10.50.1.94` (30 hosts)
+
+Remaining free: `10.50.1.96 – 10.50.1.255`
+
+### Link D — /30 (4‑block aligned)
+- Next aligned /30 after 1.64/27 (64..95) is **1.96/30** (96..99)
+- **D:** `10.50.1.96/30`  
+  - Network: `10.50.1.96`  
+  - Broadcast: `10.50.1.99`  
+  - Usable: `10.50.1.97 – 10.50.1.98` (2 hosts)
+
+Remaining free (optional future use):  
+- `10.50.1.100 – 10.50.1.255` (plenty of headroom for growth)
+
+---
+
+## 3) Final Allocation (Answer)
+
+- **Dept A:** `10.50.0.0/24` → Usable `10.50.0.1 – 10.50.0.254` (254)  
+- **Dept B:** `10.50.1.0/26` → Usable `10.50.1.1 – 10.50.1.62` (62)  
+- **Dept C:** `10.50.1.64/27` → Usable `10.50.1.65 – 10.50.1.94` (30)  
+- **Link D:** `10.50.1.96/30` → Usable `10.50.1.97 – 10.50.1.98` (2)
+
+✅ Fits entirely within `10.50.0.0/23` with **no overlaps**, clean binary alignment.
+
+---
+
+## 4) Sanity Checks & Quick Tricks
+
+- **Alignment:**  
+  - /24 steps by 256 → `.0, .1, .2…` in the 3rd octet.  
+  - /26 steps by 64 → `.0, .64, .128, .192` in the 4th octet.  
+  - /27 steps by 32 → `.0, .32, .64, .96, …`  
+  - /30 steps by 4 → `.0, .4, .8, .12, …`
+
+- **Host math refresher:**  
+  - /24 → 256 total, **254 usable**  
+  - /26 → 64 total, **62 usable**  
+  - /27 → 32 total, **30 usable**  
+  - /30 → 4 total, **2 usable**
+
+- **VLSM workflow:**  
+  1) Sort subnets by **descending host need**.  
+  2) Assign the **smallest mask** that meets each need.  
+  3) Place each block at the **next aligned boundary**.  
+  4) Ensure **no overlap** and within the parent prefix.
+
+---
+
+## 5) Interview One‑Liner
+“From 10.50.0.0/23, allocate A=/24 (10.50.0.0/24), B=/26 (10.50.1.0/26), C=/27 (10.50.1.64/27), D=/30 (10.50.1.96/30). This order fits cleanly, aligns on proper boundaries, and leaves growth room.”
+
+### Q4 — Real-World Curveball: Multi-Layer Attack Chain
+
+**Scenario (Question):**  
+During a red team engagement, you discover:  
+1. An access switch has no port security. You launch a **MAC flooding attack**, overflowing the CAM table.  
+2. You then perform **ARP spoofing** to impersonate the default gateway and capture traffic.  
+3. Finally, you manipulate a router’s **routing table** using **ICMP redirect messages**, forcing packets through your rogue system.  
+
+**Question:**  
+1. Map each step to the correct OSI/TCP-IP layer.  
+2. Explain how these weaknesses chain together.  
+3. Suggest one defense measure for each step.  
+
+---
+
+**Answer:**
+
+**Layer Mapping**  
+- MAC Flooding → Data Link (L2) / Link Layer  
+- ARP Spoofing → Data Link (L2) / Link Layer  
+- ICMP Redirect → Network (L3) / Internet Layer  
+
+---
+
+**Attack Chain (Red Team View)**  
+- **MAC Flooding:** Overflows CAM → switch acts like hub → attacker captures frames.  
+- **ARP Spoofing:** Attacker impersonates gateway → becomes MITM → sniffs credentials, injects payloads.  
+- **ICMP Redirect:** Attacker manipulates routing → hosts forward traffic via attacker → full packet control.  
+
+---
+
+**Blue Team Defenses**  
+- **MAC Flooding:** Enable port security (limit MACs per port), disable unused ports.  
+- **ARP Spoofing:** Deploy Dynamic ARP Inspection (DAI), static ARP for gateways, enforce TLS/SSH.  
+- **ICMP Redirect:** Disable ICMP redirects on routers, authenticate routing protocols, monitor routing changes.  
+
+---
+
+**Interview One-Liner**  
+“MAC flooding (L2) forces hub-like behavior, ARP spoofing (L2) enables MITM, and ICMP redirects (L3) manipulate routing. Defenses: port security, ARP inspection, and disabling ICMP redirects.”
+
+### Q4 — Real-World Curveball: Defense in Depth
+
+**Scenario (Question):**  
+During a red team exercise:  
+1. You try brute-forcing SSH on `10.0.0.12:22`, but the **firewall blocks all inbound SSH except from a VPN subnet**.  
+2. You pivot and launch a **SQL injection** against the company’s web app. The **IDS (Snort)** raises an alert in the SOC dashboard, but traffic still passes through.  
+3. You then upload a malicious file through the web app. The **IPS (inline, Suricata)** detects it as a known malware signature and **drops the upload in real time**.  
+
+**Question:**  
+1. Which security control (Firewall, IDS, IPS) was effective in each step?  
+2. How do these three layers complement each other in defense-in-depth?  
+3. What’s one limitation of relying only on one of them?  
+
+---
+
+**Answer:**
+
+1. **Controls Effective at Each Step**  
+   - Step 1 → Firewall blocked brute-force SSH.  
+   - Step 2 → IDS detected SQL injection (alert only).  
+   - Step 3 → IPS detected malware and blocked it in real time.  
+
+2. **Defense-in-Depth**  
+   - Firewall enforces network access control.  
+   - IDS provides visibility and alerts SOC of suspicious traffic.  
+   - IPS actively blocks known exploits and malware inline.  
+   - Together: layered security = prevent, detect, and respond.  
+
+3. **Limitations of Relying on One**  
+   - Firewall only: Can’t see application-layer attacks (SQLi, XSS).  
+   - IDS only: Detects but doesn’t block → attacker may still succeed.  
+   - IPS only: Can block, but may cause false positives and lacks broader visibility.  
+
+---
+
+**Interview One-Liner**  
+“In this chain, Firewall blocked brute-force, IDS detected SQLi, IPS blocked malware. Each alone has limits, but together they form effective defense-in-depth.”
+
+### Q1 — Comprehensive Scenario: Wireshark & tcpdump
+
+**Scenario (Question):**  
+You are a SOC analyst investigating suspicious outbound traffic from a Linux server.  
+1. Using **tcpdump**, capture only traffic from the server to suspicious IP `203.0.113.50` on port `443` and save it for later analysis.  
+2. Load this capture into **Wireshark**. What filters would you apply to:  
+   - View only HTTP(S) requests?  
+   - Follow the entire TCP session between client and server?  
+   - Check for unusual DNS tunneling activity?  
+3. As part of **incident response**, what are the main differences in using tcpdump vs Wireshark in this scenario?  
+4. What are **two best practices** when performing packet capture in production networks?  
+
+---
+
+**Answer:**
+
+1. **tcpdump Command:**  
+   tcpdump -i eth0 host 203.0.113.50 and port 443 -w suspicious.pcap  
+
+2. **Wireshark Filters:**  
+   - Only HTTP(S): `http` or `tcp.port==443`  
+   - Follow full session: Right-click packet → **Follow → TCP Stream**  
+   - DNS tunneling: `dns` (look for TXT records, long queries, repetitive traffic patterns)  
+
+3. **tcpdump vs Wireshark:**  
+   - tcpdump = lightweight CLI capture, great for remote servers and quick forensics.  
+   - Wireshark = GUI deep analysis, powerful filtering, protocol hierarchy, reassembly, visualization.  
+   - tcpdump captures the data → Wireshark dissects it.  
+
+4. **Best Practices:**  
+   - Always use filters to avoid massive `.pcap` files.  
+   - Run as root/admin but restrict capture scope (least privilege).  
+   - Securely transfer `.pcap` files for central analysis (don’t leave on compromised host).  
+   - Respect privacy/legal constraints when capturing user traffic.  
+
+---
+
+**Interview One-Liner**  
+“tcpdump captures raw packets (CLI, quick, filterable), Wireshark analyzes in detail (GUI, full OSI inspection). Best practice: filter captures, minimize scope, and centralize for correlation.”

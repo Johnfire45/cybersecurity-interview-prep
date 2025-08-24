@@ -378,3 +378,259 @@ This shows exactly how ports, sequence numbers, and flags evolve to establish a 
 - “CIDR defines networks flexibly, replacing rigid A/B/C classes.”
 - “NAT hides private networks behind public IPs but doesn’t replace a firewall.”
 - “MAC spoofing = LAN attack; NAT misconfig = perimeter risk.”
+
+# 0.5.6 Routing, Switching, and ARP
+
+---
+
+## 1. Switching (Layer 2)
+- **Switches forward frames using MAC addresses**.
+- Maintain a **CAM/MAC table** mapping port ↔ MAC address.
+- Each port = its own collision domain.
+- Entire switch = one broadcast domain (unless VLANs used).
+- **VLANs (802.1Q):** Segment traffic logically.
+
+**Security Risks:**
+- MAC flooding (forces switch to act like hub).
+- VLAN hopping (misuse of trunking).
+- Rogue devices connecting to unused ports.
+
+**Defenses:**
+- Port security (limit MACs per port).
+- Disable unused switch ports.
+- Enforce VLAN segmentation.
+
+**Diagram (Switching):**
+- One central switch with multiple hosts connected.
+- Switch uses MAC table to forward frames to the correct port, not flooding all.
+
+---
+
+## 2. Routing (Layer 3)
+- **Routers forward packets based on IP addresses.**
+- Each router has a **routing table** with next hops.
+- **Static routing:** manually configured routes.
+- **Dynamic routing protocols:**
+  - Interior Gateway Protocols (within an AS): OSPF, RIP, EIGRP, IS-IS.
+  - Exterior Gateway Protocols (between AS): BGP.
+
+**Security Risks:**
+- BGP hijacking (malicious route injection).
+- ICMP redirects.
+- Misconfiguration leaks internal routes.
+
+**Defenses:**
+- Authenticate routing updates (e.g., OSPF MD5, BGP TTL Security).
+- Route filtering.
+- Monitor routing anomalies.
+
+**Diagram (Routing):**
+- Router A connects Net A (192.168.1.0/24).
+- Router B connects Net B (10.0.0.0/24).
+- Routers exchange routes and forward packets across networks.
+
+---
+
+## 3. ARP (Address Resolution Protocol)
+- **Maps IP → MAC addresses within a local subnet.**
+- Works by broadcasting:
+  - “Who has IP X?”
+  - The host with IP X replies with its MAC.
+- Stored in **ARP cache** for reuse.
+
+**Security Risks:**
+- ARP spoofing/poisoning:
+  - Attacker sends fake ARP replies → impersonates gateway.
+  - Enables Man-in-the-Middle (MITM) attacks.
+
+**Defenses:**
+- Dynamic ARP Inspection (DAI) on switches.
+- Static ARP entries for critical devices.
+- Use encrypted protocols (HTTPS, SSH) to limit impact of MITM.
+
+**Diagram (ARP):**
+- Host A (IP 192.168.1.10, MAC AA:BB) asks:
+  - “Who has 192.168.1.20?”
+- Host B (IP 192.168.1.20, MAC CC:DD) replies:
+  - “I am 192.168.1.20, MAC=CC:DD.”
+
+---
+
+## 4. Routing vs Switching vs ARP (Quick Table)
+
+| Feature        | Switching (L2)          | Routing (L3)            | ARP (L2.5)          |
+|----------------|--------------------------|--------------------------|---------------------|
+| Unit handled   | Frames (MAC)            | Packets (IP)            | IP→MAC mapping      |
+| Table used     | CAM/MAC table           | Routing table           | ARP cache           |
+| Scope          | LAN                     | Between networks        | Local subnet only   |
+| Attacks        | MAC flooding, VLAN hop  | BGP hijack, ICMP redirect | ARP spoofing        |
+| Defenses       | Port security, VLAN ACL | Auth routes, filtering  | DAI, static ARP     |
+
+---
+
+## Interview One-Liners
+- “Switches forward frames using MAC, routers forward packets using IP.”
+- “ARP resolves IP to MAC in a subnet, but attackers abuse it via spoofing.”
+- “Switching attacks: MAC flooding, VLAN hopping.”
+- “Routing attacks: BGP hijacking.”
+- “ARP attacks: MITM via spoofing.”
+
+# 0.5.7 Firewalls, IDS, and IPS
+
+---
+
+## 1. Firewalls
+
+### Purpose
+- Act as a barrier between trusted ↔ untrusted networks.
+- Control traffic based on IP, port, protocol, or application rules.
+
+### Types
+1. **Packet-Filtering Firewall (Stateless)**
+   - Works at L3/L4 (IP, port).
+   - Rules like: deny TCP port 23 (Telnet).
+   - Fast, but no connection state awareness.
+
+2. **Stateful Firewall**
+   - Tracks TCP/UDP connection state.
+   - Default in most enterprise firewalls.
+
+3. **Application/Proxy Firewall**
+   - Works at L7 (Application).
+   - Inspects HTTP headers, SQL queries.
+   - Blocks malicious payloads (SQLi, XSS).
+
+4. **Next-Generation Firewall (NGFW)**
+   - Combines L3–L7, deep packet inspection, IDS/IPS.
+   - Integrates with threat intel feeds.
+
+### Security Concerns
+- Misconfigured rules (`allow any any`).
+- Bypasses (e.g., DNS tunneling).
+
+### Defenses
+- **Default deny** principle.
+- Rule audits & least privilege.
+
+---
+
+## 2. IDS (Intrusion Detection System)
+
+### Purpose
+- Monitors traffic for malicious activity.
+- **Passive** → only alerts.
+
+### Types
+- **NIDS:** Network traffic monitoring (Snort, Suricata).
+- **HIDS:** Host log/process monitoring (OSSEC, Wazuh).
+
+### Detection Methods
+- **Signature-based:** Match known attack patterns.
+- **Anomaly-based:** Deviations from baseline (detects 0-days, but FP heavy).
+
+### Challenges
+- False positives (alert fatigue).
+- IDS evasion (packet fragmentation, obfuscation).
+
+---
+
+## 3. IPS (Intrusion Prevention System)
+
+### Purpose
+- Inline system that detects + blocks.
+- Can drop packets, reset sessions, quarantine hosts.
+
+### Differences from IDS
+- IDS = Detect & Alert.
+- IPS = Detect & Prevent/Block.
+
+### Security Concerns
+- Misconfig = blocks legit traffic (self-DoS).
+
+---
+
+## 4. Firewall vs IDS vs IPS
+
+| Feature     | Firewall                          | IDS                            | IPS                           |
+|-------------|-----------------------------------|--------------------------------|-------------------------------|
+| Function    | Access control (filter)           | Detect suspicious activity     | Detect + Block malicious traffic |
+| OSI Layers  | L3–L7 (depends on type)           | L2–L7                          | L2–L7                         |
+| Action      | Allow/Deny traffic                | Alert only                     | Drop/Block/Reset traffic      |
+| Example     | Palo Alto, Cisco ASA, iptables    | Snort, Suricata, Wazuh         | Suricata (inline), NGFW IPS   |
+
+---
+
+## Interview One-Liners
+- “Firewalls enforce access control, IDS detects, IPS prevents.”
+- “Packet filter FW = L3/L4; Application FW = L7.”
+- “IDS is passive, IPS is inline.”
+- “Defense-in-depth uses Firewall + IDS/IPS together.”
+
+# 0.5.8 Wireshark & tcpdump Basics
+
+---
+
+## 1. tcpdump (CLI Packet Capture)
+- Command-line packet sniffer for capturing traffic on network interfaces.
+- **Basic usage:**
+  tcpdump -i eth0
+
+- **Filtering (BPF syntax):**
+  - Capture only HTTP traffic:
+    tcpdump -i eth0 port 80
+  - Capture traffic from a specific host:
+    tcpdump -i eth0 host 10.0.0.5
+  - Save capture to file:
+    tcpdump -w capture.pcap
+  - Read from file:
+    tcpdump -r capture.pcap
+
+**Security Use Cases:**
+- Detect port scans (e.g., `tcpdump -n dst port 22`)
+- Capture suspicious outbound C2 traffic
+- Lightweight forensics on servers without GUI
+
+---
+
+## 2. Wireshark (GUI Packet Analyzer)
+- Graphical tool for capturing and analyzing network packets.
+- Provides dissection at all OSI layers.
+
+**Key Features:**
+- Display filters: `http.request`, `tcp.port==443`, `dns`
+- “Follow TCP Stream” → reconstruct conversations
+- Color coding to highlight protocols
+- Statistics: protocol hierarchy, conversations, I/O graphs
+
+**Security Use Cases:**
+- Malware traffic analysis (C2 beacons, exfiltration)
+- Detect cleartext credentials (HTTP/FTP logins)
+- Spot DNS tunneling or anomalies
+- Reassemble transferred files
+
+---
+
+## 3. tcpdump vs Wireshark
+
+| Feature        | tcpdump (CLI)                 | Wireshark (GUI)                |
+|----------------|-------------------------------|--------------------------------|
+| Usage          | CLI, lightweight, remote use  | GUI, detailed analysis          |
+| Filters        | BPF filters (`port 80`)       | Display filters (`tcp.port==80`)|
+| Output         | Text or `.pcap` file          | Full packet dissection & stats  |
+| Typical Use    | Server forensics, quick capture | Lab analysis, malware traffic   |
+
+---
+
+## 4. Best Practices
+- Run as **root/admin** for full capture.
+- Use filters to reduce noise and avoid huge `.pcap` files.
+- Export captures to SIEM/IDS for correlation.
+- Respect **privacy & legal constraints** when sniffing traffic.
+
+---
+
+## Interview One-Liners
+- “tcpdump = quick CLI capture, Wireshark = deep GUI analysis.”
+- “tcpdump uses BPF filters; Wireshark uses display filters.”
+- “In IR: tcpdump captures, Wireshark analyzes.”
+- “Best practice: capture only what’s needed, centralize for correlation.”
