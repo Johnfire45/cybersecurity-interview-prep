@@ -14,9 +14,9 @@
 
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
-| 🌐 Domains   |  17   |         0            |       2        |      15        | 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ (2/17)  |   11.8%    |
-| 📚 Subtopics |  81   |         7            |       0        |      74        | 🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜ (7/81)   |   8.6%     |
-| ✅ Subtasks  | 241   |        44            |       –        |     197        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (44/241) |   18.3%     |
+| 🌐 Domains   |  17   |         1            |       1        |      15        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/17)  |   17.6%    |
+| 📚 Subtopics |  81   |         8            |       0        |      73        | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ (8/81)   |   9.9%     |
+| ✅ Subtasks  | 241   |        49            |       –        |     192        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (49/241) |   20.3%     |
 
 ---
 
@@ -38,13 +38,13 @@
 
 ---
 
-## 0. Cybersecurity Fundamentals 🟡
+## 0. Cybersecurity Fundamentals 🟢
 
 #### Domain Progress Summary
-- 🟢 Mastered: 5
+- 🟢 Mastered: 6
 - 🟡 In Progress: 0
 - 🧪 Needs Review: 0
-- 🔴 Not Started: 18
+- 🔴 Not Started: 13
 - **Total Subtopics:** 33
 
 ### 0.1 Core Principles 🟢
@@ -93,13 +93,13 @@
 - [x] Firewalls, IDS/IPS — 🟢
 - [x] Wireshark & tcpdump Basics — 🟢
 
-### 0.6 Trust & Identity Concepts 🔴
+### 0.6 Trust & Identity Concepts 🟢
 
-- [ ] Chain of Trust & Certificate Authorities — 🔴
-- [ ] Encryption (Symmetric, Asymmetric) — 🔴
-- [ ] Digital Signatures — 🔴
-- [ ] Key Management & PKI — 🔴
-- [ ] Authentication vs Authorization — 🔴
+- [x] Chain of Trust & Certificate Authorities — 🟢
+- [x] Encryption (Symmetric, Asymmetric) — 🟢
+- [x] Digital Signatures — 🟢
+- [x] Key Management & PKI — 🟢
+- [x] Authentication vs Authorization — 🟢
 
 ---
 
@@ -725,4 +725,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 0 | Subtopics Mastered: 7 | Subtasks Completed: 44 | Progress: 18.3%**
+**🗂️ Total Domains: 17 | Total Subtopics: 81 | Total Subtasks: 241 | Domains Mastered: 1 | Subtopics Mastered: 8 | Subtasks Completed: 49 | Progress: 20.3%**
