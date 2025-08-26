@@ -1,0 +1,71 @@
+### Q1 — Subjective: Stagefright Vulnerability & Android OS Architecture
+
+**Question:**  
+During the Stagefright vulnerability (2015), attackers could exploit the Android media framework by sending a crafted MMS.  
+
+Explain:  
+1. How the Android OS architecture (sandboxing + SELinux) helped reduce the impact.  
+2. What would have happened if Android relied only on DAC (Discretionary Access Control) without SELinux?
+
+---
+
+**Answer (Summary):**
+
+1. **With SELinux + Sandboxing**  
+   - Each app runs in its own UID sandbox (Linux kernel).  
+   - The vulnerable mediaserver was confined by SELinux (MAC) policies.  
+   - Could only access camera/audio resources, not contacts, SMS, or system files.  
+   - This limited the blast radius of the exploit.
+
+2. **If Only DAC Was Used**  
+   - DAC relies on user/group permissions (file ownership).  
+   - Mediaserver had broad access under its UID.  
+   - Compromise could allow attackers to read/write sensitive files, escalate privileges, and break the sandbox.  
+   - DAC alone is too coarse to contain exploits.
+
+---
+
+**Interview One-Liner**  
+“Android’s sandboxing plus SELinux policies confined Stagefright to mediaserver’s limited domain. With only DAC, attackers could have gained far broader access and escalated privileges.”
+
+### Q2 — Subjective: Hardware Abstraction Layer (HAL) Security & Risks
+
+**Question:**  
+How does the Hardware Abstraction Layer (HAL) improve Android’s security and portability, and what risks are introduced if a vendor implements a poorly coded HAL driver?
+
+---
+
+**Answer (Summary):**
+
+1. **How HAL Improves Security & Portability**  
+   - **Portability:** Provides a standard API → apps work consistently across different vendors (Samsung, Pixel, OnePlus).  
+   - **Security:** Prevents direct hardware access by apps → apps interact via HAL APIs, reducing attack surface.
+
+2. **Risks of Poorly Coded HAL Drivers**  
+   - **Reliability Risk:** Hardware may not work consistently (e.g., audio HAL bug prevents stable speaker/mic use).  
+   - **Security Risk:** HAL drivers run with elevated privileges → vulnerabilities (e.g., buffer overflow, poor validation) can be exploited.  
+     - Exploits in Qualcomm camera/audio HALs have enabled attackers to gain root access.  
+
+---
+
+**Interview One-Liner**  
+“HAL abstracts hardware behind standard APIs for portability and protects it from direct app access. But weak HAL drivers create privileged attack surfaces that can be exploited for reliability issues and even root-level privilege escalation.”
+
+### Q7 — Subjective: Verified Boot Disabled
+
+**Question:**  
+If Verified Boot is disabled on an Android device, what is the single most critical security risk introduced?
+
+---
+
+**Answer (Summary):**  
+- **Verified Boot** cryptographically ensures the OS and firmware integrity at boot.  
+- **If disabled**:  
+  - Attackers can boot a **tampered OS/kernel image**.  
+  - Rootkits or persistent malware could survive reboots.  
+  - The trust chain breaks → sandboxing and SELinux can be bypassed.  
+
+---
+
+**Interview One-Liner**  
+“Disabling Verified Boot allows tampered OS images or rootkits to load at boot, breaking the trust chain and compromising the entire Android security model.”
