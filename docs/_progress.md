@@ -14,9 +14,9 @@
 
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
-| 🌐 Domains   |  17   |         1            |       1        |      15        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/17)  |   17.6%    |
-| 📚 Subtopics |  81   |         8            |       0        |      73        | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ (8/81)   |   9.9%     |
-| ✅ Subtasks  | 241   |        49            |       –        |     192        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (49/241) |   20.3%     |
+| 🌐 Domains   |  17   |         1            |       2        |      14        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/17)  |   17.6%    |
+| 📚 Subtopics |  89   |         8            |       0        |      81        | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ (8/89)   |   9.0%     |
+| ✅ Subtasks  | 277   |        49            |       –        |     228        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (49/277) |   17.7%     |
 
 ---
 
@@ -263,56 +263,109 @@
 
 ---
 
-## 3. Android Application Security 🔴
+## 3. Android Application Security 🟡
 
-### 3.1 App Manifest Analysis 🔴
+#### Domain Progress Summary
+- 🟢 Mastered: 0
+- 🟡 In Progress: 0
+- 🧪 Needs Review: 0
+- 🔴 Not Started: 13
+- **Total Subtopics:** 13
+
+### 3.1 Android Fundamentals & Architecture 🔴
+
+- [ ] Android OS Architecture — 🔴
+- [ ] App Sandboxing & Isolation — 🔴
+- [ ] Android Security Model — 🔴
+- [ ] App Lifecycle & Process Management — 🔴
+
+### 3.2 Android App Components 🔴
+
+- [ ] Activities & Lifecycle — 🔴
+- [ ] Services & Background Processing — 🔴
+- [ ] Broadcast Receivers & System Events — 🔴
+- [ ] Content Providers & Data Sharing — 🔴
+
+### 3.3 Android App Architecture 🔴
+
+- [ ] Manifest.xml Structure — 🔴
+- [ ] App Signing & Certificates — 🔴
+- [ ] Build Variants & Configurations — 🔴
+- [ ] Package Structure & APK Contents — 🔴
+
+### 3.4 Android Development Concepts 🔴
+
+- [ ] Build Process & Gradle — 🔴
+- [ ] APK Structure & DEX Files — 🔴
+- [ ] Debugging & Logging — 🔴
+- [ ] Testing & Quality Assurance — 🔴
+
+### 3.5 App Manifest Security Analysis 🔴
 
 - [ ] Permission Analysis — 🔴
 - [ ] Component Security — 🔴
 - [ ] Intent Filter Security — 🔴
 - [ ] Manifest Hardening — 🔴
 
-### 3.2 Storage Security 🔴
+### 3.6 Storage Security 🔴
 
 - [ ] SharedPreferences Security — 🔴
 - [ ] Internal Storage Security — 🔴
 - [ ] External Storage Security — 🔴
 - [ ] Database Security (SQLite) — 🔴
+- [ ] Android Keystore & Key Management — 🔴
+- [ ] Cryptography Misuse (Hardcoded Keys, Insecure RNG) — 🔴
 
-### 3.3 WebView Security 🔴
+### 3.7 WebView Security 🔴
 
 - [ ] WebView Vulnerabilities — 🔴
 - [ ] JavaScript Interface Security — 🔴
 - [ ] File Access Security — 🔴
 - [ ] WebView Hardening — 🔴
 
-### 3.4 IPC & Broadcast Security 🔴
+### 3.8 IPC & Broadcast Security 🔴
 
 - [ ] Intent Security — 🔴
 - [ ] Broadcast Receiver Security — 🔴
 - [ ] Content Provider Security — 🔴
 - [ ] Service Security — 🔴
 
-### 3.5 Network Security 🔴
+### 3.9 Network Security 🔴
 
 - [ ] SSL Pinning — 🔴
 - [ ] Certificate Validation — 🔴
 - [ ] Network Security Config — 🔴
 - [ ] API Security — 🔴
 
-### 3.6 Reverse Engineering & Obfuscation 🔴
+### 3.10 Reverse Engineering & Obfuscation 🔴
 
 - [ ] Code Obfuscation — 🔴
 - [ ] Root Detection Bypass — 🔴
 - [ ] Anti-Debugging Bypass — 🔴
 - [ ] Frida & Objection Usage — 🔴
 
-### 3.7 Mobile Security Tools 🔴
+### 3.11 Mobile Security Tools 🔴
 
 - [ ] MobSF (Mobile Security Framework) — 🔴
 - [ ] APK Analysis — 🔴
 - [ ] Dynamic Analysis — 🔴
 - [ ] Static Analysis — 🔴
+- [ ] Drozer — 🔴
+
+### 3.12 Advanced Exploitation Techniques 🔴
+
+- [ ] Privilege Escalation — 🔴
+- [ ] Data Exfiltration — 🔴
+- [ ] Side-Channel Attacks — 🔴
+- [ ] Advanced Persistence — 🔴
+
+### 3.13 Modern Android Security Features 🔴
+
+- [ ] Android 10+ Security Features — 🔴
+- [ ] Scoped Storage & Privacy — 🔴
+- [ ] Work Profiles & Enterprise — 🔴
+- [ ] Hardware Security Modules — 🔴
+- [ ] SafetyNet / Play Integrity API — 🔴
 
 ---
 
