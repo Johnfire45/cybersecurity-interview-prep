@@ -275,8 +275,8 @@
 ### 3.1 Android Fundamentals & Architecture 🔴
 
 - [ ] Android OS Architecture — 🟢
-- [ ] App Sandboxing & Isolation — 🔴
-- [ ] Android Security Model — 🔴
+- [ ] App Sandboxing & Isolation — 🟢
+- [ ] Android Security Model — 🟢
 - [ ] App Lifecycle & Process Management — 🔴
 
 ### 3.2 Android App Components 🔴

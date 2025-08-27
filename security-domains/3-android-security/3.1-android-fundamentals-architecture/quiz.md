@@ -60,12 +60,50 @@ If Verified Boot is disabled on an Android device, what is the single most criti
 
 **Answer (Summary):**  
 - **Verified Boot** cryptographically ensures the OS and firmware integrity at boot.  
-- **If disabled**:  
-  - Attackers can boot a **tampered OS/kernel image**.  
+- **If disabled**:
+  - Attackers can boot a **tampered OS/kernel image**. 
   - Rootkits or persistent malware could survive reboots.  
   - The trust chain breaks → sandboxing and SELinux can be bypassed.  
 
 ---
 
-**Interview One-Liner**  
+**Interview One-Liner**
 “Disabling Verified Boot allows tampered OS images or rootkits to load at boot, breaking the trust chain and compromising the entire Android security model.”
+
+### Q4 — Subjective: Shared UID & Sandboxing
+
+**Question:**
+If two apps are signed by the same developer key and configured to share the same UID, how does this affect Android’s sandboxing model, and what security risk does it introduce?
+
+---
+
+**Answer (Summary):**  
+- Normally, each app gets a **unique UID**, enforcing strict sandboxing and isolation.  
+- If two apps share the same UID and are signed with the same key:  
+  - They run under the **same Linux user context**.  
+  - They can directly access each other’s data and processes, bypassing Binder IPC and permission checks.  
+  - If one app is compromised, the attacker gains access to the other app as well.  
+
+---
+
+**Interview One-Liner**  
+“Shared UIDs between apps break Android’s sandboxing by merging their security contexts, meaning compromise of one app exposes the other.”
+
+### Q4 — Subjective: Shared UID & Sandboxing
+
+**Question:**  
+If two apps are signed by the same developer key and configured to share the same UID, how does this affect Android’s sandboxing model, and what security risk does it introduce?
+
+---
+
+**Answer (Summary):**  
+- Normally, each app gets a **unique UID**, enforcing strict sandboxing and isolation.  
+- If two apps share the same UID and are signed with the same key:  
+  - They run under the **same Linux user context**.  
+  - They can directly access each other’s data and processes, bypassing Binder IPC and permission checks.  
+  - If one app is compromised, the attacker gains access to the other app as well.  
+
+---
+
+**Interview One-Liner**  
+“Shared UIDs between apps break Android’s sandboxing by merging their security contexts, meaning compromise of one app exposes the other.”

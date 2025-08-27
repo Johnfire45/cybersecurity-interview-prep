@@ -110,3 +110,127 @@
 | **Android Runtime (ART) + Core Libraries** | Executes app code, provides libraries                                 | - ART (replaced Dalvik VM) → JIT + AOT compilation <br> - Libraries: libc, SSL, SQLite, WebKit <br> - WhatsApp uses SQLite for chats | - Memory mgmt <br> - Secure execution of DEX code <br> - Provides crypto libraries |
 | **Hardware Abstraction Layer (HAL)** | Standard API between hardware drivers and higher Android layers          | - Camera HAL (consistent camera API across devices) <br> - Audio HAL <br> - Sensor HAL | - Controls access to hardware <br> - Prevents direct driver exposure to apps      |
 | **Linux Kernel (Foundation)** | Core OS layer: process mgmt, drivers, power, networking, SELinux                 | - Drivers: Wi-Fi, Camera, Audio, Bluetooth <br> - Process scheduling, memory management | - UID/GID process isolation <br> - SELinux Mandatory Access Control <br> - Verified Boot |
+
+# 3.1.2 App Sandboxing & Isolation
+
+---
+
+## What is Sandboxing?
+- Sandboxing = isolating apps so they can’t freely interact with each other or the system.  
+- Every app runs in its **own process** with a **unique Linux UID**.  
+- Prevents one app from directly accessing another app’s data.  
+
+---
+
+## How It Works
+1. **UID Isolation**  
+   - Unique UID per app assigned at install.  
+   - Kernel enforces → one UID cannot read/write another’s files.  
+
+2. **Filesystem Isolation**  
+   - Each app gets private dir in `/data/data/<package_name>`.  
+   - Only owning UID can access.  
+
+3. **Process Isolation**  
+   - Apps run in separate processes.  
+   - A crash/compromise doesn’t directly affect others.  
+
+4. **Binder IPC**  
+   - Secure inter-process communication.  
+   - Enforces permission checks for data/service exchange.  
+
+---
+
+## Security Reinforcements
+- **SELinux**: Fine-grained mandatory access control on top of UID sandboxing.  
+- **Permissions**: Explicit consent needed for shared resources (camera, contacts).  
+- **Isolated Processes**: Sensitive components can run with restricted capabilities.  
+
+---
+
+## Benefits
+- Limits attack surface.  
+- Malware can’t easily spread between apps.  
+- Enforces **least privilege**.  
+
+---
+
+## Weaknesses
+- **Privilege Escalation**: Kernel exploits (e.g., Dirty COW) can escape sandbox.  
+- **Shared UID**: Apps with same dev key can share UID → weakens isolation.  
+- **Misconfigured IPC**: Exposed Content Providers can bypass sandbox.  
+
+---
+
+## Interview One-Liners
+- “Sandboxing is enforced by Linux UID separation + SELinux policies.”  
+- “Apps communicate via Binder IPC, controlled by permissions.”  
+- “Weaknesses include kernel exploits, shared UID abuse, and misconfigured IPC.”
+
+# 3.1.3 Android Security Model
+
+---
+
+## Core Principle
+- Based on **least privilege** → apps only get the permissions they need.
+- Security enforced across **kernel, framework, and app levels**.
+
+---
+
+## Key Components
+
+1. **Linux Kernel Security**
+   - UID/GID isolation for sandboxing.
+   - SELinux (SEAndroid) → Mandatory Access Control (MAC) policies.
+
+2. **Application Sandbox**
+   - Each app in its own isolated environment.
+   - Data stored in `/data/data/<package_name>` → private to app.
+
+3. **Permission Model**
+   - Apps declare permissions in `AndroidManifest.xml`.
+   - Runtime permissions (Android 6.0+) require user approval.
+   - Example: Camera, Location.
+
+4. **App Signing**
+   - Every app signed by developer certificate.
+   - Ensures app integrity & developer identity.
+   - Tampered apps rejected if signature invalid.
+
+5. **Inter-Process Communication (IPC)**
+   - Binder IPC mediates communication.
+   - Permission checks enforced for Content Providers, Broadcasts, Intents.
+
+6. **Google Play Protect**
+   - Malware scanning in Play Store & on-device.
+   - Detects harmful behavior at runtime.
+
+7. **Verified Boot**
+   - Cryptographically checks OS images at boot.
+   - Prevents tampered system partitions from loading.
+
+8. **Updates & Patch Management**
+   - Monthly patches from Google/OEMs.
+   - Project Treble improves modular patch delivery.
+
+---
+
+## Enforcement Mechanisms
+- **DAC**: Linux file ownership & permissions.
+- **MAC**: SELinux strict policy enforcement.
+- **Cryptography**: App signing, Verified Boot.
+- **User Control**: Runtime permission prompts, Play Protect alerts.
+
+---
+
+## Real-World Failures
+- **Stagefright (2015)** → exploited media framework; mitigated by SELinux.
+- **Fake ID Vulnerability** → exploited cert chain validation to impersonate trusted apps.
+- **Kernel exploits (e.g., Dirty COW)** → enabled sandbox escapes.
+
+---
+
+## Interview One-Liners
+- “Android’s security model combines sandboxing, permissions, app signing, SELinux, and Verified Boot.”  
+- “App signing enforces integrity and ties apps to a developer identity.”  
+- “Least privilege: each app runs with unique UID + explicit permission requests.”  
