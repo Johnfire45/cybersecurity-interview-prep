@@ -234,3 +234,70 @@
 - “Android’s security model combines sandboxing, permissions, app signing, SELinux, and Verified Boot.”  
 - “App signing enforces integrity and ties apps to a developer identity.”  
 - “Least privilege: each app runs with unique UID + explicit permission requests.”  
+
+# 3.1.4 App Lifecycle & Process Management
+
+---
+
+## Why Lifecycle Matters
+- Android has **limited resources** (battery, RAM, CPU).  
+- OS manages app processes efficiently for performance + security.  
+- Lifecycle ensures apps behave predictably when switching, minimizing, or resuming.
+
+---
+
+## App Component Lifecycles
+
+1. **Activity Lifecycle**  
+   - States: `onCreate()` → `onStart()` → `onResume()` → `onPause()` → `onStop()` → `onDestroy()`.  
+   - Example: Switching apps moves current app to `onPause()`/`onStop()`.
+
+2. **Service Lifecycle**  
+   - For background tasks.  
+   - States: `onCreate()` → `onStartCommand()` → `onDestroy()`.  
+   - Example: Music service plays audio even if UI closed.
+
+3. **Broadcast Receiver Lifecycle**  
+   - Triggered by system events (e.g., SMS, battery low).  
+   - Lives only during `onReceive()` execution.
+
+4. **Content Provider Lifecycle**  
+   - Manages shared app data (e.g., Contacts DB).  
+   - Initialized when accessed.
+
+---
+
+## Process Management
+
+- **Zygote Process**  
+  - Forks new app processes from a preloaded template.  
+  - Ensures faster startup.
+
+- **Low Memory Killer (LMK)**  
+  - Kills processes when memory is low.  
+  - Priority order: Foreground > Visible > Service > Background > Empty.
+
+- **Oom_adj & cgroups**  
+  - Assigns “out-of-memory” scores.  
+  - Foreground apps = lowest score (least likely to be killed).
+
+---
+
+## Security Aspects
+- Background services restricted → prevents spyware persistence.  
+- Lifecycle limits reduce risk of hidden processes draining battery.  
+- Broadcast receivers short-lived → smaller attack surface.
+
+---
+
+## Real-World Examples
+- **Task Killers:** Early apps harmed battery by fighting Android’s lifecycle.  
+- **Android 8+ Restrictions:** Limited background services to prevent abuse (e.g., hidden crypto miners).  
+- **Malware Workarounds:** Some malware re-register services; modern Android detects/blocks such persistence.
+
+---
+
+## Interview One-Liners
+- “Zygote forks app processes to speed up launches.”  
+- “LMK prioritizes killing background apps to free memory.”  
+- “Lifecycle management enforces least privilege and reduces persistent malware risks.”

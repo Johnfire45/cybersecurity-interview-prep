@@ -107,3 +107,27 @@ If two apps are signed by the same developer key and configured to share the sam
 
 **Interview One-Liner**  
 “Shared UIDs between apps break Android’s sandboxing by merging their security contexts, meaning compromise of one app exposes the other.”
+
+### Q1 — Subjective: Background Service Persistence in Android 8+
+
+**Question:**  
+If a malicious app keeps restarting a background service to avoid being killed by Android’s process management, how does modern Android (Android 8.0 and above) prevent this kind of persistence, and why is this important for security?
+
+---
+
+**Answer (Summary):**
+
+1. **Android 8+ Restrictions**  
+- Background services are restricted and cannot run indefinitely.  
+- Apps must use **Foreground Services** (with a visible notification) or **JobScheduler/WorkManager**.  
+- If a service tries to persist secretly, the system kills it.
+
+2. **Security Importance**  
+- Prevents spyware and persistent malware from hiding in the background.  
+- Reduces risks of stealth processes draining battery/memory.  
+- Enforces visibility of long-running tasks → smaller attack surface.  
+
+---
+
+**Interview One-Liner**  
+“Android 8+ blocks endless background services, forcing apps to use visible or scheduled tasks. This prevents spyware persistence and reduces the attack surface.”
