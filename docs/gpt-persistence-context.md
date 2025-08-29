@@ -101,6 +101,30 @@ Each folder should contain:
 
 ---
 
+## 📂 Course Structure Clarification (Binding Rule)
+
+- **Domain**: The top-level section (e.g., `## 3. Android Application Security`).  
+- **Subtopic**: The second-level section under each domain (e.g., `### 3.2 Android App Components`).  
+- **Subtasks**: The checkboxes (`- [ ] ...`) listed under each subtopic (e.g., `- [ ] Activities & Lifecycle`).  
+
+### 🔎 Study Flow Rule
+1. Always **start with the Subtopic overview** before diving into subtasks.  
+   - Explain the purpose of the subtopic.  
+   - Describe how all subtasks under it connect together.  
+
+2. Then go into **Subtasks one by one**, following this flow:  
+   - Deep explanation (principles + real-world relevance).  
+   - Summarize into `notes.md`.  
+   - Create quizzes (`quiz.md`) → MCQs first, then subjective/scenario questions.  
+
+3. Progression must **strictly follow Domain → Subtopic → Subtask order**.  
+   - Never skip subtasks.  
+   - Never jump directly to subtasks without first giving subtopic overview.  
+
+---
+
+✅ This ensures consistency across all domains and prevents skipping context.
+
 ## 🧠 Learning Flow for New Topics
 
 When starting a **new topic or sub-topic or subtasks**:

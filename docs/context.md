@@ -77,8 +77,8 @@ Each domain (e.g., api-security, cloud-security) must also have:
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         1            |       2        |      14        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/17)  |   17.6%    |
-| 📚 Subtopics |  81   |         8            |       0        |      73        | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ (8/81)   |   9.9%     |
-| ✅ Subtasks  | 241   |        49            |       –        |     192        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (49/241) |   20.3%     |
+| 📚 Subtopics |  89   |        12            |       0        |      77        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (12/89)  |   13.5%    |
+| ✅ Subtasks  | 277   |        57            |       –        |     220        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (57/277) |   20.6%     |
 
 **Legend:**  
 🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
@@ -87,7 +87,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 **📊 Content Status Summary:**
 - **Completed:** Domain 0 (Cybersecurity Fundamentals - 6/6 subtopics completed) 🎉, 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting)
-- **In Progress:** Domain 1 (Web Application Security - 2/12 subtopics completed), Domain 3 (Android Application Security - 0/13 subtopics completed)
+- **In Progress:** Domain 1 (Web Application Security - 2/12 subtopics completed), Domain 3 (Android Application Security - 2/13 subtopics completed, 3.1 & 3.2 mastered)
 - **Next Priority:** Continue Domain 1 (Web Application Security) - remaining subtopics: 1.3-1.12, OR focus on Domain 3 (Android Application Security) - starting with 3.1 Android Fundamentals & Architecture
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion, OR complete Domain 3 (Android Application Security).
@@ -135,8 +135,8 @@ cybersecurity-interview-prep/
 │   │   ├── 2.4-api-data-exposure/
 │   │   ├── 2.5-api-security-testing/
 │   ├── 3-android-security/                           # Domain 3 🟡 IN PROGRESS
-│   │   ├── 3.1-android-fundamentals-architecture/   # Subtopic 3.1 🔴 NOT STARTED
-│   │   ├── 3.2-android-app-components/              # Subtopic 3.2 🔴 NOT STARTED
+│   │   ├── 3.1-android-fundamentals-architecture/   # Subtopic 3.1 🟢 COMPLETED
+│   │   ├── 3.2-android-app-components/              # Subtopic 3.2 🟢 COMPLETED
 │   │   ├── 3.3-android-app-architecture/            # Subtopic 3.3 🔴 NOT STARTED
 │   │   ├── 3.4-android-development-concepts/        # Subtopic 3.4 🔴 NOT STARTED
 │   │   ├── 3.5-app-manifest-security-analysis/      # Subtopic 3.5 🔴 NOT STARTED

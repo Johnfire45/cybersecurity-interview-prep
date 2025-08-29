@@ -302,3 +302,77 @@
 - “Zygote forks app processes to speed up launches.”  
 - “LMK prioritizes killing background apps to free memory.”  
 - “Lifecycle management enforces least privilege and reduces persistent malware risks.”
+
+# Zygote Workflow in Android
+
+---
+
+## Overview
+- **Zygote = the mother of all Android app processes.**
+- Started very early at boot by the `init` process.
+- Preloads core Java classes, Android framework classes, and common resources.
+- Listens for requests to start new apps.
+- When requested, it **forks** itself to create new app processes.
+
+---
+
+## How Zygote Works
+1. **Init Process**  
+   - Starts Zygote at boot time.  
+
+2. **Zygote Process**  
+   - Preloads classes & libraries (Java core, Android framework).  
+   - Ensures consistency across all apps.  
+
+3. **App Launch Request**  
+   - System requests Zygote to start an app.  
+
+4. **Fork**  
+   - Zygote forks itself into a child process.  
+
+5. **Child Process**  
+   - Inherits preloaded resources.  
+   - Saves memory & speeds up startup.  
+
+6. **App Initialization**  
+   - Child process loads app-specific code/resources.  
+   - App is now ready to run.  
+
+---
+
+## Security Implications
+- Zygote runs with **system-level privileges**.  
+- If compromised:  
+  - Every child process inherits the exploit.  
+  - Could lead to **system-wide privilege escalation**.  
+- Protections:  
+  - Zygote socket restricted to system services.  
+  - SELinux policies enforce strict access control.  
+
+---
+
+## Real-World Example
+- **Zygote Vulnerability (2012):**  
+  - Malicious apps could send crafted requests to Zygote socket.  
+  - Triggered endless forking → **Denial of Service (DoS)**.  
+  - Patched by restricting access.  
+
+---
+
+## Interview One-Liners
+- “Every Android app process is forked from Zygote for speed and efficiency.”  
+- “Zygote preloads libraries so apps launch faster and consume less memory.”  
+- “If Zygote is compromised, every app process inherits the attack — breaking sandboxing.”  
+- “Android protects Zygote via SELinux and socket restrictions.”  
+
+---
+
+## Diagram (Mermaid)
+
+```mermaid
+flowchart TD
+    A[Init Process] --> B[Zygote Process<br/>Preloads libraries & framework]
+    B --> C[App Launch Request]
+    C --> D[Fork: Zygote creates child process]
+    D --> E[Child Process<br/>Inherits preloaded resources]
+    E --> F[App Initialization<br/>Loads app code & resources]
