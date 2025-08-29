@@ -270,6 +270,7 @@
 ## Process Management
 
 - **Zygote Process**  
+  - Parent processs that starts at the boot
   - Forks new app processes from a preloaded template.  
   - Ensures faster startup.
 

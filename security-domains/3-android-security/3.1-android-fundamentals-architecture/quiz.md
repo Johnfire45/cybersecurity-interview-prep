@@ -131,3 +131,29 @@ If a malicious app keeps restarting a background service to avoid being killed b
 
 **Interview One-Liner**  
 “Android 8+ blocks endless background services, forcing apps to use visible or scheduled tasks. This prevents spyware persistence and reduces the attack surface.”
+
+### Q2 — Subjective: Zygote Process in Android
+
+**Question:**  
+Why does Android use the Zygote process for starting new app processes instead of creating each process from scratch, and what would be the security risk if Zygote itself were compromised?
+
+---
+
+**Answer (Summary):**
+
+1. **Why Zygote is Used**  
+- Zygote starts at boot and preloads core classes, libraries, and ART runtime.  
+- New apps are forked from Zygote instead of starting fresh.  
+- This makes app startup **faster, more efficient, and consistent**.
+
+2. **Security Risk if Compromised**  
+- All app processes are children of Zygote.  
+- If Zygote is exploited:  
+  - Every new app process inherits the compromise.  
+  - Sandbox and process isolation would be broken.  
+  - Leads to potential **system-wide privilege escalation**.
+
+---
+
+**Interview One-Liner**  
+“Zygote speeds up app launches by preloading libraries and forking processes. If compromised, every new process inherits the exploit, collapsing Android’s sandboxing model.”
