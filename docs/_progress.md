@@ -15,8 +15,8 @@
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         1            |       2        |      14        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/17)  |   17.6%    |
-| 📚 Subtopics |  89   |        14            |       0        |      75        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (14/89)  |   15.7%    |
-| ✅ Subtasks  | 277   |        65            |       –        |     212        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (65/277) |   23.5%     |
+| 📚 Subtopics |  89   |        15            |       0        |      74        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (15/89)  |   16.9%    |
+| ✅ Subtasks  | 277   |        69            |       –        |     208        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (69/277) |   24.9%     |
 
 ---
 
@@ -300,12 +300,12 @@
 - [x] Debugging & Logging — 🟢
 - [x] Testing & Quality Assurance — 🟢
 
-### 3.5 App Manifest Security Analysis 🔴
+### 3.5 App Manifest Security Analysis 🟢
 
-- [ ] Permission Analysis — 🔴
-- [ ] Component Security — 🔴
-- [ ] Intent Filter Security — 🔴
-- [ ] Manifest Hardening — 🔴
+- [x] Permission Analysis — 🟢
+- [x] Component Security — 🟢
+- [x] Intent Filter Security — 🟢
+- [x] Manifest Hardening — 🟢
 
 ### 3.6 Storage Security 🔴
 
@@ -778,4 +778,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 89 | Total Subtasks: 277 | Domains Mastered: 1 | Subtopics Mastered: 14 | Subtasks Completed: 65 | Progress: 23.5%**
+**🗂️ Total Domains: 17 | Total Subtopics: 89 | Total Subtasks: 277 | Domains Mastered: 1 | Subtopics Mastered: 15 | Subtasks Completed: 69 | Progress: 24.9%**

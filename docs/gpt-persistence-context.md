@@ -36,7 +36,6 @@ Path convention:
 Each folder should contain:
 - `notes.md` → Topic-wise notes  
 - `quiz.md` → MCQs + real-world attack simulations  
----
 
 ## 📋 File Responsibilities
 
@@ -52,215 +51,78 @@ Each folder should contain:
 
 ## 📊 Progress Tracking Protocol
 
-#### **Domain Structure and Progress Units**
+**Structure:**
+- **Domains:** Top-level folders (0–16) representing cybersecurity domains
+- **Subtopics:** Learning modules within each domain (e.g., `### 1.1 Input Validation & Injection`)
+- **Subtasks:** Individual checkboxes (`- [ ]` or `- [x]`) representing specific concepts to master
 
-- **Main Domains:**  
-  The top-level folders (numbered 0–16) represent the primary cybersecurity domains (e.g., Web Application Security, Cloud Security).
-
-- **Subtopics/Subdomains:**  
-  Each domain contains multiple subtopics, represented as numbered headers in `_progress.md` (e.g., `### 1.1 Input Validation & Injection`). These are the main learning modules within each domain.
-
-- **Subtasks (Progress Units):**  
-  Under each subtopic, there are multiple individual checkboxes (`- [ ]` or `- [x]`).  
-  - Each checkbox represents a specific concept, technique, or scenario to be mastered.
-  - The total number of these checkboxes across all subtopics is the true measure of progress (e.g., 241 subtasks).
-  - **Progress percentage, “completed,” and “remaining” counts in `_progress.md` must always be calculated based on the number of checked `[x]` boxes, not just subtopic headers.**
-
-#### **Manual Mastery Mark (🟢):**
-
-- When a subtopic is fully mastered (all subtasks completed and reviewed), it is marked with a green dot (🟢) at the subtopic header level.
-- The green dot is a manual, authoritative indicator of mastery for that subtopic, but the overall progress bar and statistics are based on the sum of completed subtasks.
-
-#### **Summary:**
-
-- **Domains:** Organizational grouping  
-- **Subtopics:** Learning modules  
-- **Subtasks:** Actual progress units (checkboxes)  
-- **Progress Bar:** Always reflects the ratio of checked subtasks to total subtasks
-
----
-
-#### **Manual Green Dot (🟢) — Source of Truth**
-
-- The green dot (🟢) at the subtask, subtopic, or domain level is the only authoritative indicator of progress in `_progress.md`.
-- Only the user (Harshit) updates the 🟢 mark, and it always reflects the true, reviewed, and confirmed state of completion.
-- All summary statistics, progress bars, and status updates made by Cursor or any LLM agent must be based on counting and tracking the number of domains, subtopics, and subtasks marked with 🟢.
-- **Never override, infer, or “auto-complete” a 🟢 mark—Cursor must only update progress based on explicit 🟢 marks present in the file.**
+**Progress Calculation:**
+- Progress percentage and counts are based on checked `[x]` boxes, not subtopic headers
+- Manual mastery mark (🟢) at subtopic level indicates full completion
+- Only user (Harshit) updates 🟢 marks - never auto-complete or infer progress
+- All statistics must be based on explicit 🟢 marks present in `_progress.md`
 
 ---
 
 ## 📚 Study Progress Flow
 
 1. Check `_progress.md` before each session  
-2. First explain the topic/subtopic/subtasks in details in the chat only and then also give a summary of the explaination for the `notes.md` in a markdown box.  
+2. Explain topic/subtopic/subtasks in detail, then provide summary for `notes.md`  
 3. Move to `quiz.md` and solve questions  
-4. Mark topic as **🟢 mastered** when:  
-   - Notes are understood  
-   - Quiz is solved correctly  
-   - User confirms retention
+4. Mark topic as **🟢 mastered** when notes are understood, quiz solved correctly, and user confirms retention
 
----
+## 📂 Course Structure & Learning Flow
 
-## 📂 Course Structure Clarification (Binding Rule)
+**Structure:**
+- **Domain**: Top-level section (e.g., `## 3. Android Application Security`)
+- **Subtopic**: Second-level section (e.g., `### 3.2 Android App Components`)  
+- **Subtasks**: Individual checkboxes (`- [ ] Activities & Lifecycle`)
 
-- **Domain**: The top-level section (e.g., `## 3. Android Application Security`).  
-- **Subtopic**: The second-level section under each domain (e.g., `### 3.2 Android App Components`).  
-- **Subtasks**: The checkboxes (`- [ ] ...`) listed under each subtopic (e.g., `- [ ] Activities & Lifecycle`).  
+**Learning Flow:**
+1. Start with subtopic overview before diving into subtasks
+2. Explain purpose and how subtasks connect together
+3. Go through subtasks one by one: deep explanation → summarize to `notes.md` → create `quiz.md`
+4. Follow strict Domain → Subtopic → Subtask order
 
-### 🔎 Study Flow Rule
-1. Always **start with the Subtopic overview** before diving into subtasks.  
-   - Explain the purpose of the subtopic.  
-   - Describe how all subtasks under it connect together.  
-
-2. Then go into **Subtasks one by one**, following this flow:  
-   - Deep explanation (principles + real-world relevance).  
-   - Summarize into `notes.md`.  
-   - Create quizzes (`quiz.md`) → MCQs first, then subjective/scenario questions.  
-
-3. Progression must **strictly follow Domain → Subtopic → Subtask order**.  
-   - Never skip subtasks.  
-   - Never jump directly to subtasks without first giving subtopic overview.  
-
----
-
-✅ This ensures consistency across all domains and prevents skipping context.
-
-## 🧠 Learning Flow for New Topics
-
-When starting a **new topic or sub-topic or subtasks**:
-
-- GPT must provide **detailed breakdowns**, not just high-level bullets.
-- This includes:
-  - 📖 Concept explanation from first principles  
-  - 🧩 Layered learning: step-by-step build-up  
-  - 🧪 Real-world analogies or examples  
-  - 🔒 Security context (where applicable)  
-  - 🛠️ How this applies to interviews, real-world, or projects  
-
-- Once the topic is well-discussed and understood, only then:
-  - ✍️ Summarize the key points into `notes.md`  
-  - 🧼 Keep `notes.md` clean, concise, and final — no raw dumps
+**For New Topics:**
+- Provide detailed breakdowns from first principles
+- Include real-world analogies, security context, and interview relevance
+- Only summarize to `notes.md` after thorough discussion and give this in markdown box
+- Keep `notes.md` clean and final
 
 ---
 
 ## ✅ File Output Guidelines
 
-### 🧾 When to Use Markdown Blocks
+**Markdown Blocks:** Use triple-backtick only for copy-pasteable content (code, file contents, structured reports)
 
-Use triple-backtick markdown **only** when output should be copy-pasted directly:
-- Code (e.g., JS, HTML, Python, Bash)  
-- Shell commands, payloads  
-- Cursor, Claude or LLM prompts  
-- File contents (e.g., `notes.md`, `quiz.md`)  
-- Structured reports (e.g., result tables)  
+**Filename Output:** Always print filename tag outside markdown block
 
-❌ Do **not** wrap general explanations or reasoning in markdown.  
-❌ Do **not** wrap quiz question and answer or any such interactive chats in markdown.  
-✅ Maintain clean formatting and emojis outside markdown when needed.
-
----
-
-## 📄 Filename Output Rule
-
-**Always print the filename tag outside the markdown block. Only the file content goes inside.**
-
-**Example:**
-
-# 📄 File: notes.md
-
-```markdown
-<file content>
-<All `notes.md` content must be placed *inside* a triple-backtick markdown block.>
-```markdown
-For each file update, show clearly where the output belongs.
-
----
-
-## 🧠 Action Format (Post-Action Summary)
-
-After any file creation or update, use:
-
-```markdown
-## ✅ What was done
-- Describe file and section updated
-
-## 🔍 Why it was done
-- Explain the purpose (e.g., sync, clarity, restructure, quiz enrichment)
-
-## ⚠️ What to verify next
-- State any review, testing, or topic confirmation needed
-```
-
----
-
-## ✍️ Cursor Prompt Rules
-
-For any Cursor prompt:
-- Include:
-  - ✅ Task instructions  
-  - 🧠 Fix/debug logic  
-  - 🛡️ Security context  
-  - 💬 Inline code explanations  
-  - 🗂️ File names & output structure  
-- Always refer to:
-  - `_progress.md`  
-  - `context.md`  
-  - Any files referenced in prompt
-
----
-
-## 🧼 Clean Coding & Notes Practices
-
-- Headings: Use `##`, `###` with emoji tags where useful  
-- Lists: Use emoji bullets  
-  - ✅ Complete  
-  - ❌ Vulnerability or mistake  
-  - ⚠️ Warning or edge case  
-- Code inside proper blocks (` ```js `, ` ```html `, etc.)  
-- No nested markdown blocks (avoid quote inside code inside quote)
+**Formatting:** Use emoji bullets (✅ Complete, ❌ Vulnerability, ⚠️ Warning), proper code blocks, no nested markdown
 
 ---
 
 ## 🧪 Quiz Behavior Rules
 
 - Ask **interview-level MCQs** — not basic  
-- Label real-world scenarios:
-  - 🧨 Real-World Scenario  
-  - 🔒 OWASP Auth Bypass  
-  - 💡 Business Logic Exploit  
-  - 🛠️ Defense Engineering  
-
-### 🎯 Quiz Format Rules:
-1. Always ask **1 question at a time**  
-2. **If question has sub-questions**, ask those only after the first is answered  
-3. Wait for user input before revealing answers  
-4. After the User answer:
-   - Confirm correctness and draw a comparison between the actual right and how the user answered technically
-   - Explain reasoning and possible variants  
-5. After this give a summarize `quiz.md` notes 
-
----
+- Label real-world scenarios: 🧨 Real-World Scenario, 🔒 OWASP Auth Bypass, 💡 Business Logic Exploit, 🛠️ Defense Engineering  
+- Ask 1 question at a time, wait for user input before revealing answers
+- After user answer: confirm correctness, explain reasoning and variants, then summarize `quiz.md` notes
 
 ## 🛡️ Security Framing Rules
 
-In any security topic:
-- ✅ Map each issue to:
-  - OWASP Top 10  
-  - OWASP API Top 10  
-- ⚠️ Warn on dangerous or insecure practices:
-  - Use of `eval`, `innerHTML`, insecure deserialization, broken access control  
-- 🔐 Highlight mitigation strategy (e.g., CSP, input sanitization, auth headers)  
-- 🚫 NEVER expose or generate hardcoded secrets or tokens
+- Map issues to OWASP Top 10 and OWASP API Top 10
+- Warn on dangerous practices (eval, innerHTML, insecure deserialization, broken access control)
+- Highlight mitigation strategies (CSP, input sanitization, auth headers)
+- Never expose hardcoded secrets or tokens
 
----
+## 🧩 Behavior Protocols
 
-## 🧩 Behavior Protocols for ChatGPT
-
-- 📌 Always stay within scope of **Cybersecurity Interview Prep**  
-- ❌ Do **not** assume anything outside uploaded files or context.md  
-- ✅ Ask before making file changes  
-- ✅ Do **not** install new tools or suggest packages without confirmation  
-- 🧠 If confusion occurs, **reconfirm instructions** and show steps before execution  
-- 🛠️ Treat this file (`gpt-persistence-context.md`) as binding and always up-to-date
+- Stay within Cybersecurity Interview Prep scope
+- Don't assume anything outside uploaded files or context.md
+- Ask before making file changes
+- Don't install tools or suggest packages without confirmation
+- Reconfirm instructions if confusion occurs
+- Treat this file as binding and always up-to-date
 
 ---
