@@ -77,8 +77,8 @@ Each domain (e.g., api-security, cloud-security) must also have:
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         1            |       2        |      14        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/17)  |   17.6%    |
-| 📚 Subtopics |  89   |        15            |       0        |      74        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (15/89)  |   16.9%    |
-| ✅ Subtasks  | 277   |        69            |       –        |     208        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (69/277) |   24.9%     |
+| 📚 Subtopics |  89   |        16            |       0        |      73        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (16/89)  |   18.0%    |
+| ✅ Subtasks  | 277   |        75            |       –        |     202        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (75/277) |   27.1%     |
 
 **Legend:**  
 🟢 = Mastered/Completed 🟡 = In Progress 🔴 = Not Started 🟩 = Progress ⬜ = Remaining
@@ -87,7 +87,7 @@ Each domain (e.g., api-security, cloud-security) must also have:
 
 **📊 Content Status Summary:**
 - **Completed:** Domain 0 (Cybersecurity Fundamentals - 6/6 subtopics completed) 🎉, 1.1 (Input Validation & Injection), 1.2 (Cross-Site Scripting)
-- **In Progress:** Domain 1 (Web Application Security - 2/12 subtopics completed), Domain 3 (Android Application Security - 5/13 subtopics completed, 3.1, 3.2, 3.3, 3.4 & 3.5 mastered)
+- **In Progress:** Domain 1 (Web Application Security - 2/12 subtopics completed), Domain 3 (Android Application Security - 6/13 subtopics completed, 3.1, 3.2, 3.3, 3.4, 3.5 & 3.6 mastered)
 - **Next Priority:** Continue Domain 1 (Web Application Security) - remaining subtopics: 1.3-1.12, OR focus on Domain 3 (Android Application Security) - starting with 3.1 Android Fundamentals & Architecture
 - **Ready for Development:** All 17 domains with complete, correctly numbered folder structure.
 - **Future Priority:** Continue with Domain 1 remaining subtopics (1.3-1.12) after Domain 0 completion, OR complete Domain 3 (Android Application Security).
@@ -140,7 +140,7 @@ cybersecurity-interview-prep/
 │   │   ├── 3.3-android-app-architecture/            # Subtopic 3.3 🟢 COMPLETED
 │   │   ├── 3.4-android-development-concepts/        # Subtopic 3.4 🟢 COMPLETED
 │   │   ├── 3.5-app-manifest-security-analysis/      # Subtopic 3.5 🟢 COMPLETED
-│   │   ├── 3.6-storage-security/                    # Subtopic 3.6 🔴 NOT STARTED
+│   │   ├── 3.6-storage-security/                    # Subtopic 3.6 🟢 COMPLETED
 │   │   ├── 3.7-webview-security/                    # Subtopic 3.7 🔴 NOT STARTED
 │   │   ├── 3.8-ipc-broadcast-security/              # Subtopic 3.8 🔴 NOT STARTED
 │   │   ├── 3.9-network-security/                    # Subtopic 3.9 🔴 NOT STARTED

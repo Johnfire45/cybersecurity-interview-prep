@@ -15,8 +15,8 @@
 | Category     | Total | 🟢 Mastered/Completed | 🟡 In Progress | 🔴 Not Started | Progress Bar           | % Complete |
 |:------------:|:-----:|:--------------------:|:--------------:|:--------------:|:----------------------:|:----------:|
 | 🌐 Domains   |  17   |         1            |       2        |      14        | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜ (3/17)  |   17.6%    |
-| 📚 Subtopics |  89   |        15            |       0        |      74        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (15/89)  |   16.9%    |
-| ✅ Subtasks  | 277   |        69            |       –        |     208        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (69/277) |   24.9%     |
+| 📚 Subtopics |  89   |        16            |       0        |      73        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (16/89)  |   18.0%    |
+| ✅ Subtasks  | 277   |        75            |       –        |     202        | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 (75/277) |   27.1%     |
 
 ---
 
@@ -307,14 +307,14 @@
 - [x] Intent Filter Security — 🟢
 - [x] Manifest Hardening — 🟢
 
-### 3.6 Storage Security 🔴
+### 3.6 Storage Security 🟢
 
-- [ ] SharedPreferences Security — 🔴
-- [ ] Internal Storage Security — 🔴
-- [ ] External Storage Security — 🔴
-- [ ] Database Security (SQLite) — 🔴
-- [ ] Android Keystore & Key Management — 🔴
-- [ ] Cryptography Misuse (Hardcoded Keys, Insecure RNG) — 🔴
+- [x] SharedPreferences Security — 🟢
+- [x] Internal Storage Security — 🟢
+- [x] External Storage Security — 🟢
+- [x] Database Security (SQLite) — 🟢
+- [x] Android Keystore & Key Management — 🟢
+- [x] Cryptography Misuse (Hardcoded Keys, Insecure RNG) — 🟢
 
 ### 3.7 WebView Security 🔴
 
@@ -778,4 +778,4 @@
 
 ---
 
-**🗂️ Total Domains: 17 | Total Subtopics: 89 | Total Subtasks: 277 | Domains Mastered: 1 | Subtopics Mastered: 15 | Subtasks Completed: 69 | Progress: 24.9%**
+**🗂️ Total Domains: 17 | Total Subtopics: 89 | Total Subtasks: 277 | Domains Mastered: 1 | Subtopics Mastered: 16 | Subtasks Completed: 75 | Progress: 27.1%**
